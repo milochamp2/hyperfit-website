@@ -3,6 +3,7 @@ interface SectionProps {
   className?: string;
   id?: string;
   dark?: boolean;
+  diagonal?: boolean;
 }
 
 export default function Section({
@@ -10,13 +11,22 @@ export default function Section({
   className = "",
   id,
   dark = false,
+  diagonal = false,
 }: SectionProps) {
+  const bg = dark
+    ? "bg-gradient-to-b from-steel to-jet-light"
+    : "bg-jet";
+
   return (
     <section
       id={id}
-      className={`px-4 py-16 md:py-24 ${dark ? "bg-steel" : "bg-jet"} ${className}`}
+      className={`relative px-4 py-20 md:py-28 ${bg} ${diagonal ? "clip-diagonal" : ""} ${className}`}
     >
-      <div className="mx-auto max-w-7xl">{children}</div>
+      {/* Subtle top accent line for dark sections */}
+      {dark && (
+        <div className="pointer-events-none absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-cyan/10 to-transparent" />
+      )}
+      <div className="relative mx-auto max-w-7xl">{children}</div>
     </section>
   );
 }

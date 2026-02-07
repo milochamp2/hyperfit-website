@@ -3,6 +3,9 @@
 import { useState, type FormEvent } from "react";
 import Button from "./Button";
 
+const inputStyles =
+  "w-full rounded-lg border border-cyan/10 bg-steel/50 px-4 py-3 text-white placeholder-muted/50 outline-none transition-all focus:border-cyan/40 focus:shadow-[0_0_12px_rgba(0,194,255,0.08)]";
+
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
 
@@ -14,8 +17,8 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="rounded-xl bg-steel p-8 text-center">
-        <h3 className="font-heading text-2xl font-bold text-cyan">
+      <div className="card-futuristic rounded-xl p-8 text-center glow-cyan">
+        <h3 className="text-gradient font-heading text-2xl font-bold">
           Message Sent!
         </h3>
         <p className="mt-2 text-muted">
@@ -29,7 +32,7 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-5">
       <div className="grid gap-5 md:grid-cols-2">
         <div>
-          <label htmlFor="name" className="mb-1 block text-sm font-medium">
+          <label htmlFor="name" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-muted">
             Name
           </label>
           <input
@@ -37,12 +40,12 @@ export default function ContactForm() {
             id="name"
             name="name"
             required
-            className="w-full rounded-lg border border-steel-light bg-steel px-4 py-3 text-white placeholder-muted outline-none transition-colors focus:border-cyan"
+            className={inputStyles}
             placeholder="Your name"
           />
         </div>
         <div>
-          <label htmlFor="email" className="mb-1 block text-sm font-medium">
+          <label htmlFor="email" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-muted">
             Email
           </label>
           <input
@@ -50,25 +53,25 @@ export default function ContactForm() {
             id="email"
             name="email"
             required
-            className="w-full rounded-lg border border-steel-light bg-steel px-4 py-3 text-white placeholder-muted outline-none transition-colors focus:border-cyan"
+            className={inputStyles}
             placeholder="you@example.com"
           />
         </div>
       </div>
       <div>
-        <label htmlFor="phone" className="mb-1 block text-sm font-medium">
+        <label htmlFor="phone" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-muted">
           Phone (optional)
         </label>
         <input
           type="tel"
           id="phone"
           name="phone"
-          className="w-full rounded-lg border border-steel-light bg-steel px-4 py-3 text-white placeholder-muted outline-none transition-colors focus:border-cyan"
+          className={inputStyles}
           placeholder="04XX XXX XXX"
         />
       </div>
       <div>
-        <label htmlFor="message" className="mb-1 block text-sm font-medium">
+        <label htmlFor="message" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-muted">
           Message
         </label>
         <textarea
@@ -76,7 +79,7 @@ export default function ContactForm() {
           name="message"
           required
           rows={5}
-          className="w-full rounded-lg border border-steel-light bg-steel px-4 py-3 text-white placeholder-muted outline-none transition-colors focus:border-cyan resize-none"
+          className={`${inputStyles} resize-none`}
           placeholder="How can we help?"
         />
       </div>

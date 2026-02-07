@@ -54,6 +54,7 @@ export default function Home() {
         <SectionHeading
           title="What We Offer"
           subtitle="Everything you need to train smarter, recover better, and achieve real results."
+          gradient
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature) => (
@@ -85,6 +86,7 @@ export default function Home() {
         <SectionHeading
           title="Membership & Pricing"
           subtitle="Flexible plans to fit your training style and budget."
+          gradient
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {pricingPlans.map((plan) => (
@@ -130,16 +132,19 @@ export default function Home() {
       </Section>
 
       {/* Final CTA */}
-      <Section>
-        <div className="text-center">
-          <h2 className="font-heading text-3xl font-bold md:text-4xl lg:text-5xl">
+      <Section className="grid-overlay relative overflow-hidden">
+        {/* Background glow */}
+        <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-64 w-64 rounded-full bg-cyan/5 blur-3xl" />
+
+        <div className="relative text-center">
+          <h2 className="text-gradient font-heading text-3xl font-bold uppercase tracking-tight md:text-4xl lg:text-5xl">
             Ready to Train Different?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg text-muted">
             Stop going through the motions. Start training with purpose at
             Mitcham&apos;s leading function training gym.
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Button href={siteConfig.bookingUrl} size="lg" external>
               Book a Class
             </Button>

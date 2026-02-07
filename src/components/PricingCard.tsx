@@ -23,21 +23,25 @@ export default function PricingCard({
     <div
       className={`relative flex flex-col rounded-xl p-6 transition-all duration-300 ${
         highlighted
-          ? "border-2 border-cyan bg-steel glow-cyan"
-          : "bg-steel hover:bg-steel-light"
+          ? "card-futuristic border-cyan/40 glow-cyan scale-[1.02]"
+          : "card-futuristic hover:border-cyan/20"
       }`}
     >
       {highlighted && (
-        <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-cyan px-4 py-1 text-xs font-bold text-jet">
-          MOST POPULAR
+        <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+          <div className="rounded-full border border-cyan/30 bg-cyan/10 px-4 py-1 text-[10px] font-bold uppercase tracking-widest text-cyan backdrop-blur-sm">
+            Most Popular
+          </div>
         </div>
       )}
-      <h3 className="font-heading text-xl font-bold">{name}</h3>
+      <h3 className="font-heading text-lg font-bold uppercase tracking-wide">
+        {name}
+      </h3>
       <div className="mt-4">
-        <span className="font-heading text-4xl font-bold text-cyan">
+        <span className="text-gradient-accent font-heading text-4xl font-bold">
           {price}
         </span>
-        <span className="ml-2 text-muted">/{period}</span>
+        <span className="ml-2 text-sm text-muted">/{period}</span>
       </div>
       <p className="mt-3 text-sm text-muted">{description}</p>
       <ul className="mt-6 flex-1 space-y-3">

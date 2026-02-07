@@ -6,60 +6,76 @@ export default function LocationHours() {
     <div className="grid gap-8 md:grid-cols-2">
       {/* Contact Info */}
       <div className="space-y-6">
-        <div className="flex items-start gap-3">
-          <MapPinIcon className="mt-1 h-5 w-5 shrink-0 text-cyan" />
-          <div>
-            <h3 className="font-heading font-bold">Address</h3>
-            <p className="text-muted">{siteConfig.address.full}</p>
-            <a
-              href={siteConfig.googleMapsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-1 inline-block text-sm text-cyan hover:text-cyan-glow"
-            >
-              Get Directions
-            </a>
+        {[
+          {
+            Icon: MapPinIcon,
+            label: "Address",
+            content: (
+              <>
+                <p className="text-muted">{siteConfig.address.full}</p>
+                <a
+                  href={siteConfig.googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 inline-block text-sm text-cyan hover:text-cyan-glow transition-colors"
+                >
+                  Get Directions &rarr;
+                </a>
+              </>
+            ),
+          },
+          {
+            Icon: PhoneIcon,
+            label: "Phone",
+            content: (
+              <a
+                href={`tel:${siteConfig.phone}`}
+                className="text-muted hover:text-cyan transition-colors"
+              >
+                {siteConfig.phoneDisplay}
+              </a>
+            ),
+          },
+          {
+            Icon: EnvelopeIcon,
+            label: "Email",
+            content: (
+              <a
+                href={`mailto:${siteConfig.email}`}
+                className="text-muted hover:text-cyan transition-colors"
+              >
+                {siteConfig.email}
+              </a>
+            ),
+          },
+        ].map(({ Icon, label, content }) => (
+          <div key={label} className="flex items-start gap-4">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-cyan/15 bg-cyan/5">
+              <Icon className="h-4 w-4 text-cyan" />
+            </div>
+            <div>
+              <h3 className="font-heading text-sm font-bold uppercase tracking-wider">
+                {label}
+              </h3>
+              {content}
+            </div>
           </div>
-        </div>
-
-        <div className="flex items-start gap-3">
-          <PhoneIcon className="mt-1 h-5 w-5 shrink-0 text-cyan" />
-          <div>
-            <h3 className="font-heading font-bold">Phone</h3>
-            <a
-              href={`tel:${siteConfig.phone}`}
-              className="text-muted hover:text-cyan"
-            >
-              {siteConfig.phoneDisplay}
-            </a>
-          </div>
-        </div>
-
-        <div className="flex items-start gap-3">
-          <EnvelopeIcon className="mt-1 h-5 w-5 shrink-0 text-cyan" />
-          <div>
-            <h3 className="font-heading font-bold">Email</h3>
-            <a
-              href={`mailto:${siteConfig.email}`}
-              className="text-muted hover:text-cyan"
-            >
-              {siteConfig.email}
-            </a>
-          </div>
-        </div>
+        ))}
       </div>
 
       {/* Business Hours */}
-      <div>
-        <div className="flex items-center gap-2 mb-4">
-          <ClockIcon className="h-5 w-5 text-cyan" />
-          <h3 className="font-heading font-bold">Opening Hours</h3>
+      <div className="card-futuristic rounded-xl p-6">
+        <div className="mb-5 flex items-center gap-2">
+          <ClockIcon className="h-4 w-4 text-cyan" />
+          <h3 className="font-heading text-sm font-bold uppercase tracking-wider">
+            Opening Hours
+          </h3>
         </div>
-        <div className="space-y-2">
+        <div className="space-y-2.5">
           {siteConfig.hours.map((h) => (
             <div
               key={h.day}
-              className="flex justify-between border-b border-steel-light pb-2 text-sm"
+              className="flex justify-between border-b border-cyan/5 pb-2.5 text-sm"
             >
               <span className="font-medium">{h.day}</span>
               <span className="text-muted">
