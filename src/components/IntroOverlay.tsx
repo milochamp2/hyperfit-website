@@ -49,11 +49,11 @@ export default function IntroOverlay() {
       <div className="relative flex flex-col items-center gap-6 intro-logo">
         <Logo height={40} className="md:h-[56px]" />
         <div className="flex items-center gap-3">
-          <div className="h-px w-8 bg-cyan/40" />
-          <span className="font-heading text-[10px] font-semibold uppercase tracking-[0.3em] text-cyan/70">
+          <div className="h-px w-8 bg-white/30" />
+          <span className="font-heading text-[10px] font-semibold uppercase tracking-[0.3em] text-white/80">
             Function Training Gym
           </span>
-          <div className="h-px w-8 bg-cyan/40" />
+          <div className="h-px w-8 bg-white/30" />
         </div>
       </div>
     </div>

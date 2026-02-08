@@ -30,13 +30,11 @@ export default function Logo({ className = "", height = 28 }: LogoProps) {
       >
         HYPER
       </text>
-      {/* FIT — outlined, matching the logo style */}
+      {/* FIT — solid white fill */}
       <text
         x="330"
         y="66"
-        fill="none"
-        stroke="white"
-        strokeWidth="2.5"
+        fill="white"
         fontFamily="Montserrat, Arial Black, sans-serif"
         fontWeight="900"
         fontStyle="italic"
