@@ -21,32 +21,33 @@ export default function PricingCard({
 }: PricingCardProps) {
   return (
     <div
-      className={`relative flex flex-col rounded-xl p-6 transition-all duration-300 ${
+      className={`relative flex flex-col rounded-xl p-8 transition-all duration-300 ${
         highlighted
-          ? "card-futuristic border-cyan/40 glow-cyan scale-[1.02]"
-          : "card-futuristic hover:border-cyan/20"
+          ? "card-futuristic border-cyan/30 glow-cyan scale-[1.02]"
+          : "card-futuristic"
       }`}
     >
       {highlighted && (
-        <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-          <div className="rounded-full border border-cyan/30 bg-cyan/10 px-4 py-1 text-[10px] font-bold uppercase tracking-widest text-cyan backdrop-blur-sm">
+        <div className="absolute -top-3.5 left-1/2 z-10 -translate-x-1/2">
+          <div className="whitespace-nowrap rounded-full bg-cyan px-5 py-1 text-[10px] font-bold uppercase tracking-widest text-jet">
             Most Popular
           </div>
         </div>
       )}
-      <h3 className="font-heading text-lg font-bold uppercase tracking-wide">
+      <h3 className="font-heading text-base font-bold uppercase tracking-wide">
         {name}
       </h3>
-      <div className="mt-4">
-        <span className="text-gradient-accent font-heading text-4xl font-bold">
+      <div className="mt-4 flex items-baseline gap-1">
+        <span className="text-gradient-accent font-heading text-5xl font-bold">
           {price}
         </span>
-        <span className="ml-2 text-sm text-muted">/{period}</span>
+        <span className="text-sm text-muted">/{period}</span>
       </div>
-      <p className="mt-3 text-sm text-muted">{description}</p>
-      <ul className="mt-6 flex-1 space-y-3">
+      <p className="mt-4 text-sm leading-relaxed text-muted">{description}</p>
+      <div className="my-6 h-px w-full bg-gradient-to-r from-transparent via-cyan/10 to-transparent" />
+      <ul className="flex-1 space-y-3">
         {features.map((feature) => (
-          <li key={feature} className="flex items-start gap-2 text-sm">
+          <li key={feature} className="flex items-start gap-3 text-sm">
             <CheckIcon className="mt-0.5 h-4 w-4 shrink-0 text-cyan" />
             <span>{feature}</span>
           </li>

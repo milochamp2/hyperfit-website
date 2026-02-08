@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { siteConfig } from "@/config/site";
 import { MenuIcon, XIcon } from "./Icons";
 import Button from "./Button";
+import Logo from "./Logo";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -16,16 +17,14 @@ export default function Header() {
       {/* Accent line at very top */}
       <div className="h-px w-full bg-gradient-to-r from-transparent via-cyan/40 to-transparent" />
 
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
         {/* Logo */}
-        <Link href="/" className="group flex items-center gap-2">
-          <span className="font-heading text-2xl font-bold tracking-tight">
-            HYPER<span className="text-gradient-accent">FIT</span>
-          </span>
+        <Link href="/" aria-label="HyperFit Home">
+          <Logo height={24} />
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Main navigation">
+        <nav className="hidden items-center gap-8 lg:flex" aria-label="Main navigation">
           {siteConfig.nav.map((item) => (
             <Link
               key={item.href}
@@ -43,7 +42,7 @@ export default function Header() {
         </nav>
 
         {/* Desktop CTA */}
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-3 lg:flex">
           <Button href={siteConfig.bookingUrl} size="sm" external>
             Book a Class
           </Button>
@@ -53,7 +52,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="text-white transition-colors hover:text-cyan md:hidden cursor-pointer"
+          className="text-white transition-colors hover:text-cyan lg:hidden cursor-pointer"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
           {mobileOpen ? <XIcon /> : <MenuIcon />}
@@ -66,10 +65,10 @@ export default function Header() {
       {/* Mobile Nav */}
       {mobileOpen && (
         <nav
-          className="border-t border-steel-light/30 bg-jet/95 px-4 pb-6 pt-4 backdrop-blur-md md:hidden"
+          className="border-t border-steel-light/30 bg-jet/95 px-6 pb-8 pt-6 backdrop-blur-md lg:hidden"
           aria-label="Mobile navigation"
         >
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-5">
             {siteConfig.nav.map((item) => (
               <Link
                 key={item.href}

@@ -9,6 +9,7 @@ import {
   EnvelopeIcon,
   ClockIcon,
 } from "./Icons";
+import Logo from "./Logo";
 
 export default function Footer() {
   return (
@@ -20,10 +21,8 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
-            <Link href="/" className="inline-block">
-              <span className="font-heading text-2xl font-bold tracking-tight">
-                HYPER<span className="text-gradient-accent">FIT</span>
-              </span>
+            <Link href="/" className="inline-block" aria-label="HyperFit Home">
+              <Logo height={20} />
             </Link>
             <p className="mt-3 text-sm leading-relaxed text-muted">
               Mitcham&apos;s premier function training gym. Open functional

@@ -14,14 +14,14 @@ export default function FeatureCard({
   const Icon = getIcon(icon);
 
   return (
-    <div className="card-futuristic corner-accent group rounded-xl p-6 transition-all duration-300">
-      <div className="mb-4 inline-flex rounded-lg border border-cyan/20 bg-cyan/5 p-3 text-cyan transition-colors duration-300 group-hover:bg-cyan/10">
-        <Icon className="h-8 w-8" />
+    <div className="card-futuristic group rounded-xl p-8 transition-all duration-300">
+      <div className="mb-5 inline-flex rounded-lg border border-cyan/20 bg-cyan/5 p-3 text-cyan transition-colors duration-300 group-hover:bg-cyan/10">
+        <Icon className="h-7 w-7" />
       </div>
-      <h3 className="font-heading text-lg font-bold uppercase tracking-wide">
+      <h3 className="font-heading text-base font-bold uppercase tracking-wide">
         {title}
       </h3>
-      <p className="mt-2 text-sm leading-relaxed text-muted">{description}</p>
+      <p className="mt-3 text-sm leading-relaxed text-muted">{description}</p>
     </div>
   );
 }

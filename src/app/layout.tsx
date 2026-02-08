@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat, Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import IntroOverlay from "@/components/IntroOverlay";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -50,8 +51,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${montserrat.variable} ${inter.variable}`}>
       <body className="flex min-h-screen flex-col antialiased">
+        <IntroOverlay />
         <Header />
-        <main className="flex-1 pt-16">{children}</main>
+        <main className="flex-1 pt-[72px]">{children}</main>
         <Footer />
       </body>
     </html>
