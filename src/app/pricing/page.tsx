@@ -47,12 +47,12 @@ export default function PricingPage() {
                   Private Room Hire
                 </h3>
                 <div className="mt-2">
-                  <span className="font-heading text-3xl font-bold text-cyan">
+                  <span className="font-heading text-3xl font-bold text-white">
                     $40
                   </span>
-                  <span className="ml-1 text-muted">/hour</span>
+                  <span className="ml-1 text-white/70">/hour</span>
                 </div>
-                <p className="mt-2 text-sm text-muted">
+                <p className="mt-2 text-sm text-white/70">
                   Standard rate for private room bookings. Available for PT,
                   rehab, mobility, or small group sessions.
                 </p>
@@ -62,12 +62,12 @@ export default function PricingPage() {
                   Member Rate
                 </h3>
                 <div className="mt-2">
-                  <span className="font-heading text-3xl font-bold text-cyan">
+                  <span className="font-heading text-3xl font-bold text-white">
                     $30
                   </span>
-                  <span className="ml-1 text-muted">/hour</span>
+                  <span className="ml-1 text-white/70">/hour</span>
                 </div>
-                <p className="mt-2 text-sm text-muted">
+                <p className="mt-2 text-sm text-white/70">
                   Discounted rate for Unlimited Membership holders. Priority
                   booking access included.
                 </p>
@@ -79,11 +79,11 @@ export default function PricingPage() {
 
       {/* Special Offers */}
       <Section>
-        <div className="mx-auto max-w-2xl rounded-xl border-2 border-cyan bg-steel p-8 text-center glow-cyan">
+        <div className="mx-auto max-w-2xl rounded-xl border-2 border-white/30 bg-steel p-8 text-center">
           <h2 className="font-heading text-2xl font-bold md:text-3xl">
             Intro Offer: First Class Free
           </h2>
-          <p className="mt-3 text-muted">
+          <p className="mt-3 text-white/70">
             New to HyperFit? Try your first group class completely free — no
             strings attached. Experience the training, meet the coaches, and
             see why Mitcham trains here.
@@ -102,7 +102,7 @@ export default function PricingPage() {
           <h2 className="font-heading text-3xl font-bold md:text-4xl">
             Have Questions About Pricing?
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-muted">
+          <p className="mx-auto mt-4 max-w-xl text-white/70">
             Get in touch and we&apos;ll find the plan that works best for your
             goals and budget.
           </p>

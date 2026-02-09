@@ -60,7 +60,7 @@ export default function AboutPage() {
             title="Our Mission"
             subtitle="To make functional fitness accessible, effective, and enjoyable for everyone — regardless of age, experience, or fitness level."
           />
-          <p className="text-muted leading-relaxed">
+          <p className="text-white/70 leading-relaxed">
             HyperFit was founded with a simple belief: training should prepare
             you for life, not just the mirror. Our open functional training
             space, fully equipped gym floor, and private rooms create an
@@ -83,10 +83,10 @@ export default function AboutPage() {
               key={value.title}
               className="rounded-xl bg-jet p-6 border border-steel"
             >
-              <h3 className="font-heading text-xl font-bold text-cyan">
+              <h3 className="font-heading text-xl font-bold text-white">
                 {value.title}
               </h3>
-              <p className="mt-2 text-muted">{value.description}</p>
+              <p className="mt-2 text-white/70">{value.description}</p>
             </div>
           ))}
         </div>
@@ -102,7 +102,7 @@ export default function AboutPage() {
           <ul className="space-y-3">
             {whoItsFor.map((item) => (
               <li key={item} className="flex items-start gap-3">
-                <CheckIcon className="mt-1 h-5 w-5 shrink-0 text-cyan" />
+                <CheckIcon className="mt-1 h-5 w-5 shrink-0 text-white" />
                 <span className="text-lg">{item}</span>
               </li>
             ))}
@@ -116,7 +116,7 @@ export default function AboutPage() {
           <h2 className="font-heading text-3xl font-bold md:text-4xl">
             Come See the Space
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-muted">
+          <p className="mx-auto mt-4 max-w-xl text-white/70">
             Drop in for a tour, try a free class, or get in touch — we&apos;d love
             to show you around HyperFit Mitcham.
           </p>

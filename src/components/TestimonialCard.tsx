@@ -13,16 +13,16 @@ export default function TestimonialCard({
 }: TestimonialCardProps) {
   return (
     <div className="card-futuristic rounded-xl p-6 transition-all duration-300">
-      <div className="mb-3 flex gap-1 text-cyan">
+      <div className="mb-3 flex gap-1 text-white">
         {Array.from({ length: rating }).map((_, i) => (
           <StarIcon key={i} className="h-4 w-4" />
         ))}
       </div>
-      <p className="text-sm leading-relaxed text-muted italic">
+      <p className="text-sm leading-relaxed text-white/70 italic">
         &ldquo;{text}&rdquo;
       </p>
-      <div className="mt-5 flex items-center gap-3 border-t border-cyan/10 pt-4">
-        <div className="flex h-9 w-9 items-center justify-center rounded-full bg-cyan/10 font-heading text-sm font-bold text-cyan">
+      <div className="mt-5 flex items-center gap-3 border-t border-white/10 pt-4">
+        <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 font-heading text-sm font-bold text-white">
           {name.charAt(0)}
         </div>
         <span className="font-heading text-sm font-bold">{name}</span>

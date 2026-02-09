@@ -69,7 +69,7 @@ export default function ContactPage() {
 
             {/* Socials */}
             <div className="mt-8">
-              <h3 className="font-heading text-sm font-bold uppercase tracking-wider text-cyan">
+              <h3 className="font-heading text-sm font-bold uppercase tracking-wider text-white">
                 Follow Us
               </h3>
               <div className="mt-3 flex gap-4">
@@ -78,7 +78,7 @@ export default function ContactPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
-                  className="rounded-lg bg-steel p-3 text-muted transition-colors hover:bg-steel-light hover:text-cyan"
+                  className="rounded-lg bg-steel p-3 text-white/70 transition-colors hover:bg-steel-light hover:text-white"
                 >
                   <InstagramIcon />
                 </a>
@@ -87,7 +87,7 @@ export default function ContactPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"
-                  className="rounded-lg bg-steel p-3 text-muted transition-colors hover:bg-steel-light hover:text-cyan"
+                  className="rounded-lg bg-steel p-3 text-white/70 transition-colors hover:bg-steel-light hover:text-white"
                 >
                   <FacebookIcon />
                 </a>
@@ -96,7 +96,7 @@ export default function ContactPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="TikTok"
-                  className="rounded-lg bg-steel p-3 text-muted transition-colors hover:bg-steel-light hover:text-cyan"
+                  className="rounded-lg bg-steel p-3 text-white/70 transition-colors hover:bg-steel-light hover:text-white"
                 >
                   <TikTokIcon />
                 </a>
@@ -138,7 +138,7 @@ export default function ContactPage() {
           <h2 className="font-heading text-3xl font-bold md:text-4xl">
             Ready to Start Training?
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-muted">
+          <p className="mx-auto mt-4 max-w-xl text-white/70">
             Book your first class, claim your free trial, or just drop in and
             say hello. We can&apos;t wait to meet you.
           </p>

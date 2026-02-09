@@ -142,17 +142,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ─── Gradient Text ─── */
 .text-gradient {
-  background: linear-gradient(135deg, #FFFFFF 0%, var(--color-cyan) 50%, var(--color-cyan-glow) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
 }
 
 .text-gradient-accent {
-  background: linear-gradient(135deg, var(--color-cyan) 0%, var(--color-purple) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
 }
 
 /* ─── Corner Accent ─── */

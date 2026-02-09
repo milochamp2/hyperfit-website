@@ -37,7 +37,7 @@ export default function FAQsPage() {
           <h2 className="font-heading text-3xl font-bold md:text-4xl">
             Still Have Questions?
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-muted">
+          <p className="mx-auto mt-4 max-w-xl text-white/70">
             Our team is happy to help. Reach out anytime and we&apos;ll get
             back to you as soon as possible.
           </p>

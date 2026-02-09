@@ -21,12 +21,12 @@ export default function SectionHeading({
         {title}
       </h2>
       {subtitle && (
-        <p className="mt-4 text-lg text-muted md:text-xl">{subtitle}</p>
+        <p className="mt-4 text-lg text-white/70 md:text-xl">{subtitle}</p>
       )}
       <div className={`mt-5 flex items-center gap-2 ${centered ? "justify-center" : ""}`}>
-        <div className="h-px w-8 bg-cyan/30" />
-        <div className="h-1.5 w-1.5 rotate-45 bg-cyan" />
-        <div className="h-px w-8 bg-cyan/30" />
+        <div className="h-px w-8 bg-white/30" />
+        <div className="h-1.5 w-1.5 rotate-45 bg-white" />
+        <div className="h-px w-8 bg-white/30" />
       </div>
     </div>
   );

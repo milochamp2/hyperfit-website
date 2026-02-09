@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 z-50 w-full bg-jet/80 backdrop-blur-md">
       {/* Accent line at very top */}
-      <div className="h-px w-full bg-gradient-to-r from-transparent via-cyan/40 to-transparent" />
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent" />
 
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
         {/* Logo */}
@@ -29,13 +29,13 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className={`relative text-xs font-semibold uppercase tracking-widest transition-colors hover:text-cyan ${
-                pathname === item.href ? "text-cyan" : "text-muted"
+              className={`relative text-xs font-semibold uppercase tracking-widest transition-colors hover:text-white ${
+                pathname === item.href ? "text-white" : "text-white/70"
               }`}
             >
               {item.label}
               {pathname === item.href && (
-                <span className="absolute -bottom-1 left-0 h-px w-full bg-cyan" />
+                <span className="absolute -bottom-1 left-0 h-px w-full bg-white" />
               )}
             </Link>
           ))}
@@ -52,7 +52,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="text-white transition-colors hover:text-cyan lg:hidden cursor-pointer"
+          className="text-white transition-colors hover:text-white/80 lg:hidden cursor-pointer"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
           {mobileOpen ? <XIcon /> : <MenuIcon />}
@@ -74,8 +74,8 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileOpen(false)}
-                className={`font-heading text-sm font-semibold uppercase tracking-widest transition-colors hover:text-cyan ${
-                  pathname === item.href ? "text-cyan" : "text-white"
+                className={`font-heading text-sm font-semibold uppercase tracking-widest transition-colors hover:text-white ${
+                  pathname === item.href ? "text-white" : "text-white/70"
                 }`}
               >
                 {item.label}

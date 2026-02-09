@@ -16,11 +16,11 @@ interface ButtonProps {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-cyan text-jet font-bold hover:bg-cyan-glow btn-shimmer glow-cyan-hover transition-all duration-300 hover:scale-[1.03]",
+    "bg-white text-jet font-bold hover:bg-white/90 btn-shimmer transition-all duration-300 hover:scale-[1.03]",
   outline:
-    "border border-cyan/50 text-cyan font-bold hover:border-cyan hover:bg-cyan/10 hover:shadow-[0_0_20px_rgba(0,194,255,0.15)] transition-all duration-300 hover:scale-[1.03]",
+    "border border-white/50 text-white font-bold hover:border-white hover:bg-white/10 transition-all duration-300 hover:scale-[1.03]",
   ghost:
-    "text-cyan font-semibold hover:text-cyan-glow transition-all duration-300 underline-offset-4 hover:underline",
+    "text-white font-semibold hover:text-white/80 transition-all duration-300 underline-offset-4 hover:underline",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {

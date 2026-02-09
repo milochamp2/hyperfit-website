@@ -12,12 +12,12 @@ export default function LocationHours() {
             label: "Address",
             content: (
               <>
-                <p className="text-muted">{siteConfig.address.full}</p>
+                <p className="text-white/70">{siteConfig.address.full}</p>
                 <a
                   href={siteConfig.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-1 inline-block text-sm text-cyan hover:text-cyan-glow transition-colors"
+                  className="mt-1 inline-block text-sm text-white/70 hover:text-white transition-colors"
                 >
                   Get Directions &rarr;
                 </a>
@@ -30,7 +30,7 @@ export default function LocationHours() {
             content: (
               <a
                 href={`tel:${siteConfig.phone}`}
-                className="text-muted hover:text-cyan transition-colors"
+                className="text-white/70 hover:text-white transition-colors"
               >
                 {siteConfig.phoneDisplay}
               </a>
@@ -42,7 +42,7 @@ export default function LocationHours() {
             content: (
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="text-muted hover:text-cyan transition-colors"
+                className="text-white/70 hover:text-white transition-colors"
               >
                 {siteConfig.email}
               </a>
@@ -50,8 +50,8 @@ export default function LocationHours() {
           },
         ].map(({ Icon, label, content }) => (
           <div key={label} className="flex items-start gap-4">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-cyan/15 bg-cyan/5">
-              <Icon className="h-4 w-4 text-cyan" />
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-white/15 bg-white/5">
+              <Icon className="h-4 w-4 text-white" />
             </div>
             <div>
               <h3 className="font-heading text-sm font-bold uppercase tracking-wider">
@@ -66,7 +66,7 @@ export default function LocationHours() {
       {/* Business Hours */}
       <div className="card-futuristic rounded-xl p-6">
         <div className="mb-5 flex items-center gap-2">
-          <ClockIcon className="h-4 w-4 text-cyan" />
+          <ClockIcon className="h-4 w-4 text-white" />
           <h3 className="font-heading text-sm font-bold uppercase tracking-wider">
             Opening Hours
           </h3>
@@ -75,10 +75,10 @@ export default function LocationHours() {
           {siteConfig.hours.map((h) => (
             <div
               key={h.day}
-              className="flex justify-between border-b border-cyan/5 pb-2.5 text-sm"
+              className="flex justify-between border-b border-white/5 pb-2.5 text-sm"
             >
               <span className="font-medium">{h.day}</span>
-              <span className="text-muted">
+              <span className="text-white/70">
                 {h.open} – {h.close}
               </span>
             </div>

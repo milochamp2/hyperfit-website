@@ -39,7 +39,7 @@ export default function ServicesPage() {
           <h2 className="font-heading text-3xl font-bold md:text-4xl">
             Not Sure Where to Start?
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-muted">
+          <p className="mx-auto mt-4 max-w-xl text-white/70">
             Book a free introductory session and we&apos;ll help you find the
             right training for your goals and fitness level.
           </p>

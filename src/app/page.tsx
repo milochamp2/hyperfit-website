@@ -140,7 +140,7 @@ export default function Home() {
           <h2 className="text-gradient font-heading text-3xl font-bold uppercase tracking-tight md:text-4xl lg:text-5xl">
             Ready to Train Different?
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-muted">
+          <p className="mx-auto mt-4 max-w-xl text-lg text-white/70">
             Stop going through the motions. Start training with purpose at
             Mitcham&apos;s leading function training gym.
           </p>

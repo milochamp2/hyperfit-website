@@ -4,7 +4,7 @@ import { useState, type FormEvent } from "react";
 import Button from "./Button";
 
 const inputStyles =
-  "w-full rounded-lg border border-cyan/10 bg-steel/50 px-4 py-3 text-white placeholder-muted/50 outline-none transition-all focus:border-cyan/40 focus:shadow-[0_0_12px_rgba(0,194,255,0.08)]";
+  "w-full rounded-lg border border-white/10 bg-steel/50 px-4 py-3 text-white placeholder-white/40 outline-none transition-all focus:border-white/40 focus:shadow-[0_0_12px_rgba(255,255,255,0.05)]";
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -17,11 +17,11 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="card-futuristic rounded-xl p-8 text-center glow-cyan">
+      <div className="card-futuristic rounded-xl p-8 text-center">
         <h3 className="text-gradient font-heading text-2xl font-bold">
           Message Sent!
         </h3>
-        <p className="mt-2 text-muted">
+        <p className="mt-2 text-white/70">
           Thanks for reaching out. We&apos;ll get back to you shortly.
         </p>
       </div>
@@ -32,7 +32,7 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-5">
       <div className="grid gap-5 md:grid-cols-2">
         <div>
-          <label htmlFor="name" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-muted">
+          <label htmlFor="name" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-white/70">
             Name
           </label>
           <input
@@ -45,7 +45,7 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label htmlFor="email" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-muted">
+          <label htmlFor="email" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-white/70">
             Email
           </label>
           <input
@@ -59,7 +59,7 @@ export default function ContactForm() {
         </div>
       </div>
       <div>
-        <label htmlFor="phone" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-muted">
+        <label htmlFor="phone" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-white/70">
           Phone (optional)
         </label>
         <input
@@ -71,7 +71,7 @@ export default function ContactForm() {
         />
       </div>
       <div>
-        <label htmlFor="message" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-muted">
+        <label htmlFor="message" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-white/70">
           Message
         </label>
         <textarea
