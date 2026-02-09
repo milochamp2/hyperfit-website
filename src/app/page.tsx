@@ -45,7 +45,7 @@ export default function Home() {
     <>
       {/* Hero */}
       <Hero
-        title="Train With Purpose. Build Real Strength."
+        title="SELF. CARE. CLUB."
         subtitle="Mitcham's premier function training gym — open functional space, full gym facilities, and 3 private training & recovery rooms."
       />
 
