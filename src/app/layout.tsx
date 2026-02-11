@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_AU",
     siteName: "HyperFit",
-    title: "HyperFit | Function Training Gym in Mitcham",
+    title: "HyperFit | Function Training - 24/7 Gym - Recovery",
     description:
       "Mitcham's premier function training gym. Open functional space, full gym, 3 private rooms. Book your class today.",
   },
