@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import IntroOverlay from "@/components/IntroOverlay";
 import ChatWidget from "@/components/ChatWidget";
+import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -60,6 +61,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${montserrat.variable} ${inter.variable}`}>
       <body className="flex min-h-screen flex-col antialiased">
+        <SmoothScroll />
         <IntroOverlay />
         <Header />
         <main className="flex-1 pt-[72px]">{children}</main>
