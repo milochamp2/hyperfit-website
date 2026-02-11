@@ -41,6 +41,14 @@ export const metadata: Metadata = {
     title: "HyperFit | Function Training - 24/7 Gym - Recovery",
     description:
       "Mitcham's premier function training gym. Open functional space, full gym, 3 private rooms. Book your class today.",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "HyperFit - Function Training - 24/7 Gym - Recovery",
+      },
+    ],
   },
 };
 
