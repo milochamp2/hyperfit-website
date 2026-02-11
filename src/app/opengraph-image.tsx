@@ -17,7 +17,6 @@ export default async function Image() {
           width: "100%",
           height: "100%",
           display: "flex",
-          flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
           padding: "80px",
@@ -32,7 +31,6 @@ export default async function Image() {
             fontStyle: "italic",
             color: "white",
             letterSpacing: "-0.05em",
-            marginBottom: "40px",
           }}
         >
           <span style={{ marginRight: "20px" }}>HYPER</span>
@@ -44,19 +42,6 @@ export default async function Image() {
           >
             FIT
           </span>
-        </div>
-
-        {/* Tagline */}
-        <div
-          style={{
-            display: "flex",
-            fontSize: 36,
-            color: "rgba(255, 255, 255, 0.8)",
-            textAlign: "center",
-            fontWeight: 600,
-          }}
-        >
-          Function Training - 24/7 Gym - Recovery
         </div>
       </div>
     ),
