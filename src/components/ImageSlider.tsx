@@ -46,9 +46,9 @@ export default function ImageSlider({
   if (images.length === 0) return null;
 
   return (
-    <div className="relative w-full overflow-hidden rounded-xl border border-steel">
+    <div className="relative mx-auto max-w-4xl overflow-hidden rounded-xl border border-steel">
       {/* Slides container */}
-      <div className="relative aspect-[16/10] w-full">
+      <div className="relative aspect-[16/9] w-full bg-jet-light">
         {images.map((image, index) => (
           <div
             key={image.src}
@@ -62,16 +62,16 @@ export default function ImageSlider({
               src={image.src}
               alt={image.alt}
               fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1100px"
+              className="object-contain"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 896px"
               priority={index === 0}
             />
           </div>
         ))}
 
         {/* Gradient overlays for edges */}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-jet/30 via-transparent to-jet/30" />
-        <div className="pointer-events-none absolute bottom-0 left-0 h-24 w-full bg-gradient-to-t from-jet/60 to-transparent" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-jet/20 via-transparent to-jet/20" />
+        <div className="pointer-events-none absolute bottom-0 left-0 h-16 w-full bg-gradient-to-t from-jet/40 to-transparent" />
       </div>
 
       {/* Navigation arrows */}
