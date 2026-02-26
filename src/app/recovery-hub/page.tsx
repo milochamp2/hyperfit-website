@@ -25,6 +25,29 @@ const room3Images = [
   { src: "/recovery/private room 3 images/image 9.jpg", alt: "Private Room 3 — Full room view" },
 ];
 
+const room2Images = [
+  { src: "/recovery/private room 2 images/pr2 img 1.jpg", alt: "Private Room 2 — Overview" },
+  { src: "/recovery/private room 2 images/pr2 img 2.jpg", alt: "Private Room 2 — Training area" },
+  { src: "/recovery/private room 2 images/pr2 img 3.jpg", alt: "Private Room 2 — Equipment" },
+  { src: "/recovery/private room 2 images/pr2 img 4.jpg", alt: "Private Room 2 — Session space" },
+  { src: "/recovery/private room 2 images/pr2 img 5.jpg", alt: "Private Room 2 — Recovery setup" },
+  { src: "/recovery/private room 2 images/pr2 img 6.jpg", alt: "Private Room 2 — Full room view" },
+];
+
+const platinumRoomImages = [
+  { src: "/recovery/platinum room/plat room image 1.jpg", alt: "Platinum Room — Overview" },
+  { src: "/recovery/platinum room/plat room img 2.jpg", alt: "Platinum Room — Interior" },
+  { src: "/recovery/platinum room/plat room image 3.jpg", alt: "Platinum Room — Facilities" },
+  { src: "/recovery/platinum room/plat room image 4.jpg", alt: "Platinum Room — Full view" },
+];
+
+const saunaRoomImages = [
+  { src: "/recovery/sauna room/plat room image 5.jpg", alt: "Sauna Room — Overview" },
+  { src: "/recovery/sauna room/plat room image 6.jpg", alt: "Sauna Room — Interior" },
+  { src: "/recovery/sauna room/plat room image 7.jpg", alt: "Sauna Room — Facilities" },
+  { src: "/recovery/sauna room/plat room image 8.jpg", alt: "Sauna Room — Full view" },
+];
+
 const recoveryServices = [
   "Guided stretching and mobility sessions",
   "Soft tissue work and foam rolling",
@@ -51,6 +74,34 @@ export default function RecoveryHubPage() {
           gradient
         />
         <ImageSlider images={room3Images} autoPlayInterval={5000} />
+      </Section>
+
+      {/* Private Room 2 Gallery */}
+      <Section dark>
+        <SectionHeading
+          title="Private Room 2"
+          subtitle="A versatile private training space for personal training, rehab, and focused sessions."
+        />
+        <ImageSlider images={room2Images} autoPlayInterval={5000} />
+      </Section>
+
+      {/* Platinum Room Gallery */}
+      <Section>
+        <SectionHeading
+          title="Platinum Room"
+          subtitle="Our premium private room — the ultimate space for elite training and recovery."
+          gradient
+        />
+        <ImageSlider images={platinumRoomImages} autoPlayInterval={5000} />
+      </Section>
+
+      {/* Sauna Room Gallery */}
+      <Section dark>
+        <SectionHeading
+          title="Sauna Room"
+          subtitle="Heat therapy for deep recovery — relax, restore, and rejuvenate after every session."
+        />
+        <ImageSlider images={saunaRoomImages} autoPlayInterval={5000} />
       </Section>
 
       {/* What We Offer */}
