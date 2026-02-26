@@ -26,7 +26,7 @@ export default function ImageSlider({
       if (isTransitioning || index === current) return;
       setIsTransitioning(true);
       setCurrent(index);
-      setTimeout(() => setIsTransitioning(false), 500);
+      setTimeout(() => setIsTransitioning(false), 700);
     },
     [current, isTransitioning]
   );
@@ -35,14 +35,14 @@ export default function ImageSlider({
     const nextIndex = (current + 1) % images.length;
     setIsTransitioning(true);
     setCurrent(nextIndex);
-    setTimeout(() => setIsTransitioning(false), 500);
+    setTimeout(() => setIsTransitioning(false), 700);
   }, [current, images.length]);
 
   const prev = useCallback(() => {
     const prevIndex = (current - 1 + images.length) % images.length;
     setIsTransitioning(true);
     setCurrent(prevIndex);
-    setTimeout(() => setIsTransitioning(false), 500);
+    setTimeout(() => setIsTransitioning(false), 700);
   }, [current, images.length]);
 
   useEffect(() => {
@@ -65,9 +65,10 @@ export default function ImageSlider({
         {/* Sliding track */}
         <div
           ref={trackRef}
-          className="flex transition-transform duration-500 ease-in-out"
+          className="flex"
           style={{
             transform: `translateX(${translateX}%)`,
+            transition: "transform 700ms cubic-bezier(0.25, 0.1, 0.25, 1)",
           }}
         >
           {images.map((image, index) => (
@@ -77,17 +78,20 @@ export default function ImageSlider({
               style={{ width: `${slideWidth}%`, marginRight: `${gap}%` }}
             >
               <div
-                className={`relative h-full w-full overflow-hidden rounded-lg border transition-all duration-500 ${
+                className={`relative h-full w-full overflow-hidden rounded-lg ${
                   index === current
-                    ? "border-white/20 scale-100 opacity-100"
-                    : "border-steel scale-95 opacity-40"
+                    ? "scale-100 opacity-100"
+                    : "scale-[0.92] opacity-30"
                 }`}
+                style={{
+                  transition: "transform 700ms cubic-bezier(0.25, 0.1, 0.25, 1), opacity 700ms cubic-bezier(0.25, 0.1, 0.25, 1)",
+                }}
               >
                 <Image
                   src={image.src}
                   alt={image.alt}
                   fill
-                  className="object-contain bg-jet-light"
+                  className="object-contain bg-jet"
                   sizes="(max-width: 768px) 80vw, (max-width: 1200px) 60vw, 700px"
                   priority={index === 0}
                 />

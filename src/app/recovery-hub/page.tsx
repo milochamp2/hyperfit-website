@@ -154,12 +154,12 @@ export default function RecoveryHubPage() {
             ].map((stat) => (
               <div
                 key={stat.label}
-                className="flex flex-col items-center justify-center rounded-xl border border-steel bg-jet-light p-6 text-center"
+                className="card-futuristic flex flex-col items-center justify-center rounded-xl p-6 text-center transition-all duration-300"
               >
-                <div className="font-heading text-3xl font-bold text-white">
+                <div className="font-heading text-3xl font-bold text-white md:text-4xl">
                   {stat.value}
                 </div>
-                <div className="mt-1 text-xs uppercase tracking-wider text-white/70">
+                <div className="mt-2 text-xs uppercase tracking-wider text-white/70">
                   {stat.label}
                 </div>
               </div>
