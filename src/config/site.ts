@@ -6,9 +6,9 @@ export const siteConfig = {
   url: "https://www.hyperfit.com.au",
 
   // Contact
-  phone: "+61 3 9999 0000",
-  phoneDisplay: "(03) 9999 0000",
-  email: "info@hyperfit.com.au",
+  phone: "+61 436 526 009",
+  phoneDisplay: "0436 526 009",
+  email: "admin@hyperfit.com.au",
 
   // Location
   address: {
@@ -22,8 +22,8 @@ export const siteConfig = {
 
   // External Links
   bookingUrl: "https://clients.mindbodyonline.com/classic/ws?studioid=000000",
-  messageUrl: "sms:+61399990000",
-  whatsappUrl: "https://wa.me/61399990000",
+  messageUrl: "sms:+61436526009",
+  whatsappUrl: "https://wa.me/61436526009",
   googleMapsUrl: "https://maps.google.com/?q=HyperFit+Mitcham",
   googleMapsEmbed:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d145.1942!3d-37.8136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sMitcham+VIC+3132!5e0!3m2!1sen!2sau!4v1700000000000!5m2!1sen!2sau",

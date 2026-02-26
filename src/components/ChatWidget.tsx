@@ -10,35 +10,101 @@ interface Message {
 const quickReplies = [
   "What are your opening hours?",
   "How much is a membership?",
-  "Do you offer free trials?",
+  "What services do you offer?",
+  "Tell me about recovery rooms",
   "Where are you located?",
 ];
 
 function getBotResponse(message: string): string {
   const lower = message.toLowerCase();
 
-  if (lower.includes("hour") || lower.includes("open") || lower.includes("close")) {
-    return "We're open Monday–Friday 5:00 AM – 9:00 PM, Saturday 7:00 AM – 5:00 PM, and Sunday 8:00 AM – 2:00 PM.";
+  // Greetings
+  if (lower.includes("hello") || lower.includes("hi") || lower.includes("hey") || lower.includes("g'day")) {
+    return "Hey there! Welcome to HyperFit — Mitcham's premier function training gym. How can I help you today?";
   }
-  if (lower.includes("price") || lower.includes("cost") || lower.includes("membership") || lower.includes("much")) {
-    return "We offer Casual visits at $25, 10 Class Packs at $200, Unlimited Membership at $55/week, and PT sessions at $80/session. Visit our Pricing page for full details!";
+
+  // Opening hours
+  if (lower.includes("hour") || lower.includes("open") || lower.includes("close") || lower.includes("time")) {
+    return "We're open Mon–Thu 5:30 AM – 8:30 PM, Friday 5:30 AM – 7:00 PM, Saturday 7:00 AM – 1:00 PM, and Sunday 8:00 AM – 12:00 PM.";
   }
+
+  // Pricing & membership
+  if (lower.includes("price") || lower.includes("cost") || lower.includes("membership") || lower.includes("much") || lower.includes("fee")) {
+    return "Our plans: Casual Visit $25/session, 10-Class Pack $200, Unlimited Membership $55/week (most popular — includes unlimited classes, full gym access & 1 free PT/month), and PT Packages at $90/session. Check out /pricing for full details!";
+  }
+
+  // Free trial
   if (lower.includes("free") || lower.includes("trial")) {
-    return "Yes! Your first group class is completely free — no strings attached. Book through our website or just drop in!";
+    return "Yes! Your first group class is completely free — no strings attached. Book through our website or just drop in and we'll get you started!";
   }
-  if (lower.includes("location") || lower.includes("where") || lower.includes("address") || lower.includes("find")) {
-    return "We're located at 1 Mitcham Road, Mitcham VIC 3132. There's plenty of free parking available!";
+
+  // Location
+  if (lower.includes("location") || lower.includes("where") || lower.includes("address") || lower.includes("find") || lower.includes("direction")) {
+    return "We're at 123 Whitehorse Road, Mitcham VIC 3132. Plenty of free parking right outside the gym! Visit /contact for a map.";
   }
+
+  // Recovery Hub / Private rooms
+  if (lower.includes("recover") || lower.includes("rehab") || lower.includes("mobility") || lower.includes("sauna") || lower.includes("platinum")) {
+    return "Our Recovery Hub features 4 dedicated spaces: Private Room 2 & 3 for training and recovery, the Platinum Room for elite sessions, and a Sauna Room for heat therapy. We offer guided stretching, soft tissue work, injury rehab, and more. Check out /recovery-hub to see the rooms!";
+  }
+
+  // Private rooms
   if (lower.includes("private") || lower.includes("room")) {
-    return "We have 3 private training & recovery rooms available for hire. Standard rate is $40/hour, or $30/hour for members.";
+    return "We have 3 private training & recovery rooms plus a Sauna Room. They're perfect for personal training, rehab, mobility work, or small group sessions. Members get discounted rates. See all rooms at /recovery-hub!";
   }
-  if (lower.includes("class") || lower.includes("group")) {
-    return "We run 50+ group classes per week including functional training, HIIT, strength, and mobility sessions. Book online or via our app!";
+
+  // Services overview
+  if (lower.includes("service") || lower.includes("offer") || lower.includes("what do you")) {
+    return "At HyperFit we offer: Functional Group Training (50+ classes/week), Open Gym Access (full equipment), Personal Training (1-on-1 coaching), Recovery & Mobility Sessions, Private Room Training, and Small Group Bookings. Visit /services for details!";
   }
-  if (lower.includes("hello") || lower.includes("hi") || lower.includes("hey")) {
-    return "Hey there! Welcome to HyperFit. How can I help you today?";
+
+  // Functional training / group classes
+  if (lower.includes("class") || lower.includes("group") || lower.includes("functional") || lower.includes("training")) {
+    return "We run 50+ coach-led group classes per week — functional training, strength, HIIT, and mobility sessions. Every class is scalable for all fitness levels. Book online or check our timetable!";
   }
-  return "Thanks for your message! For detailed enquiries, feel free to call us at 0412 345 678 or visit our Contact page. I can help with hours, pricing, location, and class info!";
+
+  // Personal training
+  if (lower.includes("personal") || lower.includes("pt") || lower.includes("coach") || lower.includes("one on one") || lower.includes("1 on 1")) {
+    return "Our certified personal trainers create customised programs for your goals — strength, fat loss, rehab, or performance. PT sessions are $90/session with private room access and nutrition guidance included.";
+  }
+
+  // Gym / equipment
+  if (lower.includes("gym") || lower.includes("equipment") || lower.includes("weights") || lower.includes("cardio")) {
+    return "Our fully equipped gym includes premium free weights, machines, cardio equipment, functional rigs, sleds, ropes, and more. Open gym access is included with all memberships!";
+  }
+
+  // Booking
+  if (lower.includes("book") || lower.includes("reserve") || lower.includes("sign up") || lower.includes("join")) {
+    return "You can book classes and sessions through our online booking system. Click 'Book a Class' on our website or download the Mindbody app. You can also call us at 0436 526 009!";
+  }
+
+  // Contact
+  if (lower.includes("contact") || lower.includes("phone") || lower.includes("call") || lower.includes("email")) {
+    return "You can reach us at 0436 526 009 or email admin@hyperfit.com.au. Visit /contact for our full contact form and map!";
+  }
+
+  // Parking
+  if (lower.includes("park")) {
+    return "Yes! We have dedicated free parking right outside the gym, plus additional street parking on Whitehorse Road and surrounding streets.";
+  }
+
+  // Cancellation
+  if (lower.includes("cancel")) {
+    return "Memberships can be cancelled with 2 weeks' written notice. Class bookings can be cancelled up to 4 hours before without charge. Late cancellations may incur a fee.";
+  }
+
+  // What to bring
+  if (lower.includes("bring") || lower.includes("wear") || lower.includes("need")) {
+    return "Just bring comfortable workout clothes, supportive shoes, a water bottle, and a towel. We provide towels and filtered water for members. No special equipment needed!";
+  }
+
+  // Beginner
+  if (lower.includes("beginner") || lower.includes("start") || lower.includes("new") || lower.includes("first time") || lower.includes("nervous")) {
+    return "All levels welcome! Our classes are scalable for complete beginners to advanced athletes. Our coaches will modify exercises to match your ability. Try your first class free — we'll make you feel right at home!";
+  }
+
+  // Default
+  return "Thanks for your message! I can help with hours, pricing, services, recovery rooms, classes, and more. For detailed enquiries, call us at 0436 526 009 or email admin@hyperfit.com.au.";
 }
 
 export default function ChatWidget() {
