@@ -14,15 +14,15 @@ export const metadata: Metadata = {
 };
 
 const room3Images = [
-  { src: "/recovery/room3-1.jpg", alt: "Private Room 3 — Recovery space overview" },
-  { src: "/recovery/room3-2.jpg", alt: "Private Room 3 — Recovery equipment" },
-  { src: "/recovery/room3-3.jpg", alt: "Private Room 3 — Treatment area" },
-  { src: "/recovery/room3-4.jpg", alt: "Private Room 3 — Mobility station" },
-  { src: "/recovery/room3-5.jpg", alt: "Private Room 3 — Recovery tools" },
-  { src: "/recovery/room3-6.jpg", alt: "Private Room 3 — Stretching space" },
-  { src: "/recovery/room3-7.jpg", alt: "Private Room 3 — Rehabilitation area" },
-  { src: "/recovery/room3-8.jpg", alt: "Private Room 3 — Private setting" },
-  { src: "/recovery/room3-9.jpg", alt: "Private Room 3 — Full room view" },
+  { src: "/recovery/image 1.jpg", alt: "Private Room 3 — Recovery space overview" },
+  { src: "/recovery/image 2.jpg", alt: "Private Room 3 — Recovery equipment" },
+  { src: "/recovery/image 3.jpg", alt: "Private Room 3 — Treatment area" },
+  { src: "/recovery/image 4.jpg", alt: "Private Room 3 — Mobility station" },
+  { src: "/recovery/image 5.jpg", alt: "Private Room 3 — Recovery tools" },
+  { src: "/recovery/image 6.jpg", alt: "Private Room 3 — Stretching space" },
+  { src: "/recovery/image 7.jpg", alt: "Private Room 3 — Rehabilitation area" },
+  { src: "/recovery/image 8.jpg", alt: "Private Room 3 — Private setting" },
+  { src: "/recovery/image 9.jpg", alt: "Private Room 3 — Full room view" },
 ];
 
 const recoveryServices = [
