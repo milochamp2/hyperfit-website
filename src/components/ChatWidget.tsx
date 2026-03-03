@@ -43,14 +43,19 @@ function getBotResponse(message: string): string {
     return "We're at 123 Whitehorse Road, Mitcham VIC 3132. Plenty of free parking right outside the gym! Visit /contact for a map.";
   }
 
-  // Recovery Hub / Private rooms
-  if (lower.includes("recover") || lower.includes("rehab") || lower.includes("mobility") || lower.includes("sauna") || lower.includes("platinum")) {
-    return "Our Recovery Hub features 4 dedicated spaces: Private Room 2 & 3 for training and recovery, the Platinum Room for elite sessions, and a Sauna Room for heat therapy. We offer guided stretching, soft tissue work, injury rehab, and more. Check out /recovery-hub to see the rooms!";
+  // Recovery Hub / Sauna / Bath
+  if (lower.includes("recover") || lower.includes("rehab") || lower.includes("mobility") || lower.includes("sauna") || lower.includes("bath") || lower.includes("platinum")) {
+    return "Our Recovery Hub has 3 private rooms, each with a 4-person sauna, hot bath, and cold bath. Private Room 1 (Platinum) starts at $40/hr, Rooms 2 & 3 start at $35/hr. Recovery Boots available for $25/hr. Open 5 AM – 10 PM daily. Check out /recovery-hub for photos and full pricing!";
   }
 
-  // Private rooms
+  // Private rooms / pricing
   if (lower.includes("private") || lower.includes("room")) {
-    return "We have 3 private training & recovery rooms plus a Sauna Room. They're perfect for personal training, rehab, mobility work, or small group sessions. Members get discounted rates. See all rooms at /recovery-hub!";
+    return "We have 3 private recovery rooms: Room 1 (Platinum) from $40 (1 person) to $100 (4 people), Rooms 2 & 3 from $35 (1 person) to $95 (4 people). All rooms include sauna, hot bath & cold bath. 1-hour passes, open 5 AM – 10 PM. See /recovery-hub!";
+  }
+
+  // Recovery boots
+  if (lower.includes("boot")) {
+    return "Recovery Boots are available for $25 per 1-hour session. Great for circulation and muscle recovery after a tough workout!";
   }
 
   // Services overview

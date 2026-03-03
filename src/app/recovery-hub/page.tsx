@@ -10,8 +10,28 @@ import { CheckIcon } from "@/components/Icons";
 export const metadata: Metadata = {
   title: "Recovery Hub",
   description:
-    "Explore HyperFit's Recovery Hub — Private Room 3 dedicated to recovery, mobility, and rehabilitation. Book your private recovery session today.",
+    "Explore HyperFit's Recovery Hub — 3 private recovery rooms with sauna, hot bath, cold bath, and recovery boots. Open 5 AM – 10 PM. Book your session today.",
 };
+
+const platinumRoomImages = [
+  { src: "/recovery/platinum room/plat room image 1.jpg", alt: "Private Room 1 (Platinum) — Overview" },
+  { src: "/recovery/platinum room/plat room img 2.jpg", alt: "Private Room 1 (Platinum) — Interior" },
+  { src: "/recovery/platinum room/plat room image 3.jpg", alt: "Private Room 1 (Platinum) — Facilities" },
+  { src: "/recovery/platinum room/plat room image 4.jpg", alt: "Private Room 1 (Platinum) — Full view" },
+  { src: "/recovery/sauna room/plat room image 5.jpg", alt: "Private Room 1 (Platinum) — Sauna" },
+  { src: "/recovery/sauna room/plat room image 6.jpg", alt: "Private Room 1 (Platinum) — Hot bath" },
+  { src: "/recovery/sauna room/plat room image 7.jpg", alt: "Private Room 1 (Platinum) — Cold bath" },
+  { src: "/recovery/sauna room/plat room image 8.jpg", alt: "Private Room 1 (Platinum) — Recovery area" },
+];
+
+const room2Images = [
+  { src: "/recovery/private room 2 images/pr2 img 1.jpg", alt: "Private Room 2 — Overview" },
+  { src: "/recovery/private room 2 images/pr2 img 2.jpg", alt: "Private Room 2 — Training area" },
+  { src: "/recovery/private room 2 images/pr2 img 3.jpg", alt: "Private Room 2 — Equipment" },
+  { src: "/recovery/private room 2 images/pr2 img 4.jpg", alt: "Private Room 2 — Session space" },
+  { src: "/recovery/private room 2 images/pr2 img 5.jpg", alt: "Private Room 2 — Recovery setup" },
+  { src: "/recovery/private room 2 images/pr2 img 6.jpg", alt: "Private Room 2 — Full room view" },
+];
 
 const room3Images = [
   { src: "/recovery/private room 3 images/image 1.jpg", alt: "Private Room 3 — Recovery space overview" },
@@ -25,36 +45,10 @@ const room3Images = [
   { src: "/recovery/private room 3 images/image 9.jpg", alt: "Private Room 3 — Full room view" },
 ];
 
-const room2Images = [
-  { src: "/recovery/private room 2 images/pr2 img 1.jpg", alt: "Private Room 2 — Overview" },
-  { src: "/recovery/private room 2 images/pr2 img 2.jpg", alt: "Private Room 2 — Training area" },
-  { src: "/recovery/private room 2 images/pr2 img 3.jpg", alt: "Private Room 2 — Equipment" },
-  { src: "/recovery/private room 2 images/pr2 img 4.jpg", alt: "Private Room 2 — Session space" },
-  { src: "/recovery/private room 2 images/pr2 img 5.jpg", alt: "Private Room 2 — Recovery setup" },
-  { src: "/recovery/private room 2 images/pr2 img 6.jpg", alt: "Private Room 2 — Full room view" },
-];
-
-const platinumRoomImages = [
-  { src: "/recovery/platinum room/plat room image 1.jpg", alt: "Platinum Room — Overview" },
-  { src: "/recovery/platinum room/plat room img 2.jpg", alt: "Platinum Room — Interior" },
-  { src: "/recovery/platinum room/plat room image 3.jpg", alt: "Platinum Room — Facilities" },
-  { src: "/recovery/platinum room/plat room image 4.jpg", alt: "Platinum Room — Full view" },
-];
-
-const saunaRoomImages = [
-  { src: "/recovery/sauna room/plat room image 5.jpg", alt: "Sauna Room — Overview" },
-  { src: "/recovery/sauna room/plat room image 6.jpg", alt: "Sauna Room — Interior" },
-  { src: "/recovery/sauna room/plat room image 7.jpg", alt: "Sauna Room — Facilities" },
-  { src: "/recovery/sauna room/plat room image 8.jpg", alt: "Sauna Room — Full view" },
-];
-
-const recoveryServices = [
-  "Guided stretching and mobility sessions",
-  "Soft tissue work and foam rolling",
-  "Post-workout recovery protocols",
-  "Injury rehabilitation sessions",
-  "Private one-on-one recovery coaching",
-  "Pre-hab and injury prevention programs",
+const roomFeatures = [
+  "4 Person Sauna",
+  "Hot Bath",
+  "Cold Bath",
 ];
 
 export default function RecoveryHubPage() {
@@ -62,11 +56,46 @@ export default function RecoveryHubPage() {
     <>
       <Hero
         title="Recovery Hub"
-        subtitle="Dedicated private recovery rooms designed for mobility, rehabilitation, and total body restoration. Train hard. Recover smarter."
+        subtitle="3 private recovery rooms featuring sauna, hot bath, cold bath, and recovery boots. Open 5 AM – 10 PM."
         showCTAs={false}
       />
 
-      {/* Room Gallery */}
+      {/* Private Room 1 (Platinum) Gallery */}
+      <Section>
+        <SectionHeading
+          title="Private Room 1 (Platinum)"
+          subtitle="Our premium recovery room — the ultimate space for elite recovery and restoration."
+          gradient
+        />
+        <ImageSlider images={platinumRoomImages} autoPlayInterval={5000} />
+        <div className="mt-8 flex flex-wrap justify-center gap-4">
+          {roomFeatures.map((feature) => (
+            <div key={feature} className="flex items-center gap-2">
+              <CheckIcon className="h-4 w-4 text-white" />
+              <span className="text-sm text-white/80">{feature}</span>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Private Room 2 Gallery */}
+      <Section dark>
+        <SectionHeading
+          title="Private Room 2"
+          subtitle="A versatile private recovery space with sauna, hot bath, and cold bath."
+        />
+        <ImageSlider images={room2Images} autoPlayInterval={5000} />
+        <div className="mt-8 flex flex-wrap justify-center gap-4">
+          {roomFeatures.map((feature) => (
+            <div key={feature} className="flex items-center gap-2">
+              <CheckIcon className="h-4 w-4 text-white" />
+              <span className="text-sm text-white/80">{feature}</span>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Private Room 3 Gallery */}
       <Section>
         <SectionHeading
           title="Private Room 3"
@@ -74,51 +103,75 @@ export default function RecoveryHubPage() {
           gradient
         />
         <ImageSlider images={room3Images} autoPlayInterval={5000} />
+        <div className="mt-8 flex flex-wrap justify-center gap-4">
+          {roomFeatures.map((feature) => (
+            <div key={feature} className="flex items-center gap-2">
+              <CheckIcon className="h-4 w-4 text-white" />
+              <span className="text-sm text-white/80">{feature}</span>
+            </div>
+          ))}
+        </div>
       </Section>
 
-      {/* Private Room 2 Gallery */}
+      {/* Pricing */}
       <Section dark>
         <SectionHeading
-          title="Private Room 2"
-          subtitle="A versatile private training space for personal training, rehab, and focused sessions."
+          title="Recovery Room Pricing"
+          subtitle="All passes are 1 hour. Open 5 AM – 10 PM daily."
         />
-        <ImageSlider images={room2Images} autoPlayInterval={5000} />
-      </Section>
+        <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-3">
+          {/* Platinum Room Pricing */}
+          <div className="card-futuristic rounded-xl p-6 transition-all duration-300">
+            <h3 className="font-heading text-lg font-bold uppercase tracking-wide text-white">
+              Private Room 1 (Platinum)
+            </h3>
+            <div className="mt-4 space-y-3">
+              {[
+                { people: "1 Person", price: "$40" },
+                { people: "2 Person", price: "$60" },
+                { people: "3 Person", price: "$80" },
+                { people: "4 Person", price: "$100" },
+              ].map((tier) => (
+                <div key={tier.people} className="flex items-center justify-between border-b border-white/10 pb-2">
+                  <span className="text-sm text-white/70">{tier.people}</span>
+                  <span className="font-heading font-bold text-white">{tier.price}</span>
+                </div>
+              ))}
+            </div>
+          </div>
 
-      {/* Platinum Room Gallery */}
-      <Section>
-        <SectionHeading
-          title="Platinum Room"
-          subtitle="Our premium private room — the ultimate space for elite training and recovery."
-          gradient
-        />
-        <ImageSlider images={platinumRoomImages} autoPlayInterval={5000} />
-      </Section>
+          {/* Private Room 2 & 3 Pricing */}
+          <div className="card-futuristic rounded-xl p-6 transition-all duration-300">
+            <h3 className="font-heading text-lg font-bold uppercase tracking-wide text-white">
+              Private Room 2 &amp; 3
+            </h3>
+            <div className="mt-4 space-y-3">
+              {[
+                { people: "1 Person", price: "$35" },
+                { people: "2 Person", price: "$55" },
+                { people: "3 Person", price: "$75" },
+                { people: "4 Person", price: "$95" },
+              ].map((tier) => (
+                <div key={tier.people} className="flex items-center justify-between border-b border-white/10 pb-2">
+                  <span className="text-sm text-white/70">{tier.people}</span>
+                  <span className="font-heading font-bold text-white">{tier.price}</span>
+                </div>
+              ))}
+            </div>
+          </div>
 
-      {/* Sauna Room Gallery */}
-      <Section dark>
-        <SectionHeading
-          title="Sauna Room"
-          subtitle="Heat therapy for deep recovery — relax, restore, and rejuvenate after every session."
-        />
-        <ImageSlider images={saunaRoomImages} autoPlayInterval={5000} />
-      </Section>
-
-      {/* What We Offer */}
-      <Section dark>
-        <SectionHeading
-          title="Recovery Services"
-          subtitle="Expert-guided recovery sessions tailored to your body and goals."
-        />
-        <div className="mx-auto max-w-2xl">
-          <ul className="space-y-3">
-            {recoveryServices.map((item) => (
-              <li key={item} className="flex items-start gap-3">
-                <CheckIcon className="mt-1 h-5 w-5 shrink-0 text-white" />
-                <span className="text-lg">{item}</span>
-              </li>
-            ))}
-          </ul>
+          {/* Recovery Boots */}
+          <div className="card-futuristic rounded-xl p-6 transition-all duration-300">
+            <h3 className="font-heading text-lg font-bold uppercase tracking-wide text-white">
+              Recovery Boots
+            </h3>
+            <div className="mt-4 space-y-3">
+              <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                <span className="text-sm text-white/70">1 Hour Pass</span>
+                <span className="font-heading font-bold text-white">$25</span>
+              </div>
+            </div>
+          </div>
         </div>
       </Section>
 
@@ -138,19 +191,17 @@ export default function RecoveryHubPage() {
               </p>
               <p>
                 At HyperFit, our Recovery Hub provides a private, focused
-                environment with expert guidance to help you move better, feel
-                better, and perform at your best. Whether you&apos;re recovering from
-                a tough session or managing a long-term injury, our coaches are
-                here to support you.
+                environment with sauna, hot bath, cold bath, and recovery boots
+                to help you move better, feel better, and perform at your best.
               </p>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4">
             {[
               { value: "3", label: "Private Rooms" },
-              { value: "100%", label: "Privacy" },
-              { value: "45min", label: "Session Length" },
-              { value: "1-on-1", label: "Expert Coaching" },
+              { value: "5AM–10PM", label: "Open Daily" },
+              { value: "1hr", label: "Session Length" },
+              { value: "From $25", label: "Per Session" },
             ].map((stat) => (
               <div
                 key={stat.label}
@@ -175,8 +226,8 @@ export default function RecoveryHubPage() {
             Book Your Recovery Session
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-white/70">
-            Take your recovery seriously. Book a private session in our Recovery
-            Hub and feel the difference expert-guided recovery makes.
+            Take your recovery seriously. Book a private room with sauna, hot
+            bath, and cold bath — and feel the difference.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Button href={siteConfig.bookingUrl} size="lg" external>
