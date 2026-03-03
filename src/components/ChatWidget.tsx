@@ -25,7 +25,7 @@ function getBotResponse(message: string): string {
 
   // Opening hours
   if (lower.includes("hour") || lower.includes("open") || lower.includes("close") || lower.includes("time")) {
-    return "We're open Mon–Thu 5:30 AM – 8:30 PM, Friday 5:30 AM – 7:00 PM, Saturday 7:00 AM – 1:00 PM, and Sunday 8:00 AM – 12:00 PM.";
+    return "We're open 5:00 AM – 10:00 PM, Monday to Sunday — every day of the week!";
   }
 
   // Pricing & membership

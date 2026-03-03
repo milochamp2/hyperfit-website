@@ -37,13 +37,13 @@ export const siteConfig = {
 
   // Business Hours
   hours: [
-    { day: "Monday", open: "5:30 AM", close: "8:30 PM" },
-    { day: "Tuesday", open: "5:30 AM", close: "8:30 PM" },
-    { day: "Wednesday", open: "5:30 AM", close: "8:30 PM" },
-    { day: "Thursday", open: "5:30 AM", close: "8:30 PM" },
-    { day: "Friday", open: "5:30 AM", close: "7:00 PM" },
-    { day: "Saturday", open: "7:00 AM", close: "1:00 PM" },
-    { day: "Sunday", open: "8:00 AM", close: "12:00 PM" },
+    { day: "Monday", open: "5:00 AM", close: "10:00 PM" },
+    { day: "Tuesday", open: "5:00 AM", close: "10:00 PM" },
+    { day: "Wednesday", open: "5:00 AM", close: "10:00 PM" },
+    { day: "Thursday", open: "5:00 AM", close: "10:00 PM" },
+    { day: "Friday", open: "5:00 AM", close: "10:00 PM" },
+    { day: "Saturday", open: "5:00 AM", close: "10:00 PM" },
+    { day: "Sunday", open: "5:00 AM", close: "10:00 PM" },
   ],
 
   // Navigation
