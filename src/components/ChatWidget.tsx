@@ -90,12 +90,12 @@ function getBotResponse(message: string): string {
 
   // Booking
   if (lower.includes("book") || lower.includes("reserve") || lower.includes("sign up") || lower.includes("join")) {
-    return "You can book classes and sessions through our online booking system. Click 'Book a Class' on our website or download the Mindbody app. You can also call us at 0436 526 009!";
+    return "You can book classes and sessions through our online booking system. Click 'Book a Class' on our website or download the Mindbody app. You can also call us at 0474 952 921!";
   }
 
   // Contact
   if (lower.includes("contact") || lower.includes("phone") || lower.includes("call") || lower.includes("email")) {
-    return "You can reach us at 0436 526 009 or email admin@hyperfit.com.au. Visit /contact for our full contact form and map!";
+    return "You can reach us at 0474 952 921 or email admin@hyperfit.com.au. Visit /contact for our full contact form and map!";
   }
 
   // Parking
@@ -119,7 +119,7 @@ function getBotResponse(message: string): string {
   }
 
   // Default
-  return "Thanks for your message! I can help with hours, pricing, services, recovery rooms, classes, and more. For detailed enquiries, call us at 0436 526 009 or email admin@hyperfit.com.au.";
+  return "Thanks for your message! I can help with hours, pricing, services, recovery rooms, classes, and more. For detailed enquiries, call us at 0474 952 921 or email admin@hyperfit.com.au.";
 }
 
 export default function ChatWidget() {
