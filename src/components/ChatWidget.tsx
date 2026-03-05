@@ -30,7 +30,17 @@ function getBotResponse(message: string): string {
 
   // Pricing & membership
   if (lower.includes("price") || lower.includes("cost") || lower.includes("membership") || lower.includes("much") || lower.includes("fee")) {
-    return "Our plans: Casual Visit $25/session, 10-Class Pack $200, Unlimited Membership $55/week (most popular — includes unlimited classes, full gym access & 1 free PT/month), and PT Packages at $90/session. Check out /pricing for full details!";
+    return "Our memberships: Early Bird Unlimited $65/week (limited time!), Unlimited $75/week, ONETWO + Hyperfit Bundle $80/week, Recovery Hub Only $55/week. Class passes: Single $26, 5-Pack $120, 10-Pack $220. All memberships include 24/7 gym access. Visit /membership for full details!";
+  }
+
+  // Early bird
+  if (lower.includes("early bird") || lower.includes("earlybird") || lower.includes("launch") || lower.includes("special")) {
+    return "Our Early Bird Unlimited Membership is $65/week — available during our Open/Trial Day and for 2 weeks after launch. 12-week lock-in, and the price stays at $65/week as long as you keep your membership. After the Early Bird window, it becomes $75/week. Sign up at /membership!";
+  }
+
+  // Bundle / ONETWO
+  if (lower.includes("bundle") || lower.includes("onetwo") || lower.includes("boxing")) {
+    return "The ONETWO + Hyperfit Bundle is $80/week and includes unlimited ONETWO Boxing classes, unlimited Hyperfit classes, 24/7 gym access, compression boots, and 2 recovery sessions per week. Check out /membership for details!";
   }
 
   // Free trial
@@ -95,7 +105,7 @@ function getBotResponse(message: string): string {
 
   // Cancellation
   if (lower.includes("cancel")) {
-    return "Memberships can be cancelled with 2 weeks' written notice. Class bookings can be cancelled up to 4 hours before without charge. Late cancellations may incur a fee.";
+    return "Memberships have a 12-week lock-in period. 30 days notice required to cancel. You can freeze your membership with 7 days notice, for up to 3 months per year.";
   }
 
   // What to bring
