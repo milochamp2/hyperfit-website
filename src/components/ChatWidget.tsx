@@ -40,7 +40,7 @@ function getBotResponse(message: string): string {
 
   // Bundle / ONETWO
   if (lower.includes("bundle") || lower.includes("onetwo") || lower.includes("boxing")) {
-    return "The ONETWO + Hyperfit Bundle is $80/week and includes unlimited ONETWO Boxing classes, unlimited Hyperfit classes, 24/7 gym access, compression boots, and 2 recovery sessions per week. Check out /membership for details!";
+    return "The ONETWO + Hyperfit Bundle comes in two options: $80/week (with recovery sessions, compression boots & 24/7 gym) or $70/week (unlimited ONETWO Boxing + Hyperfit classes & 24/7 gym, no recovery). Check out /membership for details!";
   }
 
   // Free trial

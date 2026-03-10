@@ -52,6 +52,13 @@ export default function ContactPage() {
                 Call {siteConfig.phoneDisplay}
               </Button>
               <Button
+                href="tel:+61436526009"
+                variant="outline"
+                className="w-full"
+              >
+                Recovery Hub — 0436 526 009
+              </Button>
+              <Button
                 href={siteConfig.messageUrl}
                 variant="outline"
                 className="w-full"

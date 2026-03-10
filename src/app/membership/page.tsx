@@ -27,6 +27,12 @@ const bundleFeatures = [
   "2 recovery sessions per week in Private Rooms 2 & 3",
 ];
 
+const bundleLiteFeatures = [
+  "Unlimited ONETWO Boxing classes",
+  "Unlimited Hyperfit classes",
+  "Unlimited access to the Hyperfit 24/7 gym",
+];
+
 const recoveryFeatures = [
   "3 recovery sessions per week in any recovery room (Private Rooms 1, 2 & 3)",
   "Unlimited access to compression boots",
@@ -132,8 +138,14 @@ export default function MembershipPage() {
           title="ONETWO + Hyperfit Bundle"
           subtitle="The ultimate training combo — boxing meets functional fitness."
         />
-        <div className="mx-auto max-w-lg">
-          <div className="card-futuristic rounded-xl p-8 transition-all duration-300">
+        <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
+          {/* $80/week with recovery */}
+          <div className="relative card-futuristic rounded-xl p-8 border-white/30 scale-[1.02] transition-all duration-300">
+            <div className="absolute -top-3.5 left-1/2 z-10 -translate-x-1/2">
+              <div className="whitespace-nowrap rounded-full bg-white px-5 py-1 text-[10px] font-bold uppercase tracking-widest text-jet">
+                With Recovery
+              </div>
+            </div>
             <div className="flex items-baseline gap-1">
               <span className="font-heading text-5xl font-bold text-white">$80</span>
               <span className="text-sm text-white/70">/week</span>
@@ -149,6 +161,28 @@ export default function MembershipPage() {
             </ul>
             <div className="mt-8">
               <Button href={siteConfig.bookingUrl} className="w-full" external>
+                Get Started
+              </Button>
+            </div>
+          </div>
+
+          {/* $70/week without recovery */}
+          <div className="card-futuristic rounded-xl p-8 transition-all duration-300">
+            <div className="flex items-baseline gap-1">
+              <span className="font-heading text-5xl font-bold text-white">$70</span>
+              <span className="text-sm text-white/70">/week</span>
+            </div>
+            <div className="my-6 h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+            <ul className="space-y-3">
+              {bundleLiteFeatures.map((feature) => (
+                <li key={feature} className="flex items-start gap-3 text-sm">
+                  <CheckIcon className="mt-0.5 h-4 w-4 shrink-0 text-white" />
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-8">
+              <Button href={siteConfig.bookingUrl} variant="outline" className="w-full" external>
                 Get Started
               </Button>
             </div>
