@@ -5,9 +5,10 @@ interface HeroProps {
   title: string;
   subtitle: string;
   showCTAs?: boolean;
+  showPill?: boolean;
 }
 
-export default function Hero({ title, subtitle, showCTAs = true }: HeroProps) {
+export default function Hero({ title, subtitle, showCTAs = true, showPill = false }: HeroProps) {
   return (
     <section
       className="grid-overlay relative flex min-h-[90vh] items-center overflow-hidden px-4"
@@ -34,12 +35,14 @@ export default function Hero({ title, subtitle, showCTAs = true }: HeroProps) {
       <div className="relative mx-auto max-w-7xl z-10">
         <div className="max-w-3xl">
           {/* Pill tag */}
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white backdrop-blur-sm">
-            <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
-            Function Training Gym &mdash; Mitcham
-          </div>
+          {showPill && (
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white backdrop-blur-sm">
+              <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
+              Function Training Gym &mdash; Mitcham
+            </div>
+          )}
 
-          <h1 className="text-gradient font-heading text-5xl font-bold leading-[1.05] tracking-tight md:text-6xl lg:text-8xl">
+          <h1 className="font-display text-6xl leading-[1.05] tracking-wide md:text-7xl lg:text-9xl text-white">
             {title}
           </h1>
 
@@ -62,26 +65,6 @@ export default function Hero({ title, subtitle, showCTAs = true }: HeroProps) {
               >
                 Call Us
               </Button>
-            </div>
-          )}
-
-          {/* Stats row */}
-          {showCTAs && (
-            <div className="mt-16 flex flex-wrap gap-8 border-t border-white/10 pt-8">
-              {[
-                { value: "3", label: "Private Rooms" },
-                { value: "500+", label: "Members" },
-                { value: "50+", label: "Classes / Week" },
-              ].map((stat) => (
-                <div key={stat.label}>
-                  <div className="font-heading text-3xl font-bold text-white md:text-4xl">
-                    {stat.value}
-                  </div>
-                  <div className="text-xs uppercase tracking-wider text-white/70">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
             </div>
           )}
         </div>

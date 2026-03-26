@@ -3,12 +3,12 @@ import Section from "@/components/Section";
 import SectionHeading from "@/components/SectionHeading";
 import FeatureCard from "@/components/FeatureCard";
 import ServiceCard from "@/components/ServiceCard";
-import PricingCard from "@/components/PricingCard";
+
 import TestimonialCard from "@/components/TestimonialCard";
 import GalleryGrid from "@/components/GalleryGrid";
 import LocationHours from "@/components/LocationHours";
 import Button from "@/components/Button";
-import { siteConfig, services, pricingPlans, testimonials } from "@/config/site";
+import { siteConfig, services, testimonials } from "@/config/site";
 import type { IconName } from "@/components/Icons";
 
 const features = [
@@ -46,7 +46,7 @@ export default function Home() {
       {/* Hero */}
       <Hero
         title="SELF. CARE. CLUB."
-        subtitle="Mitcham's premier function training gym — open functional space, full gym facilities, and 3 private training & recovery rooms."
+        subtitle="Mitcham's premier all-in-one functional training hub — built for performance, recovery, and results. 24/7 gym access, boxing, HYROX, group classes, and private recovery rooms — all under one roof."
       />
 
       {/* What We Offer */}
@@ -77,25 +77,6 @@ export default function Home() {
         <div className="mt-10 text-center">
           <Button href="/services" variant="outline">
             View All Services
-          </Button>
-        </div>
-      </Section>
-
-      {/* Pricing Preview */}
-      <Section>
-        <SectionHeading
-          title="Membership & Pricing"
-          subtitle="Flexible plans to fit your training style and budget."
-          gradient
-        />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {pricingPlans.map((plan) => (
-            <PricingCard key={plan.name} {...plan} />
-          ))}
-        </div>
-        <div className="mt-10 text-center">
-          <Button href="/pricing" variant="outline">
-            View Full Pricing
           </Button>
         </div>
       </Section>

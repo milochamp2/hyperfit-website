@@ -9,46 +9,57 @@ import { CheckIcon } from "@/components/Icons";
 export const metadata: Metadata = {
   title: "Membership",
   description:
-    "HyperFit membership plans — Unlimited Membership, ONETWO + Hyperfit Bundle, Recovery Hub Membership, and class passes. Join Mitcham's premier function training gym.",
+    "HyperFit membership plans — Hyper Elite, Hyper Train, Hyper Recover, Early Bird deals, and casual class passes. Join Mitcham's premier functional training gym.",
 };
 
-const unlimitedFeatures = [
-  "Unlimited access to classes",
-  "Unlimited access to the 24/7 functional gym",
-  "Unlimited access to compression boots",
-  "2 recovery sessions per week in Private Rooms 2 & 3",
+const hyperEliteFeatures = [
+  "24/7 gym access",
+  "Unlimited classes (strength / conditioning / boxing / Hyrox sims)",
+  "2x recovery sessions per week (Private Rooms 2 & 3)",
+  "Unlimited access to recovery boots",
 ];
 
-const bundleFeatures = [
-  "Unlimited ONETWO Boxing classes",
-  "Unlimited Hyperfit classes",
-  "Unlimited access to the Hyperfit 24/7 gym",
-  "Unlimited access to compression boots",
-  "2 recovery sessions per week in Private Rooms 2 & 3",
+const hyperTrainFeatures = [
+  "24/7 gym access",
+  "Unlimited classes (strength / conditioning / boxing / Hyrox sims)",
 ];
 
-const bundleLiteFeatures = [
-  "Unlimited ONETWO Boxing classes",
-  "Unlimited Hyperfit classes",
-  "Unlimited access to the Hyperfit 24/7 gym",
+const hyperRecoverFeatures = [
+  "Unlimited recovery sessions per week (any recovery room)",
+  "Unlimited access to recovery boots",
 ];
 
-const recoveryFeatures = [
-  "3 recovery sessions per week in any recovery room (Private Rooms 1, 2 & 3)",
-  "Unlimited access to compression boots",
-];
-
-const classPasses = [
+const casualPasses = [
   { name: "Single Class", price: "$26" },
   { name: "5 Class Pack", price: "$120" },
   { name: "10 Class Pack", price: "$220" },
+  { name: "Gym Day Pass", price: "$15" },
+];
+
+const earlyBirdPlans = [
+  {
+    name: "Gold — All Access",
+    price: "$55",
+    note: "Locked for life",
+  },
+  {
+    name: "Silver — Classes + Gym",
+    price: "$40",
+    note: "Locked for life",
+  },
+  {
+    name: "Boxing Only",
+    price: "$35",
+    note: "Locked for life",
+  },
 ];
 
 const membershipTerms = [
-  "12-week lock-in period for memberships",
+  "Early Bird membership prices are locked in for life — no price increases",
+  "8-week lock-in period for memberships",
   "30 days notice required to cancel",
-  "7 days notice required to freeze a membership",
-  "Memberships can be frozen for a maximum of 3 months per year",
+  "7 days notice required to pause a membership",
+  "Memberships can be paused for a maximum of 90 days per year",
 ];
 
 export default function MembershipPage() {
@@ -60,18 +71,17 @@ export default function MembershipPage() {
         showCTAs={false}
       />
 
-      {/* Early Bird / Unlimited Membership */}
+      {/* HYPER ELITE ⚡ */}
       <Section>
         <SectionHeading
-          title="Unlimited Membership"
-          subtitle="Everything you need to train, recover, and perform at your best."
+          title="Hyper Elite ⚡"
+          subtitle="Full access — train, recover, and perform at your best."
           gradient
         />
         <div className="mx-auto max-w-4xl">
-          {/* Features list */}
           <div className="mx-auto mb-10 max-w-lg">
             <ul className="space-y-3">
-              {unlimitedFeatures.map((feature) => (
+              {hyperEliteFeatures.map((feature) => (
                 <li key={feature} className="flex items-start gap-3">
                   <CheckIcon className="mt-1 h-5 w-5 shrink-0 text-white" />
                   <span className="text-lg">{feature}</span>
@@ -80,27 +90,47 @@ export default function MembershipPage() {
             </ul>
           </div>
 
-          {/* Pricing cards */}
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-3">
             {/* Early Bird */}
             <div className="relative card-futuristic rounded-xl p-8 border-white/30 scale-[1.02] transition-all duration-300">
               <div className="absolute -top-3.5 left-1/2 z-10 -translate-x-1/2">
                 <div className="whitespace-nowrap rounded-full bg-white px-5 py-1 text-[10px] font-bold uppercase tracking-widest text-jet">
-                  Early Bird Offer
+                  Early Bird
                 </div>
               </div>
-              <h3 className="font-heading text-base font-bold uppercase tracking-wide">
-                Early Bird Unlimited Membership
+              <h3 className="font-heading text-sm font-bold uppercase tracking-wide">
+                Early Bird
               </h3>
               <div className="mt-4 flex items-baseline gap-1">
                 <span className="font-heading text-5xl font-bold text-white">$65</span>
                 <span className="text-sm text-white/70">/week</span>
               </div>
               <p className="mt-4 text-sm leading-relaxed text-white/70">
-                Available during our Open / Trial Day (before launch) and for two
-                weeks after the gym officially launches. 12-week lock-in period.
-                Price remains $65/week for those who sign up during the Early Bird
-                period.
+                Launch Day &amp; two weeks only. Price locked in for life.
+              </p>
+              <div className="mt-6">
+                <Button href={siteConfig.bookingUrl} className="w-full" external>
+                  Sign Up Now
+                </Button>
+              </div>
+            </div>
+
+            {/* ONETWO Early Bird */}
+            <div className="relative card-futuristic rounded-xl p-8 border-white/30 scale-[1.02] transition-all duration-300">
+              <div className="absolute -top-3.5 left-1/2 z-10 -translate-x-1/2">
+                <div className="whitespace-nowrap rounded-full bg-white px-5 py-1 text-[10px] font-bold uppercase tracking-widest text-jet">
+                  ONETWO Early Bird
+                </div>
+              </div>
+              <h3 className="font-heading text-sm font-bold uppercase tracking-wide">
+                ONETWO Early Bird
+              </h3>
+              <div className="mt-4 flex items-baseline gap-1">
+                <span className="font-heading text-5xl font-bold text-white">$55</span>
+                <span className="text-sm text-white/70">/week</span>
+              </div>
+              <p className="mt-4 text-sm leading-relaxed text-white/70">
+                Exclusive ONETWO member rate. Launch Day &amp; two weeks only. Price locked in for life.
               </p>
               <div className="mt-6">
                 <Button href={siteConfig.bookingUrl} className="w-full" external>
@@ -111,16 +141,15 @@ export default function MembershipPage() {
 
             {/* Standard */}
             <div className="card-futuristic rounded-xl p-8 transition-all duration-300">
-              <h3 className="font-heading text-base font-bold uppercase tracking-wide">
-                Unlimited Membership
+              <h3 className="font-heading text-sm font-bold uppercase tracking-wide">
+                Standard
               </h3>
               <div className="mt-4 flex items-baseline gap-1">
                 <span className="font-heading text-5xl font-bold text-white">$75</span>
                 <span className="text-sm text-white/70">/week</span>
               </div>
               <p className="mt-4 text-sm leading-relaxed text-white/70">
-                Our standard Unlimited Membership after the two-week Early Bird
-                window closes. Full access to everything HyperFit offers.
+                Full access after the Early Bird window closes.
               </p>
               <div className="mt-6">
                 <Button href={siteConfig.bookingUrl} variant="outline" className="w-full" external>
@@ -132,68 +161,75 @@ export default function MembershipPage() {
         </div>
       </Section>
 
-      {/* ONETWO + Hyperfit Bundle */}
+      {/* HYPER TRAIN ⚡ */}
       <Section dark>
         <SectionHeading
-          title="ONETWO + Hyperfit Bundle"
-          subtitle="The ultimate training combo — boxing meets functional fitness."
+          title="Hyper Train ⚡"
+          subtitle="Classes + gym — everything you need to train hard."
         />
-        <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
-          {/* $80/week with recovery */}
-          <div className="relative card-futuristic rounded-xl p-8 border-white/30 scale-[1.02] transition-all duration-300">
-            <div className="absolute -top-3.5 left-1/2 z-10 -translate-x-1/2">
-              <div className="whitespace-nowrap rounded-full bg-white px-5 py-1 text-[10px] font-bold uppercase tracking-widest text-jet">
-                With Recovery
-              </div>
-            </div>
-            <div className="flex items-baseline gap-1">
-              <span className="font-heading text-5xl font-bold text-white">$80</span>
-              <span className="text-sm text-white/70">/week</span>
-            </div>
-            <div className="my-6 h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="mx-auto max-w-4xl">
+          <div className="mx-auto mb-10 max-w-lg">
             <ul className="space-y-3">
-              {bundleFeatures.map((feature) => (
-                <li key={feature} className="flex items-start gap-3 text-sm">
-                  <CheckIcon className="mt-0.5 h-4 w-4 shrink-0 text-white" />
-                  <span>{feature}</span>
+              {hyperTrainFeatures.map((feature) => (
+                <li key={feature} className="flex items-start gap-3">
+                  <CheckIcon className="mt-1 h-5 w-5 shrink-0 text-white" />
+                  <span className="text-lg">{feature}</span>
                 </li>
               ))}
             </ul>
-            <div className="mt-8">
-              <Button href={siteConfig.bookingUrl} className="w-full" external>
-                Get Started
-              </Button>
-            </div>
           </div>
 
-          {/* $70/week without recovery */}
-          <div className="card-futuristic rounded-xl p-8 transition-all duration-300">
-            <div className="flex items-baseline gap-1">
-              <span className="font-heading text-5xl font-bold text-white">$70</span>
-              <span className="text-sm text-white/70">/week</span>
+          <div className="mx-auto grid max-w-3xl gap-6 md:grid-cols-2">
+            {/* Early Bird */}
+            <div className="relative card-futuristic rounded-xl p-8 border-white/30 scale-[1.02] transition-all duration-300">
+              <div className="absolute -top-3.5 left-1/2 z-10 -translate-x-1/2">
+                <div className="whitespace-nowrap rounded-full bg-white px-5 py-1 text-[10px] font-bold uppercase tracking-widest text-jet">
+                  Early Bird
+                </div>
+              </div>
+              <h3 className="font-heading text-sm font-bold uppercase tracking-wide">
+                Early Bird
+              </h3>
+              <div className="mt-4 flex items-baseline gap-1">
+                <span className="font-heading text-5xl font-bold text-white">$45</span>
+                <span className="text-sm text-white/70">/week</span>
+              </div>
+              <p className="mt-4 text-sm leading-relaxed text-white/70">
+                Launch Day &amp; two weeks only. Price locked in for life.
+              </p>
+              <div className="mt-6">
+                <Button href={siteConfig.bookingUrl} className="w-full" external>
+                  Sign Up Now
+                </Button>
+              </div>
             </div>
-            <div className="my-6 h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-            <ul className="space-y-3">
-              {bundleLiteFeatures.map((feature) => (
-                <li key={feature} className="flex items-start gap-3 text-sm">
-                  <CheckIcon className="mt-0.5 h-4 w-4 shrink-0 text-white" />
-                  <span>{feature}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-8">
-              <Button href={siteConfig.bookingUrl} variant="outline" className="w-full" external>
-                Get Started
-              </Button>
+
+            {/* Standard */}
+            <div className="card-futuristic rounded-xl p-8 transition-all duration-300">
+              <h3 className="font-heading text-sm font-bold uppercase tracking-wide">
+                Standard
+              </h3>
+              <div className="mt-4 flex items-baseline gap-1">
+                <span className="font-heading text-5xl font-bold text-white">$55</span>
+                <span className="text-sm text-white/70">/week</span>
+              </div>
+              <p className="mt-4 text-sm leading-relaxed text-white/70">
+                Classes + gym access after the Early Bird window closes.
+              </p>
+              <div className="mt-6">
+                <Button href={siteConfig.bookingUrl} variant="outline" className="w-full" external>
+                  Get Started
+                </Button>
+              </div>
             </div>
           </div>
         </div>
       </Section>
 
-      {/* Recovery Hub Membership */}
+      {/* HYPER RECOVER ⚡ */}
       <Section>
         <SectionHeading
-          title="Recovery Hub Membership"
+          title="Hyper Recover ⚡"
           subtitle="Dedicated recovery access for those who take restoration seriously."
           gradient
         />
@@ -205,7 +241,7 @@ export default function MembershipPage() {
             </div>
             <div className="my-6 h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
             <ul className="space-y-3">
-              {recoveryFeatures.map((feature) => (
+              {hyperRecoverFeatures.map((feature) => (
                 <li key={feature} className="flex items-start gap-3 text-sm">
                   <CheckIcon className="mt-0.5 h-4 w-4 shrink-0 text-white" />
                   <span>{feature}</span>
@@ -221,14 +257,14 @@ export default function MembershipPage() {
         </div>
       </Section>
 
-      {/* Class Passes */}
+      {/* Casual Passes */}
       <Section dark>
         <SectionHeading
-          title="Hyperfit Class Passes"
-          subtitle="No membership needed — grab a class pass and train."
+          title="Casual Passes"
+          subtitle="No membership needed — grab a pass and train."
         />
-        <div className="mx-auto grid max-w-3xl gap-6 sm:grid-cols-3">
-          {classPasses.map((pass) => (
+        <div className="mx-auto grid max-w-4xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {casualPasses.map((pass) => (
             <div key={pass.name} className="card-futuristic rounded-xl p-6 text-center transition-all duration-300">
               <h3 className="font-heading text-sm font-bold uppercase tracking-wide">
                 {pass.name}
@@ -246,12 +282,46 @@ export default function MembershipPage() {
         </div>
       </Section>
 
-      {/* Membership Terms */}
+      {/* Early Bird Memberships */}
       <Section>
+        <SectionHeading
+          title="Early Bird Memberships"
+          subtitle="Launch Day & limited two weeks only — prices locked in for life."
+          gradient
+        />
+        <div className="mx-auto grid max-w-4xl gap-6 sm:grid-cols-3">
+          {earlyBirdPlans.map((plan) => (
+            <div key={plan.name} className="relative card-futuristic rounded-xl p-8 border-white/30 transition-all duration-300">
+              <div className="absolute -top-3.5 left-1/2 z-10 -translate-x-1/2">
+                <div className="whitespace-nowrap rounded-full bg-white px-5 py-1 text-[10px] font-bold uppercase tracking-widest text-jet">
+                  {plan.note}
+                </div>
+              </div>
+              <h3 className="font-heading text-sm font-bold uppercase tracking-wide">
+                {plan.name}
+              </h3>
+              <div className="mt-4 flex items-baseline gap-1">
+                <span className="font-heading text-5xl font-bold text-white">{plan.price}</span>
+                <span className="text-sm text-white/70">/week</span>
+              </div>
+              <p className="mt-4 text-sm leading-relaxed text-white/70">
+                Price will not increase if you sign up during the Early Bird period.
+              </p>
+              <div className="mt-6">
+                <Button href={siteConfig.bookingUrl} className="w-full" external>
+                  Claim Now
+                </Button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Membership Terms */}
+      <Section dark>
         <SectionHeading
           title="Membership Terms"
           subtitle="Transparent terms — no surprises."
-          gradient
         />
         <div className="mx-auto max-w-2xl">
           <ul className="space-y-3">
@@ -266,7 +336,7 @@ export default function MembershipPage() {
       </Section>
 
       {/* CTA */}
-      <Section dark>
+      <Section>
         <div className="text-center">
           <h2 className="font-heading text-3xl font-bold md:text-4xl">
             Ready to Join HyperFit?

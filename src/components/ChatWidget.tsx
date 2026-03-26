@@ -30,17 +30,17 @@ function getBotResponse(message: string): string {
 
   // Pricing & membership
   if (lower.includes("price") || lower.includes("cost") || lower.includes("membership") || lower.includes("much") || lower.includes("fee")) {
-    return "Our memberships: Early Bird Unlimited $65/week (limited time!), Unlimited $75/week, ONETWO + Hyperfit Bundle $80/week, Recovery Hub Only $55/week. Class passes: Single $26, 5-Pack $120, 10-Pack $220. All memberships include 24/7 gym access. Visit /membership for full details!";
+    return "Our memberships: Hyper Elite (full access) $75/week ($65 Early Bird, $55 ONETWO Early Bird), Hyper Train (classes + gym) $55/week ($45 Early Bird), Hyper Recover $55/week. Casual: Single class $26, 5-Pack $120, 10-Pack $220, Gym pass $15. Early Bird prices locked for life! Visit /membership for full details!";
   }
 
   // Early bird
   if (lower.includes("early bird") || lower.includes("earlybird") || lower.includes("launch") || lower.includes("special")) {
-    return "Our Early Bird Unlimited Membership is $65/week — available during our Open/Trial Day and for 2 weeks after launch. 12-week lock-in, and the price stays at $65/week as long as you keep your membership. After the Early Bird window, it becomes $75/week. Sign up at /membership!";
+    return "Early Bird memberships are available Launch Day & for 2 weeks only — prices locked for life! Gold (All Access) $55/week, Silver (Classes + Gym) $40/week, Boxing Only $35/week. Hyper Elite Early Bird $65/week, Hyper Train Early Bird $45/week. 8-week lock-in. Sign up at /membership!";
   }
 
   // Bundle / ONETWO
   if (lower.includes("bundle") || lower.includes("onetwo") || lower.includes("boxing")) {
-    return "The ONETWO + Hyperfit Bundle comes in two options: $80/week (with recovery sessions, compression boots & 24/7 gym) or $70/week (unlimited ONETWO Boxing + Hyperfit classes & 24/7 gym, no recovery). Check out /membership for details!";
+    return "We offer boxing as part of our unlimited classes in all memberships! Hyper Elite ($75/week, $65 Early Bird) includes boxing + all classes + recovery. Hyper Train ($55/week, $45 Early Bird) includes boxing + all classes + gym. There's also a Boxing Only Early Bird at $35/week. Check /membership!";
   }
 
   // Free trial
@@ -54,13 +54,13 @@ function getBotResponse(message: string): string {
   }
 
   // Recovery Hub / Sauna / Bath
-  if (lower.includes("recover") || lower.includes("rehab") || lower.includes("mobility") || lower.includes("sauna") || lower.includes("bath") || lower.includes("platinum")) {
-    return "Our Recovery Hub has 3 private rooms, each with a 4-person sauna, hot bath, and cold bath. Private Room 1 (Platinum) starts at $40/hr, Rooms 2 & 3 start at $35/hr. Recovery Boots available for $25/hr. Open 5 AM – 10 PM daily. Check out /recovery-hub for photos and full pricing!";
+  if (lower.includes("recover") || lower.includes("rehab") || lower.includes("mobility") || lower.includes("sauna") || lower.includes("bath") || lower.includes("plunge") || lower.includes("platinum")) {
+    return "Our Recovery Hub has 3 private rooms, each with an infrared sauna, hot plunge, and cold plunge. Private Room 1 (Platinum) starts at $40/hr, Rooms 2 & 3 start at $35/hr. Recovery Boots available for $25/hr. Open 5 AM – 10 PM daily. Check out /recovery-hub for photos and full pricing!";
   }
 
   // Private rooms / pricing
   if (lower.includes("private") || lower.includes("room")) {
-    return "We have 3 private recovery rooms: Room 1 (Platinum) from $40 (1 person) to $100 (4 people), Rooms 2 & 3 from $35 (1 person) to $95 (4 people). All rooms include sauna, hot bath & cold bath. 1-hour passes, open 5 AM – 10 PM. See /recovery-hub!";
+    return "We have 3 private recovery rooms: Room 1 (Platinum) from $40 (1 person) to $100 (4 people), Rooms 2 & 3 from $35 (1 person) to $95 (4 people). All rooms include infrared sauna, hot plunge & cold plunge. 1-hour passes, open 5 AM – 10 PM. See /recovery-hub!";
   }
 
   // Recovery boots
@@ -105,7 +105,7 @@ function getBotResponse(message: string): string {
 
   // Cancellation
   if (lower.includes("cancel")) {
-    return "Memberships have a 12-week lock-in period. 30 days notice required to cancel. You can freeze your membership with 7 days notice, for up to 3 months per year.";
+    return "Memberships have an 8-week lock-in period. 30 days notice required to cancel. You can pause your membership with 7 days notice, for up to 90 days per year. Early Bird prices are locked in for life — no increases!";
   }
 
   // What to bring

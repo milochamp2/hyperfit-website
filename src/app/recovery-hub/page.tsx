@@ -10,7 +10,7 @@ import { CheckIcon } from "@/components/Icons";
 export const metadata: Metadata = {
   title: "Recovery Hub",
   description:
-    "Explore HyperFit's Recovery Hub — 3 private recovery rooms with sauna, hot bath, cold bath, and recovery boots. Open 5 AM – 10 PM. Book your session today.",
+    "Explore HyperFit's Recovery Hub — 3 private recovery rooms featuring infrared sauna, hot plunge, cold plunge, and recovery boots. Open 5 AM – 10 PM. Book your session today.",
 };
 
 const platinumRoomImages = [
@@ -19,8 +19,8 @@ const platinumRoomImages = [
   { src: "/recovery/platinum room/plat room image 3.jpg", alt: "Private Room 1 (Platinum) — Facilities" },
   { src: "/recovery/platinum room/plat room image 4.jpg", alt: "Private Room 1 (Platinum) — Full view" },
   { src: "/recovery/sauna room/plat room image 5.jpg", alt: "Private Room 1 (Platinum) — Sauna" },
-  { src: "/recovery/sauna room/plat room image 6.jpg", alt: "Private Room 1 (Platinum) — Hot bath" },
-  { src: "/recovery/sauna room/plat room image 7.jpg", alt: "Private Room 1 (Platinum) — Cold bath" },
+  { src: "/recovery/sauna room/plat room image 6.jpg", alt: "Private Room 1 (Platinum) — Hot plunge" },
+  { src: "/recovery/sauna room/plat room image 7.jpg", alt: "Private Room 1 (Platinum) — Cold plunge" },
   { src: "/recovery/sauna room/plat room image 8.jpg", alt: "Private Room 1 (Platinum) — Recovery area" },
 ];
 
@@ -45,10 +45,17 @@ const room3Images = [
   { src: "/recovery/private room 3 images/image 9.jpg", alt: "Private Room 3 — Full room view" },
 ];
 
+const platinumFeatures = [
+  "Infrared Sauna",
+  "Hot Plunge",
+  "Cold Plunge",
+  "Shower",
+];
+
 const roomFeatures = [
-  "4 Person Sauna",
-  "Hot Bath",
-  "Cold Bath",
+  "Infrared Sauna",
+  "Hot Plunge",
+  "Cold Plunge",
 ];
 
 export default function RecoveryHubPage() {
@@ -56,20 +63,27 @@ export default function RecoveryHubPage() {
     <>
       <Hero
         title="Recovery Hub"
-        subtitle="3 private recovery rooms featuring sauna, hot bath, cold bath, and recovery boots. Open 5 AM – 10 PM."
+        subtitle="3 private recovery rooms, featuring — infrared sauna, hot plunge, cold plunge."
         showCTAs={false}
       />
+
+      {/* Open hours banner */}
+      <div className="bg-steel py-3 text-center">
+        <p className="font-display text-2xl tracking-wide text-white">
+          Open 5am to 10pm
+        </p>
+      </div>
 
       {/* Private Room 1 (Platinum) Gallery */}
       <Section>
         <SectionHeading
           title="Private Room 1 (Platinum)"
-          subtitle="Our premium recovery room — the ultimate space for elite recovery and restoration."
+          subtitle="The Platinum Room — your private escape for elite recovery, built to help you reset, recharge, and perform at your best."
           gradient
         />
         <ImageSlider images={platinumRoomImages} autoPlayInterval={5000} />
         <div className="mt-8 flex flex-wrap justify-center gap-4">
-          {roomFeatures.map((feature) => (
+          {platinumFeatures.map((feature) => (
             <div key={feature} className="flex items-center gap-2">
               <CheckIcon className="h-4 w-4 text-white" />
               <span className="text-sm text-white/80">{feature}</span>
@@ -82,7 +96,7 @@ export default function RecoveryHubPage() {
       <Section dark>
         <SectionHeading
           title="Private Room 2"
-          subtitle="A versatile private recovery space with sauna, hot bath, and cold bath."
+          subtitle="Step into your own private recovery space — move between infrared heat and hot/cold plunges to restore, recharge, and elevate your performance."
         />
         <ImageSlider images={room2Images} autoPlayInterval={5000} />
         <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -99,7 +113,6 @@ export default function RecoveryHubPage() {
       <Section>
         <SectionHeading
           title="Private Room 3"
-          subtitle="A purpose-built recovery space with everything you need to restore, recover, and rebuild."
           gradient
         />
         <ImageSlider images={room3Images} autoPlayInterval={5000} />
@@ -117,12 +130,12 @@ export default function RecoveryHubPage() {
       <Section dark>
         <SectionHeading
           title="Recovery Room Pricing"
-          subtitle="All passes are 1 hour. Open 5 AM – 10 PM daily."
+          subtitle="All passes are 1 hour. Open 5am–10pm daily. Sessions run to time — please exit the room promptly at the end of your booking for the next guest."
         />
         <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-3">
           {/* Platinum Room Pricing */}
           <div className="card-futuristic rounded-xl p-6 transition-all duration-300">
-            <h3 className="font-heading text-lg font-bold uppercase tracking-wide text-white">
+            <h3 className="font-display text-2xl tracking-wide text-white">
               Private Room 1 (Platinum)
             </h3>
             <div className="mt-4 space-y-3">
@@ -142,7 +155,7 @@ export default function RecoveryHubPage() {
 
           {/* Private Room 2 & 3 Pricing */}
           <div className="card-futuristic rounded-xl p-6 transition-all duration-300">
-            <h3 className="font-heading text-lg font-bold uppercase tracking-wide text-white">
+            <h3 className="font-display text-2xl tracking-wide text-white">
               Private Room 2 &amp; 3
             </h3>
             <div className="mt-4 space-y-3">
@@ -162,7 +175,7 @@ export default function RecoveryHubPage() {
 
           {/* Recovery Boots */}
           <div className="card-futuristic rounded-xl p-6 transition-all duration-300">
-            <h3 className="font-heading text-lg font-bold uppercase tracking-wide text-white">
+            <h3 className="font-display text-2xl tracking-wide text-white">
               Recovery Boots
             </h3>
             <div className="mt-4 space-y-3">
@@ -177,57 +190,49 @@ export default function RecoveryHubPage() {
 
       {/* Why Recovery Matters */}
       <Section>
-        <div className="grid gap-10 md:grid-cols-2">
-          <div>
-            <SectionHeading
-              title="Why Recovery Matters"
-              centered={false}
-            />
-            <div className="space-y-4 text-white/70 leading-relaxed">
-              <p>
-                Recovery is not optional — it&apos;s where the real gains happen.
-                Without proper recovery, your body can&apos;t adapt to training
-                stimulus, leading to plateaus, fatigue, and increased injury risk.
-              </p>
-              <p>
-                At HyperFit, our Recovery Hub provides a private, focused
-                environment with sauna, hot bath, cold bath, and recovery boots
-                to help you move better, feel better, and perform at your best.
-              </p>
-            </div>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            {[
-              { value: "3", label: "Private Rooms" },
-              { value: "5AM–10PM", label: "Open Daily" },
-              { value: "1hr", label: "Session Length" },
-              { value: "From $25", label: "Per Session" },
-            ].map((stat) => (
-              <div
-                key={stat.label}
-                className="card-futuristic flex flex-col items-center justify-center rounded-xl p-6 text-center transition-all duration-300"
-              >
-                <div className="font-heading text-3xl font-bold text-white md:text-4xl">
-                  {stat.value}
-                </div>
-                <div className="mt-2 text-xs uppercase tracking-wider text-white/70">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
+        <SectionHeading
+          title="Why Recovery Matters"
+          gradient
+        />
+        <div className="mx-auto max-w-3xl space-y-6 text-center text-lg leading-relaxed text-white/70">
+          <p>
+            Recovery isn&apos;t a luxury — it&apos;s the difference between staying the same and actually progressing.
+          </p>
+          <p>
+            You don&apos;t get better during the workout.<br />
+            You get better when your body repairs, rebuilds, and comes back stronger.
+          </p>
+          <p>
+            Skip recovery and you&apos;ll feel it:<br />
+            fatigue, tightness, plateaus, injuries.
+          </p>
+          <p>
+            Prioritise it, and everything changes:<br />
+            better performance, faster results, more energy.
+          </p>
+          <p>
+            At HyperFit, our Recovery Hub is built to accelerate that process —
+            private rooms, infrared sauna, hot/cold plunge, and recovery boots
+            designed to get you back at your best, faster.
+          </p>
+          <p className="text-xl font-semibold text-white">
+            Train hard. Recover harder.
+          </p>
+          <p className="font-display text-4xl tracking-wide text-white md:text-5xl">
+            SELF. CARE. CLUB.
+          </p>
         </div>
       </Section>
 
       {/* CTA */}
       <Section dark>
         <div className="text-center">
-          <h2 className="font-heading text-3xl font-bold md:text-4xl">
+          <h2 className="font-display text-4xl tracking-wide md:text-5xl">
             Book Your Recovery Session
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-white/70">
-            Take your recovery seriously. Book a private room with sauna, hot
-            bath, and cold bath — and feel the difference.
+            Full body reset, inside and out. Book your private recovery session
+            and restore your body, clear your mind, and recharge your energy.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Button href={siteConfig.bookingUrl} size="lg" external>
