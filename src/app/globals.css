@@ -30,6 +30,16 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
 }
 
+/* ─── Marquee ─── */
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee-scroll 20s linear infinite;
+}
+
 /* ─── Keyframes ─── */
 @keyframes pulse-glow {
   0%, 100% { opacity: 0.4; }

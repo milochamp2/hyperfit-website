@@ -1,25 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Button from "./Button";
 import { siteConfig } from "@/config/site";
-
-const carouselItems = [
-  "SELF. CARE. CLUB.",
-  "24/7 GYM ACCESS",
-  "RECOVERY HUB",
-  "BOXING & HYROX",
-  "GROUP CLASSES",
-  "PRIVATE ROOMS",
-  "MEMBERSHIP",
-];
 
 interface HeroProps {
   title?: string;
   subtitle: string;
   showCTAs?: boolean;
   showPill?: boolean;
-  showCarousel?: boolean;
+  showMarquee?: boolean;
 }
 
 export default function Hero({
@@ -27,25 +16,8 @@ export default function Hero({
   subtitle,
   showCTAs = true,
   showPill = false,
-  showCarousel = false,
+  showMarquee = false,
 }: HeroProps) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  useEffect(() => {
-    if (!showCarousel) return;
-
-    const interval = setInterval(() => {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setCurrentIndex((prev) => (prev + 1) % carouselItems.length);
-        setIsAnimating(false);
-      }, 500);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [showCarousel]);
-
   return (
     <section
       className="grid-overlay relative flex min-h-[90vh] items-center overflow-hidden px-4"
@@ -69,35 +41,40 @@ export default function Hero({
         <div className="absolute bottom-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-cyan/10 to-transparent" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl z-10">
-        <div className="max-w-4xl">
-          {/* Pill tag */}
-          {showPill && (
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white backdrop-blur-sm">
+      <div className="relative z-10 w-full">
+        {/* Pill tag */}
+        {showPill && (
+          <div className="mx-auto max-w-7xl px-4 mb-6">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white backdrop-blur-sm">
               <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
               Function Training Gym &mdash; Mitcham
             </div>
-          )}
+          </div>
+        )}
 
-          {showCarousel ? (
-            <div className="h-[1.2em] overflow-hidden text-6xl md:text-7xl lg:text-9xl">
-              <h1
-                className={`font-display tracking-wide text-white transition-all duration-500 ease-in-out ${
-                  isAnimating
-                    ? "-translate-y-full opacity-0"
-                    : "translate-y-0 opacity-100"
-                }`}
-              >
-                {carouselItems[currentIndex]}
-              </h1>
+        {showMarquee ? (
+          <div className="w-screen relative left-1/2 -translate-x-1/2 overflow-hidden">
+            <div className="marquee-track flex whitespace-nowrap">
+              {Array.from({ length: 8 }).map((_, i) => (
+                <span
+                  key={i}
+                  className="font-display text-7xl tracking-wide text-white md:text-8xl lg:text-[10rem] mx-8 shrink-0"
+                >
+                  SELF. CARE. CLUB.
+                </span>
+              ))}
             </div>
-          ) : (
+          </div>
+        ) : (
+          <div className="mx-auto max-w-7xl">
             <h1 className="font-display text-6xl leading-[1.05] tracking-wide md:text-7xl lg:text-9xl text-white">
               {title}
             </h1>
-          )}
+          </div>
+        )}
 
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/70 md:text-xl">
+        <div className="mx-auto max-w-7xl mt-6">
+          <p className="max-w-xl text-lg leading-relaxed text-white/70 md:text-xl">
             {subtitle}
           </p>
 

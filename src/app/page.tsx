@@ -46,7 +46,7 @@ export default function Home() {
       {/* Hero */}
       <Hero
         subtitle="Mitcham's premier all-in-one functional training hub — built for performance, recovery, and results. 24/7 gym access, boxing, HYROX, group classes, and private recovery rooms — all under one roof."
-        showCarousel
+        showMarquee
       />
 
       {/* What We Offer */}
