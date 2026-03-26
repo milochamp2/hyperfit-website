@@ -1,14 +1,51 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Button from "./Button";
 import { siteConfig } from "@/config/site";
 
+const carouselItems = [
+  "SELF. CARE. CLUB.",
+  "24/7 GYM ACCESS",
+  "RECOVERY HUB",
+  "BOXING & HYROX",
+  "GROUP CLASSES",
+  "PRIVATE ROOMS",
+  "MEMBERSHIP",
+];
+
 interface HeroProps {
-  title: string;
+  title?: string;
   subtitle: string;
   showCTAs?: boolean;
   showPill?: boolean;
+  showCarousel?: boolean;
 }
 
-export default function Hero({ title, subtitle, showCTAs = true, showPill = false }: HeroProps) {
+export default function Hero({
+  title,
+  subtitle,
+  showCTAs = true,
+  showPill = false,
+  showCarousel = false,
+}: HeroProps) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  useEffect(() => {
+    if (!showCarousel) return;
+
+    const interval = setInterval(() => {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setCurrentIndex((prev) => (prev + 1) % carouselItems.length);
+        setIsAnimating(false);
+      }, 500);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [showCarousel]);
+
   return (
     <section
       className="grid-overlay relative flex min-h-[90vh] items-center overflow-hidden px-4"
@@ -16,7 +53,7 @@ export default function Hero({ title, subtitle, showCTAs = true, showPill = fals
         backgroundImage: "url('/hero-bg.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundRepeat: "no-repeat"
+        backgroundRepeat: "no-repeat",
       }}
     >
       {/* Dark overlay for text readability */}
@@ -33,7 +70,7 @@ export default function Hero({ title, subtitle, showCTAs = true, showPill = fals
       </div>
 
       <div className="relative mx-auto max-w-7xl z-10">
-        <div className="max-w-3xl">
+        <div className="max-w-4xl">
           {/* Pill tag */}
           {showPill && (
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white backdrop-blur-sm">
@@ -42,9 +79,23 @@ export default function Hero({ title, subtitle, showCTAs = true, showPill = fals
             </div>
           )}
 
-          <h1 className="font-display text-6xl leading-[1.05] tracking-wide md:text-7xl lg:text-9xl text-white">
-            {title}
-          </h1>
+          {showCarousel ? (
+            <div className="h-[1.2em] overflow-hidden text-6xl md:text-7xl lg:text-9xl">
+              <h1
+                className={`font-display tracking-wide text-white transition-all duration-500 ease-in-out ${
+                  isAnimating
+                    ? "-translate-y-full opacity-0"
+                    : "translate-y-0 opacity-100"
+                }`}
+              >
+                {carouselItems[currentIndex]}
+              </h1>
+            </div>
+          ) : (
+            <h1 className="font-display text-6xl leading-[1.05] tracking-wide md:text-7xl lg:text-9xl text-white">
+              {title}
+            </h1>
+          )}
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/70 md:text-xl">
             {subtitle}
