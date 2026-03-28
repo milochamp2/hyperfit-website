@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Inter, Bebas_Neue } from "next/font/google";
+import { Montserrat, Poppins } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import IntroOverlay from "@/components/IntroOverlay";
@@ -14,16 +14,10 @@ const montserrat = Montserrat({
   display: "swap",
 });
 
-const inter = Inter({
+const poppins = Poppins({
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--font-body",
-  display: "swap",
-});
-
-const bebasNeue = Bebas_Neue({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-display",
   display: "swap",
 });
 
@@ -67,7 +61,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${inter.variable} ${bebasNeue.variable}`}>
+    <html lang="en" className={`${montserrat.variable} ${poppins.variable}`}>
       <body className="flex min-h-screen flex-col antialiased">
         <SmoothScroll />
         <PageLoader />
