@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 
 interface Message {
-  role: "user" | "bot";
+  role: "user" | "bot" | "typing";
   text: string;
 }
 
@@ -142,11 +142,16 @@ export default function ChatWidget() {
     setMessages((prev) => [...prev, userMessage]);
     setInput("");
 
-    // Simulate typing delay
+    // Show typing indicator
+    setTimeout(() => {
+      setMessages((prev) => [...prev, { role: "typing", text: "" }]);
+    }, 300);
+
+    // Send actual response after 5 seconds
     setTimeout(() => {
       const botResponse: Message = { role: "bot", text: getBotResponse(msg) };
-      setMessages((prev) => [...prev, botResponse]);
-    }, 600);
+      setMessages((prev) => prev.filter((m) => m.role !== "typing").concat(botResponse));
+    }, 5000);
   }
 
   return (
@@ -190,15 +195,25 @@ export default function ChatWidget() {
                 key={i}
                 className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
               >
-                <div
-                  className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${
-                    msg.role === "user"
-                      ? "bg-white text-jet rounded-br-md"
-                      : "bg-steel text-white rounded-bl-md"
-                  }`}
-                >
-                  {msg.text}
-                </div>
+                {msg.role === "typing" ? (
+                  <div className="max-w-[80%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed bg-steel text-white rounded-bl-md">
+                    <div className="flex items-center gap-1">
+                      <span className="h-2 w-2 rounded-full bg-white/50 animate-bounce" style={{ animationDelay: "0ms" }} />
+                      <span className="h-2 w-2 rounded-full bg-white/50 animate-bounce" style={{ animationDelay: "150ms" }} />
+                      <span className="h-2 w-2 rounded-full bg-white/50 animate-bounce" style={{ animationDelay: "300ms" }} />
+                    </div>
+                  </div>
+                ) : (
+                  <div
+                    className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${
+                      msg.role === "user"
+                        ? "bg-white text-jet rounded-br-md"
+                        : "bg-steel text-white rounded-bl-md"
+                    }`}
+                  >
+                    {msg.text}
+                  </div>
+                )}
               </div>
             ))}
             <div ref={messagesEndRef} />

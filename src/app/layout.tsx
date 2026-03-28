@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import IntroOverlay from "@/components/IntroOverlay";
 import ChatWidget from "@/components/ChatWidget";
+import PageLoader from "@/components/PageLoader";
 import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
 
@@ -69,6 +70,7 @@ export default function RootLayout({
     <html lang="en" className={`${montserrat.variable} ${inter.variable} ${bebasNeue.variable}`}>
       <body className="flex min-h-screen flex-col antialiased">
         <SmoothScroll />
+        <PageLoader />
         <IntroOverlay />
         <Header />
         <main className="flex-1 pt-[72px]">{children}</main>
