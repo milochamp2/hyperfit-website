@@ -25,6 +25,12 @@ const features = [
     icon: "dumbbell" as IconName,
   },
   {
+    title: "Boxing Classes",
+    description:
+      "Hit the pads and build power, speed, and endurance with our coach-led boxing sessions — all levels welcome.",
+    icon: "target" as IconName,
+  },
+  {
     title: "3 Private Rooms",
     description:
       "Dedicated private training and recovery rooms for PT sessions, rehab, mobility work, or small group training.",

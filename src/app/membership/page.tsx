@@ -44,12 +44,12 @@ const earlyBirdPlans = [
   },
   {
     name: "Silver — Classes + Gym",
-    price: "$40",
+    price: "$45",
     note: "Locked for life",
   },
   {
     name: "Boxing Only",
-    price: "$35",
+    price: "$40",
     note: "Locked for life",
   },
 ];

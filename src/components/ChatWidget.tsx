@@ -35,12 +35,12 @@ function getBotResponse(message: string): string {
 
   // Early bird
   if (lower.includes("early bird") || lower.includes("earlybird") || lower.includes("launch") || lower.includes("special")) {
-    return "Early Bird memberships are available Launch Day & for 2 weeks only — prices locked for life! Gold (All Access) $55/week, Silver (Classes + Gym) $40/week, Boxing Only $35/week. Hyper Elite Early Bird $65/week, Hyper Train Early Bird $45/week. 8-week lock-in. Sign up at /membership!";
+    return "Early Bird memberships are available Launch Day & for 2 weeks only — prices locked for life! Gold (All Access) $55/week, Silver (Classes + Gym) $45/week, Boxing Only $40/week. Hyper Elite Early Bird $65/week, Hyper Train Early Bird $45/week. 8-week lock-in. Sign up at /membership!";
   }
 
   // Bundle / ONETWO
   if (lower.includes("bundle") || lower.includes("onetwo") || lower.includes("boxing")) {
-    return "We offer boxing as part of our unlimited classes in all memberships! Hyper Elite ($75/week, $65 Early Bird) includes boxing + all classes + recovery. Hyper Train ($55/week, $45 Early Bird) includes boxing + all classes + gym. There's also a Boxing Only Early Bird at $35/week. Check /membership!";
+    return "We offer boxing as part of our unlimited classes in all memberships! Hyper Elite ($75/week, $65 Early Bird) includes boxing + all classes + recovery. Hyper Train ($55/week, $45 Early Bird) includes boxing + all classes + gym. There's also a Boxing Only Early Bird at $40/week. Check /membership!";
   }
 
   // Free trial
