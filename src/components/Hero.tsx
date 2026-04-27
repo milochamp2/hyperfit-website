@@ -58,7 +58,7 @@ export default function Hero({
               {Array.from({ length: 8 }).map((_, i) => (
                 <span
                   key={i}
-                  className="font-display text-7xl tracking-wide text-white md:text-8xl lg:text-[10rem] mx-8 shrink-0"
+                  className="font-display text-2xl tracking-[0.2em] text-white md:text-3xl mx-10 shrink-0"
                 >
                   SELF. CARE. CLUB.
                 </span>

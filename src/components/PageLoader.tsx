@@ -1,14 +1,21 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 
 export default function PageLoader() {
   const pathname = usePathname();
   const [loading, setLoading] = useState(false);
   const [visible, setVisible] = useState(false);
+  const isFirstRender = useRef(true);
 
   useEffect(() => {
+    // Skip on initial page load — let IntroOverlay handle that
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+
     // Show loader on route change
     setLoading(true);
     setVisible(true);
