@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Logo from "./Logo";
 
 export default function IntroOverlay() {
   const [phase, setPhase] = useState<"loading" | "reveal" | "done">("loading");
@@ -47,10 +48,8 @@ export default function IntroOverlay() {
       <div className="absolute left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-cyan/70 to-transparent intro-scan" />
 
       {/* Logo + tagline */}
-      <div className="relative flex flex-col items-center gap-5 intro-logo">
-        <div className="font-heading text-7xl font-black tracking-[0.12em] text-white md:text-8xl lg:text-9xl">
-          HYPERFIT
-        </div>
+      <div className="relative flex flex-col items-center gap-6 intro-logo">
+        <Logo height={80} className="md:h-[100px]" />
         <div className="h-px w-32 bg-gradient-to-r from-transparent via-cyan/60 to-transparent" />
         <div className="flex items-center gap-3">
           <div className="h-px w-10 bg-white/25" />
