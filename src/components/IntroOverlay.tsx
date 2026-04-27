@@ -12,11 +12,11 @@ export default function IntroOverlay() {
       return;
     }
 
-    const revealTimer = setTimeout(() => setPhase("reveal"), 2000);
+    const revealTimer = setTimeout(() => setPhase("reveal"), 2200);
     const doneTimer = setTimeout(() => {
       setPhase("done");
       sessionStorage.setItem("hyperfit-intro", "1");
-    }, 2800);
+    }, 3000);
 
     return () => {
       clearTimeout(revealTimer);
@@ -33,30 +33,34 @@ export default function IntroOverlay() {
       }`}
     >
       {/* Background grid */}
-      <div className="absolute inset-0 grid-overlay opacity-30" />
+      <div className="absolute inset-0 grid-overlay opacity-20" />
 
-      {/* Large glow orb */}
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[600px] w-[600px] rounded-full bg-cyan/10 blur-[120px] intro-pulse" />
+      {/* Deep background glow — cyan left, purple right */}
+      <div className="pointer-events-none absolute -left-32 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-cyan/10 blur-[140px]" />
+      <div className="pointer-events-none absolute -right-32 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-purple/10 blur-[140px]" />
 
-      {/* Corner accents */}
-      <div className="absolute top-8 left-8 h-14 w-14 border-t-2 border-l-2 border-cyan/50" />
-      <div className="absolute top-8 right-8 h-14 w-14 border-t-2 border-r-2 border-cyan/50" />
-      <div className="absolute bottom-8 left-8 h-14 w-14 border-b-2 border-l-2 border-cyan/50" />
-      <div className="absolute bottom-8 right-8 h-14 w-14 border-b-2 border-r-2 border-cyan/50" />
+      {/* Pulsing center glow behind logo */}
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[280px] w-[700px] rounded-full bg-cyan/8 blur-[80px] intro-pulse" />
 
       {/* Horizontal scan line */}
-      <div className="absolute left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-cyan/70 to-transparent intro-scan" />
+      <div className="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan/60 to-transparent intro-scan" />
 
-      {/* Logo + tagline */}
-      <div className="relative flex flex-col items-center gap-6 intro-logo">
-        <Logo height={80} className="md:h-[100px]" />
-        <div className="h-px w-32 bg-gradient-to-r from-transparent via-cyan/60 to-transparent" />
-        <div className="flex items-center gap-3">
-          <div className="h-px w-10 bg-white/25" />
-          <span className="font-body text-[11px] font-semibold uppercase tracking-[0.5em] text-white/60">
-            Function Training Gym
-          </span>
-          <div className="h-px w-10 bg-white/25" />
+      {/* Content */}
+      <div className="relative flex flex-col items-center gap-5 intro-logo">
+        {/* Logo */}
+        <Logo height={52} className="md:h-[64px]" />
+
+        {/* Animated underline */}
+        <div className="h-px w-0 animate-[expand_1s_0.8s_cubic-bezier(0.16,1,0.3,1)_forwards] bg-gradient-to-r from-transparent via-cyan to-transparent" />
+
+        {/* Tagline */}
+        <span className="font-body text-[10px] font-medium uppercase tracking-[0.6em] text-white/40">
+          Function Training Gym
+        </span>
+
+        {/* Loading bar */}
+        <div className="mt-2 h-[2px] w-32 overflow-hidden rounded-full bg-white/10">
+          <div className="h-full w-0 animate-[load_1.8s_0.3s_ease-out_forwards] rounded-full bg-gradient-to-r from-cyan/60 to-cyan" />
         </div>
       </div>
     </div>

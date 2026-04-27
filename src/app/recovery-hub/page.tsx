@@ -129,60 +129,75 @@ export default function RecoveryHubPage() {
       {/* Pricing */}
       <Section dark>
         <SectionHeading
-          title="Recovery Room Pricing"
-          subtitle="All passes are 1 hour. Open 5am–10pm daily. Sessions run to time — please exit the room promptly at the end of your booking for the next guest."
+          title="Recovery Passes"
+          subtitle="1 hour sessions. Open 5am – 10pm daily."
         />
-        <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-3">
-          {/* Platinum Room Pricing */}
-          <div className="card-futuristic rounded-xl p-6 transition-all duration-300">
-            <h3 className="font-display text-2xl tracking-wide text-white">
-              Private Room 1 (Platinum)
-            </h3>
-            <div className="mt-4 space-y-3">
-              {[
-                { people: "1 Person", price: "$40" },
-                { people: "2 Person", price: "$60" },
-                { people: "3 Person", price: "$80" },
-                { people: "4 Person", price: "$100" },
-              ].map((tier) => (
-                <div key={tier.people} className="flex items-center justify-between border-b border-white/10 pb-2">
-                  <span className="text-sm text-white/70">{tier.people}</span>
-                  <span className="font-heading font-bold text-white">{tier.price}</span>
-                </div>
-              ))}
-            </div>
-          </div>
 
-          {/* Private Room 2 & 3 Pricing */}
-          <div className="card-futuristic rounded-xl p-6 transition-all duration-300">
-            <h3 className="font-display text-2xl tracking-wide text-white">
-              Private Room 2 &amp; 3
-            </h3>
-            <div className="mt-4 space-y-3">
-              {[
-                { people: "1 Person", price: "$35" },
-                { people: "2 Person", price: "$55" },
-                { people: "3 Person", price: "$75" },
-                { people: "4 Person", price: "$95" },
-              ].map((tier) => (
-                <div key={tier.people} className="flex items-center justify-between border-b border-white/10 pb-2">
-                  <span className="text-sm text-white/70">{tier.people}</span>
-                  <span className="font-heading font-bold text-white">{tier.price}</span>
+        {/* Private Room 1 (Platinum) */}
+        <div className="mx-auto mb-12 max-w-5xl">
+          <h3 className="mb-6 text-center font-heading text-lg font-bold uppercase tracking-widest text-white/50">
+            Private Room 1 — Platinum
+          </h3>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { people: "1 Person", price: "$40" },
+              { people: "2 People", price: "$60" },
+              { people: "3 People", price: "$80" },
+              { people: "4 People", price: "$100" },
+            ].map((tier) => (
+              <div key={tier.people} className="card-futuristic rounded-xl p-6 text-center transition-all duration-300">
+                <p className="text-sm font-medium uppercase tracking-widest text-white/50">{tier.people}</p>
+                <p className="mt-3 font-heading text-4xl font-black text-white">{tier.price}</p>
+                <p className="mt-1 text-xs text-white/40">per hour</p>
+                <div className="mt-5">
+                  <Button href={siteConfig.bookingUrl} size="sm" className="w-full" external>
+                    Book Now
+                  </Button>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Recovery Boots */}
-          <div className="card-futuristic rounded-xl p-6 transition-all duration-300">
-            <h3 className="font-display text-2xl tracking-wide text-white">
-              Recovery Boots
-            </h3>
-            <div className="mt-4 space-y-3">
-              <div className="flex items-center justify-between border-b border-white/10 pb-2">
-                <span className="text-sm text-white/70">1 Hour Pass</span>
-                <span className="font-heading font-bold text-white">$25</span>
               </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Private Room 2 & 3 */}
+        <div className="mx-auto mb-12 max-w-5xl">
+          <h3 className="mb-6 text-center font-heading text-lg font-bold uppercase tracking-widest text-white/50">
+            Private Room 2 &amp; 3
+          </h3>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { people: "1 Person", price: "$35" },
+              { people: "2 People", price: "$55" },
+              { people: "3 People", price: "$75" },
+              { people: "4 People", price: "$95" },
+            ].map((tier) => (
+              <div key={tier.people} className="card-futuristic rounded-xl p-6 text-center transition-all duration-300">
+                <p className="text-sm font-medium uppercase tracking-widest text-white/50">{tier.people}</p>
+                <p className="mt-3 font-heading text-4xl font-black text-white">{tier.price}</p>
+                <p className="mt-1 text-xs text-white/40">per hour</p>
+                <div className="mt-5">
+                  <Button href={siteConfig.bookingUrl} size="sm" className="w-full" external>
+                    Book Now
+                  </Button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Recovery Boots */}
+        <div className="mx-auto max-w-sm">
+          <h3 className="mb-6 text-center font-heading text-lg font-bold uppercase tracking-widest text-white/50">
+            Recovery Boots
+          </h3>
+          <div className="card-futuristic rounded-xl p-8 text-center transition-all duration-300">
+            <p className="text-sm font-medium uppercase tracking-widest text-white/50">Per Person</p>
+            <p className="mt-3 font-heading text-5xl font-black text-white">$25</p>
+            <p className="mt-1 text-xs text-white/40">per hour</p>
+            <div className="mt-6">
+              <Button href={siteConfig.bookingUrl} className="w-full" external>
+                Book Now
+              </Button>
             </div>
           </div>
         </div>
