@@ -69,7 +69,7 @@ export default function RecoveryHubPage() {
 
       {/* Open hours banner */}
       <div className="bg-steel py-3 text-center">
-        <p className="font-display text-2xl tracking-wide text-white">
+        <p className="font-display text-2xl font-semibold text-white">
           Open 5am to 10pm
         </p>
       </div>
@@ -233,7 +233,7 @@ export default function RecoveryHubPage() {
           <p className="text-xl font-semibold text-white">
             Train hard. Recover harder.
           </p>
-          <p className="font-display text-4xl tracking-wide text-white md:text-5xl">
+          <p className="font-display text-4xl font-bold text-white md:text-5xl">
             SELF. CARE. CLUB.
           </p>
         </div>
@@ -242,7 +242,7 @@ export default function RecoveryHubPage() {
       {/* CTA */}
       <Section dark>
         <div className="text-center">
-          <h2 className="font-display text-4xl tracking-wide md:text-5xl">
+          <h2 className="font-display text-4xl font-bold md:text-5xl">
             Book Your Recovery Session
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-white/70">

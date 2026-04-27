@@ -14,7 +14,7 @@ export default function SectionHeading({
   return (
     <div className={`mb-14 ${centered ? "text-center" : ""}`}>
       <h2
-        className={`font-display text-4xl tracking-wide md:text-5xl lg:text-6xl ${
+        className={`font-display text-4xl font-bold md:text-5xl lg:text-6xl ${
           gradient ? "text-gradient" : ""
         }`}
       >

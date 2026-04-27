@@ -40,7 +40,7 @@ export default function Button({
   external = false,
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center rounded-lg font-heading uppercase tracking-widest cursor-pointer";
+    "inline-flex items-center justify-center rounded-lg font-heading font-semibold uppercase tracking-wider cursor-pointer";
   const styles = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
 
   if (href) {

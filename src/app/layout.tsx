@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Poppins } from "next/font/google";
+import { Space_Grotesk, Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import IntroOverlay from "@/components/IntroOverlay";
@@ -7,14 +7,13 @@ import ChatWidget from "@/components/ChatWidget";
 import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
 
-const montserrat = Montserrat({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-heading",
   display: "swap",
 });
 
-const poppins = Poppins({
-  weight: ["300", "400", "500", "600", "700"],
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
@@ -60,7 +59,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${poppins.variable}`}>
+    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`}>
       <body className="flex min-h-screen flex-col antialiased">
         <SmoothScroll />
 <IntroOverlay />
