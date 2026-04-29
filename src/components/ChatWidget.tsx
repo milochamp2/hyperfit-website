@@ -80,7 +80,7 @@ function getBotResponse(message: string): string {
 
   // Personal training
   if (lower.includes("personal") || lower.includes("pt") || lower.includes("coach") || lower.includes("one on one") || lower.includes("1 on 1")) {
-    return "Our certified personal trainers create customised programs for your goals — strength, fat loss, rehab, or performance. PT sessions are $90/session with private room access and nutrition guidance included.";
+    return "Our certified personal trainers create customised programs for your goals — strength, fat loss, rehab, or performance. PT sessions are $70/session with private room access and nutrition guidance included.";
   }
 
   // Gym / equipment

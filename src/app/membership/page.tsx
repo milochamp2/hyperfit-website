@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 const hyperEliteFeatures = [
   "24/7 gym access",
   "Unlimited classes (strength / conditioning / boxing / Hyrox sims)",
+  "Cardio / Hyper Hybrid",
   "1 recovery session per week (Private Rooms 2 & 3)",
   "Additional recovery pass available for $10",
   "Unlimited access to recovery boots",
@@ -32,6 +33,7 @@ const hyperRecoverFeatures = [
 
 const casualPasses = [
   { name: "Intro Offer — 5 Classes", price: "$50" },
+  { name: "Weekly Recovery Pass", price: "$55" },
   { name: "Single Class", price: "$26" },
   { name: "5 Class Pack", price: "$120" },
   { name: "10 Class Pack", price: "$220" },
@@ -44,24 +46,6 @@ const earlyBirdPlans = [
     price: "$60",
     note: "Lifetime Price",
     detail: "Includes 1 recovery session per week. Price locked for life.",
-  },
-  {
-    name: "Gold — All Access",
-    price: "$55",
-    note: "Locked for life",
-    detail: "Launch Day & two weeks only. Price will not increase.",
-  },
-  {
-    name: "Silver — Classes + Gym",
-    price: "$45",
-    note: "Locked for life",
-    detail: "Launch Day & two weeks only. Price will not increase.",
-  },
-  {
-    name: "Boxing Only",
-    price: "$40",
-    note: "Locked for life",
-    detail: "Launch Day & two weeks only. Price will not increase.",
   },
 ];
 
@@ -172,7 +156,7 @@ export default function MembershipPage() {
           title="Casual Passes"
           subtitle="No membership needed — grab a pass and train."
         />
-        <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {casualPasses.map((pass) => (
             <div key={pass.name} className="card-futuristic rounded-xl p-6 text-center transition-all duration-300">
               <h3 className="font-heading text-sm font-bold uppercase tracking-wide">
@@ -222,7 +206,7 @@ export default function MembershipPage() {
           title="Early Bird Memberships"
           subtitle="Launch Day & limited two weeks only — prices locked in for life."
         />
-        <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto max-w-sm">
           {earlyBirdPlans.map((plan) => (
             <div key={plan.name} className="relative card-futuristic rounded-xl p-8 border-white/30 transition-all duration-300">
               <div className="absolute -top-3.5 left-1/2 z-10 -translate-x-1/2">

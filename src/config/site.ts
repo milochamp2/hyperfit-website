@@ -184,7 +184,7 @@ export const pricingPlans = [
   },
   {
     name: "PT Package",
-    price: "$90",
+    price: "$70",
     period: "per session",
     description: "Personalised one-on-one training with our expert coaches.",
     features: [

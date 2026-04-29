@@ -57,21 +57,6 @@ export default function PricingPage() {
                   rehab, mobility, or small group sessions.
                 </p>
               </div>
-              <div>
-                <h3 className="font-heading text-lg font-bold">
-                  Member Rate
-                </h3>
-                <div className="mt-2">
-                  <span className="font-heading text-3xl font-bold text-white">
-                    $30
-                  </span>
-                  <span className="ml-1 text-white/70">/hour</span>
-                </div>
-                <p className="mt-2 text-sm text-white/70">
-                  Discounted rate for Unlimited Membership holders. Priority
-                  booking access included.
-                </p>
-              </div>
             </div>
           </div>
         </div>
