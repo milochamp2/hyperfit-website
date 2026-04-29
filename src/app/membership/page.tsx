@@ -21,11 +21,6 @@ const hyperEliteFeatures = [
   "Unlimited access to recovery boots",
 ];
 
-const hyperTrainFeatures = [
-  "24/7 gym access",
-  "Unlimited classes (strength / conditioning / boxing / Hyrox sims)",
-];
-
 const hyperRecoverFeatures = [
   "Unlimited recovery sessions per week (any recovery room)",
   "Unlimited access to recovery boots",
@@ -93,31 +88,6 @@ export default function MembershipPage() {
         </div>
       </Section>
 
-      {/* HYPER TRAIN ⚡ */}
-      <Section dark>
-        <SectionHeading
-          title="Hyper Train ⚡"
-          subtitle="Classes + gym — everything you need to train hard."
-        />
-        <div className="mx-auto max-w-lg">
-          <ul className="space-y-3">
-            {hyperTrainFeatures.map((feature) => (
-              <li key={feature} className="flex items-start gap-3">
-                <CheckIcon className="mt-1 h-5 w-5 shrink-0 text-white" />
-                <span className="text-lg">{feature}</span>
-              </li>
-            ))}
-          </ul>
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Button href={siteConfig.bookingUrl} size="lg" external>
-              Sign Up Now
-            </Button>
-            <Button href="/contact" variant="outline" size="lg">
-              Ask a Question
-            </Button>
-          </div>
-        </div>
-      </Section>
 
       {/* HYPER RECOVER ⚡ */}
       <Section>

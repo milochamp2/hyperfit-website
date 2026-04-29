@@ -12,12 +12,12 @@ export const siteConfig = {
 
   // Location
   address: {
-    street: "123 Whitehorse Road",
+    street: "3/636 Whitehorse Road",
     suburb: "Mitcham",
     state: "VIC",
     postcode: "3132",
     country: "Australia",
-    full: "123 Whitehorse Road, Mitcham VIC 3132",
+    full: "3/636 Whitehorse Road, Mitcham 3132",
   },
 
   // External Links

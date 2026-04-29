@@ -26,8 +26,7 @@ export default function Footer() {
             </Link>
             <p className="mt-3 text-sm leading-relaxed text-white/70">
               Mitcham&apos;s premier function training gym. Open functional
-              training space, full gym facilities, and 3 private training &amp;
-              recovery rooms.
+              training space, full gym facilities, and 3 private recovery rooms.
             </p>
             <div className="mt-5 flex gap-3">
               {[
@@ -78,14 +77,31 @@ export default function Footer() {
                 <MapPinIcon className="mt-0.5 h-4 w-4 shrink-0 text-white/60" />
                 <span>{siteConfig.address.full}</span>
               </li>
-              <li className="flex items-center gap-2 text-sm">
-                <PhoneIcon className="h-4 w-4 shrink-0 text-white/60" />
-                <a
-                  href={`tel:${siteConfig.phone}`}
-                  className="text-white/70 hover:text-white"
-                >
-                  {siteConfig.phoneDisplay}
-                </a>
+              <li className="flex items-start gap-2 text-sm">
+                <PhoneIcon className="mt-0.5 h-4 w-4 shrink-0 text-white/60" />
+                <div className="space-y-0.5">
+                  <div>
+                    <span className="text-white/40 text-[10px] uppercase tracking-wider">Gym &amp; Functional Training</span>
+                    <br />
+                    <a href={`tel:${siteConfig.phone}`} className="text-white/70 hover:text-white">
+                      {siteConfig.phoneDisplay}
+                    </a>
+                  </div>
+                  <div>
+                    <span className="text-white/40 text-[10px] uppercase tracking-wider">Recovery Services</span>
+                    <br />
+                    <a href="tel:+61436526009" className="text-white/70 hover:text-white">
+                      0436 526 009
+                    </a>
+                  </div>
+                  <div>
+                    <span className="text-white/40 text-[10px] uppercase tracking-wider">Ella Bayliss</span>
+                    <br />
+                    <a href="tel:+61421327425" className="text-white/70 hover:text-white">
+                      0421 327 425
+                    </a>
+                  </div>
+                </div>
               </li>
               <li className="flex items-center gap-2 text-sm">
                 <EnvelopeIcon className="h-4 w-4 shrink-0 text-white/60" />
@@ -107,18 +123,19 @@ export default function Footer() {
                 Hours
               </span>
             </h3>
-            <ul className="mt-4 space-y-1.5">
-              {siteConfig.hours.map((h) => (
-                <li
-                  key={h.day}
-                  className="flex justify-between text-sm text-white/70"
-                >
-                  <span>{h.day.slice(0, 3)}</span>
-                  <span>
-                    {h.open} – {h.close}
-                  </span>
-                </li>
-              ))}
+            <ul className="mt-4 space-y-3 text-sm">
+              <li>
+                <span className="text-white/40 text-[10px] uppercase tracking-wider">Recovery Hub</span>
+                <p className="mt-0.5 text-white/70">5:00 AM – 9:00 PM, Daily</p>
+              </li>
+              <li>
+                <span className="text-white/40 text-[10px] uppercase tracking-wider">Gym Access</span>
+                <p className="mt-0.5 text-white/70">24/7 — Ground Floor Only</p>
+              </li>
+              <li>
+                <span className="text-white/40 text-[10px] uppercase tracking-wider">Classes</span>
+                <p className="mt-0.5 text-white/70">As per timetable on app</p>
+              </li>
             </ul>
           </div>
         </div>

@@ -50,7 +50,7 @@ function getBotResponse(message: string): string {
 
   // Location
   if (lower.includes("location") || lower.includes("where") || lower.includes("address") || lower.includes("find") || lower.includes("direction")) {
-    return "We're at 123 Whitehorse Road, Mitcham VIC 3132. Plenty of free parking right outside the gym! Visit /contact for a map.";
+    return "We're at 3/636 Whitehorse Road, Mitcham 3132. Plenty of free parking right outside the gym! Visit /contact for a map.";
   }
 
   // Recovery Hub / Sauna / Bath

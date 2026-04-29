@@ -33,7 +33,7 @@ const features = [
   {
     title: "3 Private Rooms",
     description:
-      "Dedicated private training and recovery rooms for PT sessions, rehab, mobility work, or small group training.",
+      "Dedicated private rooms — hot & cold baths, infrared sauna, up to 4 person use.",
     icon: "lock" as IconName,
   },
   {
@@ -116,6 +116,26 @@ export default function Home() {
           subtitle="Drop in, say hello, and see the space for yourself."
         />
         <LocationHours />
+      </Section>
+
+      {/* Free Consult */}
+      <Section>
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="font-heading text-xs font-semibold uppercase tracking-[0.3em] text-white/40">
+            New to HyperFit?
+          </p>
+          <h2 className="mt-4 font-heading text-3xl font-bold md:text-4xl lg:text-5xl">
+            Free 30-Min Facility Tour
+          </h2>
+          <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-white/60">
+            Book a free 30-minute consult with our manager — we&apos;ll walk you through our facilities, introduce you to the team, and find the right membership for your goals.
+          </p>
+          <div className="mt-8">
+            <Button href={siteConfig.bookingUrl} size="lg" external>
+              Book Your Free Consult
+            </Button>
+          </div>
+        </div>
       </Section>
 
       {/* Final CTA */}
