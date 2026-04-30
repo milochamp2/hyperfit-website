@@ -117,12 +117,11 @@ export default function AboutPage() {
             Come See the Space
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-white/70">
-            Drop in for a tour, try a free class, or get in touch — we&apos;d love
-            to show you around HyperFit Mitcham.
+            Book in a 30 min consult — walk through of our facilities &amp; meet our team.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Button href={siteConfig.bookingUrl} size="lg" external>
-              Book a Free Trial
+              Book In Consult
             </Button>
             <Button href="/contact" variant="outline" size="lg">
               Contact Us
