@@ -4,11 +4,10 @@ import SectionHeading from "@/components/SectionHeading";
 import FeatureCard from "@/components/FeatureCard";
 import ServiceCard from "@/components/ServiceCard";
 
-import TestimonialCard from "@/components/TestimonialCard";
 import GalleryGrid from "@/components/GalleryGrid";
 import LocationHours from "@/components/LocationHours";
 import Button from "@/components/Button";
-import { siteConfig, services, testimonials } from "@/config/site";
+import { siteConfig, services } from "@/config/site";
 import type { IconName } from "@/components/Icons";
 
 const features = [
@@ -87,18 +86,6 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* Testimonials */}
-      <Section dark>
-        <SectionHeading
-          title="What Our Members Say"
-          subtitle="Real results from real people training at HyperFit Mitcham."
-        />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((testimonial) => (
-            <TestimonialCard key={testimonial.name} {...testimonial} />
-          ))}
-        </div>
-      </Section>
 
       {/* Gallery Preview */}
       <Section>
