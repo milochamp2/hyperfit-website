@@ -54,6 +54,7 @@ export const siteConfig = {
     { label: "Membership", href: "/membership" },
     { label: "Recovery Hub", href: "/recovery-hub" },
     { label: "Pricing", href: "/pricing" },
+    { label: "Shop", href: "/shop" },
     { label: "FAQs", href: "/faqs" },
     { label: "Contact", href: "/contact" },
   ],

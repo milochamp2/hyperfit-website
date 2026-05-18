@@ -27,7 +27,6 @@ const hyperRecoverFeatures = [
 ];
 
 const casualPasses = [
-  { name: "Intro Offer — 5 Classes", price: "$50" },
   { name: "Weekly Recovery Pass", price: "$55" },
   { name: "Single Class", price: "$26" },
   { name: "5 Class Pack", price: "$120" },
@@ -38,7 +37,7 @@ const casualPasses = [
 const earlyBirdPlans = [
   {
     name: "1 Membership — Full Access + Recovery",
-    price: "$60",
+    price: "$65",
     note: "Lifetime Price",
     detail: "Includes 1 recovery session per week. Price locked for life.",
   },
