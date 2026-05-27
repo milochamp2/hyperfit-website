@@ -2,8 +2,6 @@ import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import {
   InstagramIcon,
-  FacebookIcon,
-  TikTokIcon,
   MapPinIcon,
   PhoneIcon,
   EnvelopeIcon,
@@ -29,22 +27,15 @@ export default function Footer() {
               training space, full gym facilities, and 3 private recovery rooms.
             </p>
             <div className="mt-5 flex gap-3">
-              {[
-                { href: siteConfig.socials.instagram, label: "Instagram", Icon: InstagramIcon },
-                { href: siteConfig.socials.facebook, label: "Facebook", Icon: FacebookIcon },
-                { href: siteConfig.socials.tiktok, label: "TikTok", Icon: TikTokIcon },
-              ].map(({ href, label, Icon }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-steel-light bg-steel/50 text-white/70 transition-all hover:border-white/30 hover:text-white"
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
+              <a
+                href={siteConfig.socials.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-steel-light bg-steel/50 text-white/70 transition-all hover:border-white/30 hover:text-white"
+              >
+                <InstagramIcon className="h-4 w-4" />
+              </a>
             </div>
           </div>
 

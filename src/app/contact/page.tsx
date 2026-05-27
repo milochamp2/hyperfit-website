@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm";
 import LocationHours from "@/components/LocationHours";
 import Button from "@/components/Button";
 import { siteConfig } from "@/config/site";
-import { InstagramIcon, FacebookIcon, TikTokIcon } from "@/components/Icons";
+import { InstagramIcon } from "@/components/Icons";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -88,24 +88,6 @@ export default function ContactPage() {
                   className="rounded-lg bg-steel p-3 text-white/70 transition-colors hover:bg-steel-light hover:text-white"
                 >
                   <InstagramIcon />
-                </a>
-                <a
-                  href={siteConfig.socials.facebook}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Facebook"
-                  className="rounded-lg bg-steel p-3 text-white/70 transition-colors hover:bg-steel-light hover:text-white"
-                >
-                  <FacebookIcon />
-                </a>
-                <a
-                  href={siteConfig.socials.tiktok}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="TikTok"
-                  className="rounded-lg bg-steel p-3 text-white/70 transition-colors hover:bg-steel-light hover:text-white"
-                >
-                  <TikTokIcon />
                 </a>
               </div>
             </div>

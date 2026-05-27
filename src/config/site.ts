@@ -30,9 +30,7 @@ export const siteConfig = {
 
   // Social Links
   socials: {
-    instagram: "https://www.instagram.com/hyperfitgym",
-    facebook: "https://www.facebook.com/hyperfitgym",
-    tiktok: "https://www.tiktok.com/@hyperfitgym",
+    instagram: "https://www.instagram.com/hyperfit.mitcham",
   },
 
   // Business Hours
