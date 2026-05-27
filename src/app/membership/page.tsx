@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import SectionHeading from "@/components/SectionHeading";
 import Button from "@/components/Button";
+import HapanaWidget from "@/components/HapanaWidget";
 import { siteConfig } from "@/config/site";
 import { CheckIcon } from "@/components/Icons";
 
@@ -37,9 +38,10 @@ const casualPasses = [
 const earlyBirdPlans = [
   {
     name: "1 Membership — Full Access + Recovery",
-    price: "$65",
-    note: "Lifetime Price",
-    detail: "Includes 1 recovery session per week. Price locked for life.",
+    price: "$55",
+    after: "$65",
+    note: "Early Bird",
+    detail: "Includes 1 recovery session per week. Early Bird price for 6 months, then $65/week.",
   },
 ];
 
@@ -190,6 +192,7 @@ export default function MembershipPage() {
                 <span className="font-heading text-5xl font-bold text-white">{plan.price}</span>
                 <span className="text-sm text-white/70">/week</span>
               </div>
+              <p className="mt-1 text-xs text-white/50">for 6 months, then {plan.after}/week</p>
               <p className="mt-4 text-sm leading-relaxed text-white/70">
                 {plan.detail}
               </p>
@@ -201,6 +204,15 @@ export default function MembershipPage() {
             </div>
           ))}
         </div>
+      </Section>
+
+      {/* Memberships & Packages Booking */}
+      <Section dark>
+        <SectionHeading
+          title="Sign Up & Purchase"
+          subtitle="Select your membership or pack below to get started."
+        />
+        <HapanaWidget type="packages" />
       </Section>
 
       {/* Membership Terms */}

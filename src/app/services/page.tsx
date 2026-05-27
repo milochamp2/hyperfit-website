@@ -4,6 +4,7 @@ import Section from "@/components/Section";
 import SectionHeading from "@/components/SectionHeading";
 import ServiceCard from "@/components/ServiceCard";
 import Button from "@/components/Button";
+import HapanaWidget from "@/components/HapanaWidget";
 import { siteConfig, services } from "@/config/site";
 
 export const metadata: Metadata = {
@@ -31,6 +32,15 @@ export default function ServicesPage() {
             <ServiceCard key={service.id} {...service} />
           ))}
         </div>
+      </Section>
+
+      {/* Class Schedule & Bookings */}
+      <Section dark>
+        <SectionHeading
+          title="Class Schedule & Bookings"
+          subtitle="Browse the timetable and book your spot."
+        />
+        <HapanaWidget type="classes" />
       </Section>
 
       {/* CTA */}

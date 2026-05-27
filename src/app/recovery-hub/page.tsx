@@ -4,6 +4,7 @@ import Section from "@/components/Section";
 import SectionHeading from "@/components/SectionHeading";
 import ImageSlider from "@/components/ImageSlider";
 import Button from "@/components/Button";
+import HapanaWidget from "@/components/HapanaWidget";
 import { siteConfig } from "@/config/site";
 import { CheckIcon } from "@/components/Icons";
 
@@ -237,6 +238,16 @@ export default function RecoveryHubPage() {
             SELF. CARE. CLUB.
           </p>
         </div>
+      </Section>
+
+      {/* Private Sessions Booking */}
+      <Section>
+        <SectionHeading
+          title="Book a Private Session"
+          subtitle="Select your recovery room or PT session and lock in your time."
+          gradient
+        />
+        <HapanaWidget type="privates" />
       </Section>
 
       {/* CTA */}
