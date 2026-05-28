@@ -74,7 +74,7 @@ export default function MembershipPage() {
             </p>
             <div className="mt-8">
               <Button href={siteConfig.trialUrl} className="w-full" external>
-                Book a Free Class
+                Book a 30-Minute Consult
               </Button>
             </div>
           </div>

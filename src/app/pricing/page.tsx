@@ -71,7 +71,7 @@ export default function PricingPage() {
           </p>
           <div className="mt-6">
             <Button href={siteConfig.trialUrl} size="lg" external>
-              Book a Free Class
+              Book a 30-Minute Consult
             </Button>
           </div>
         </div>
