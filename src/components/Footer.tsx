@@ -116,16 +116,16 @@ export default function Footer() {
             </h3>
             <ul className="mt-4 space-y-3 text-sm">
               <li>
+                <span className="text-white/40 text-[10px] uppercase tracking-wider">Gym (Ground Floor)</span>
+                <p className="mt-0.5 text-white/70">24/7</p>
+              </li>
+              <li>
+                <span className="text-white/40 text-[10px] uppercase tracking-wider">Boxing Room (First Floor)</span>
+                <p className="mt-0.5 text-white/70">5:00 AM – 9:00 PM</p>
+              </li>
+              <li>
                 <span className="text-white/40 text-[10px] uppercase tracking-wider">Recovery Hub</span>
-                <p className="mt-0.5 text-white/70">5:00 AM – 9:00 PM, Daily</p>
-              </li>
-              <li>
-                <span className="text-white/40 text-[10px] uppercase tracking-wider">Gym Access</span>
-                <p className="mt-0.5 text-white/70">24/7 — Ground Floor Only</p>
-              </li>
-              <li>
-                <span className="text-white/40 text-[10px] uppercase tracking-wider">Classes</span>
-                <p className="mt-0.5 text-white/70">As per timetable on app</p>
+                <p className="mt-0.5 text-white/70">5:00 AM – 9:00 PM</p>
               </li>
             </ul>
           </div>

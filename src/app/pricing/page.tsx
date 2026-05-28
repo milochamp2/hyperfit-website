@@ -9,22 +9,22 @@ import { siteConfig, pricingPlans } from "@/config/site";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "HyperFit membership pricing — casual visits, unlimited memberships, class packs, and personal training packages. Flexible plans for every budget in Mitcham.",
+    "HyperFit membership pricing — EarlyBird $55/week locked for life, 2-Week Trial $65, All-Access membership, and PT packages. Simple, transparent pricing in Mitcham.",
 };
 
 export default function PricingPage() {
   return (
     <>
       <Hero
-        title="Simple, Flexible Pricing"
-        subtitle="No hidden fees, no lock-in contracts. Choose the plan that works for you."
+        title="Simple, Transparent Pricing"
+        subtitle="One membership tier. Full access. No hidden fees."
         showCTAs={false}
       />
 
       <Section>
         <SectionHeading
           title="Membership Plans"
-          subtitle="Train your way with our range of membership and session options."
+          subtitle="EarlyBird pricing is locked in for life — available at launch for a limited time only."
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {pricingPlans.map((plan) => (
@@ -33,49 +33,45 @@ export default function PricingPage() {
         </div>
       </Section>
 
-      {/* Private Room Pricing */}
+      {/* Recovery Casual Passes */}
       <Section dark>
         <SectionHeading
-          title="Private Room Sessions"
-          subtitle="Book one of our 3 private training and recovery rooms."
+          title="Recovery — Casual Passes"
+          subtitle="Non-members. Per session. Private room access."
         />
-        <div className="mx-auto max-w-2xl">
-          <div className="rounded-xl bg-jet border border-steel p-8">
-            <div className="grid gap-6 sm:grid-cols-2">
-              <div>
-                <h3 className="font-heading text-lg font-bold">
-                  Private Room Hire
-                </h3>
-                <div className="mt-2">
-                  <span className="font-heading text-3xl font-bold text-white">
-                    $40
-                  </span>
-                  <span className="ml-1 text-white/70">/hour</span>
-                </div>
-                <p className="mt-2 text-sm text-white/70">
-                  Standard rate for private room bookings. Available for PT,
-                  rehab, mobility, or small group sessions.
-                </p>
+        <div className="mx-auto grid max-w-3xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { people: "1 Person", price: "$40" },
+            { people: "2 People", price: "$60" },
+            { people: "3 People", price: "$80" },
+            { people: "4 People", price: "$100" },
+          ].map((tier) => (
+            <div key={tier.people} className="card-futuristic rounded-xl p-6 text-center transition-all duration-300">
+              <p className="text-sm font-medium uppercase tracking-widest text-white/50">{tier.people}</p>
+              <p className="mt-3 font-heading text-4xl font-black text-white">{tier.price}</p>
+              <p className="mt-1 text-xs text-white/40">per session</p>
+              <div className="mt-5">
+                <Button href="/recovery-hub#book" size="sm" className="w-full">
+                  Book Now
+                </Button>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </Section>
 
-      {/* Special Offers */}
+      {/* Intro Offer */}
       <Section>
         <div className="mx-auto max-w-2xl rounded-xl border-2 border-white/30 bg-steel p-8 text-center">
           <h2 className="font-heading text-2xl font-bold md:text-3xl">
-            Intro Offer: First Class Free
+            Intro Offer: 2-Week Trial — $65
           </h2>
           <p className="mt-3 text-white/70">
-            New to HyperFit? Try your first group class completely free — no
-            strings attached. Experience the training, meet the coaches, and
-            see why Mitcham trains here.
+            New to HyperFit? Try everything for 2 weeks — full All-Access membership, all classes, recovery, and more. Rolls automatically onto a full membership after your trial.
           </p>
           <div className="mt-6">
-            <Button href={siteConfig.bookingUrl} size="lg" external>
-              Claim Your Free Class
+            <Button href={siteConfig.trialUrl} size="lg" external>
+              Book a Free Class
             </Button>
           </div>
         </div>
@@ -88,18 +84,13 @@ export default function PricingPage() {
             Have Questions About Pricing?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-white/70">
-            Get in touch and we&apos;ll find the plan that works best for your
-            goals and budget.
+            Get in touch and we&apos;ll find the plan that works best for your goals.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Button href="/contact" size="lg">
               Contact Us
             </Button>
-            <Button
-              href={`tel:${siteConfig.phone}`}
-              variant="outline"
-              size="lg"
-            >
+            <Button href={`tel:${siteConfig.phone}`} variant="outline" size="lg">
               Call {siteConfig.phoneDisplay}
             </Button>
           </div>

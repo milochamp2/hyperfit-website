@@ -74,13 +74,11 @@ export default function LocationHours() {
         <div className="space-y-2.5">
           {siteConfig.hours.map((h) => (
             <div
-              key={h.day}
+              key={h.zone}
               className="flex justify-between border-b border-white/5 pb-2.5 text-sm"
             >
-              <span className="font-medium">{h.day}</span>
-              <span className="text-white/70">
-                {h.open} – {h.close}
-              </span>
+              <span className="font-medium">{h.zone}</span>
+              <span className="text-white/70">{h.time}</span>
             </div>
           ))}
         </div>

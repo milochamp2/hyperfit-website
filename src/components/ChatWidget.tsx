@@ -25,27 +25,32 @@ function getBotResponse(message: string): string {
 
   // Opening hours
   if (lower.includes("hour") || lower.includes("open") || lower.includes("close") || lower.includes("time")) {
-    return "We're open 5:00 AM – 10:00 PM, Monday to Sunday — every day of the week!";
+    return "Gym (ground floor): 24/7. Boxing room (first floor): 5:00 AM – 9:00 PM. Recovery Hub: 5:00 AM – 9:00 PM.";
   }
 
   // Pricing & membership
   if (lower.includes("price") || lower.includes("cost") || lower.includes("membership") || lower.includes("much") || lower.includes("fee")) {
-    return "Our memberships: Hyper Elite (full access) $75/week ($65 Early Bird, $55 ONETWO Early Bird), Hyper Train (classes + gym) $55/week ($45 Early Bird), Hyper Recover $55/week. Casual: Single class $26, 5-Pack $120, 10-Pack $220, Gym pass $15. Early Bird prices locked for life! Visit /membership for full details!";
+    return "We have one membership tier — All-Access. EarlyBird is $55/week, locked in for life (launch + 2 weeks only). Standard All-Access pricing TBC. 2-Week Trial intro offer is $65 — full access, rolls onto membership after. Recovery casual passes: 1 person $40, 2 people $60, 3 people $80, 4 people $100 per session. Visit /membership for full details!";
   }
 
   // Early bird
   if (lower.includes("early bird") || lower.includes("earlybird") || lower.includes("launch") || lower.includes("special")) {
-    return "Early Bird memberships are available Launch Day & for 2 weeks only — prices locked for life! Gold (All Access) $55/week, Silver (Classes + Gym) $45/week, Boxing Only $40/week. Hyper Elite Early Bird $65/week, Hyper Train Early Bird $45/week. 8-week lock-in. Sign up at /membership!";
+    return "EarlyBird membership is $55/week — available launch day + 2 weeks only. The rate is locked in for life for as long as you remain an active member. Full All-Access membership. Sign up at /membership!";
   }
 
-  // Bundle / ONETWO
-  if (lower.includes("bundle") || lower.includes("onetwo") || lower.includes("boxing")) {
-    return "We offer boxing as part of our unlimited classes in all memberships! Hyper Elite ($75/week, $65 Early Bird) includes boxing + all classes + recovery. Hyper Train ($55/week, $45 Early Bird) includes boxing + all classes + gym. There's also a Boxing Only Early Bird at $40/week. Check /membership!";
+  // Boxing
+  if (lower.includes("boxing") || lower.includes("hyperchamber")) {
+    return "Boxing is included in the All-Access membership — unlimited Hyperchamber boxing room classes plus access to the first floor boxing room (5:00 AM – 9:00 PM). Check /services for more!";
   }
 
-  // Free trial
-  if (lower.includes("free") || lower.includes("trial")) {
-    return "Yes! Your first group class is completely free — no strings attached. Book through our website or just drop in and we'll get you started!";
+  // Trial
+  if (lower.includes("trial") || lower.includes("intro") || lower.includes("2 week") || lower.includes("two week")) {
+    return "Our 2-Week Trial is $65 — full All-Access membership for 2 weeks, then rolls automatically onto a standard membership. Great way to experience everything before committing! Book at /membership.";
+  }
+
+  // Free trial / free class
+  if (lower.includes("free")) {
+    return "You can book a free class through our Open Day / trial booking page. Head to /membership and click 'Book a Free Class' to grab your spot!";
   }
 
   // Location
@@ -54,18 +59,18 @@ function getBotResponse(message: string): string {
   }
 
   // Recovery Hub / Sauna / Bath
-  if (lower.includes("recover") || lower.includes("rehab") || lower.includes("mobility") || lower.includes("sauna") || lower.includes("bath") || lower.includes("plunge") || lower.includes("platinum")) {
-    return "Our Recovery Hub has 3 private rooms, each with an infrared sauna, hot plunge, and cold plunge. Private Room 1 (Platinum) starts at $40/hr, Rooms 2 & 3 start at $35/hr. Recovery Boots available for $25/hr. Open 5 AM – 10 PM daily. Check out /recovery-hub for photos and full pricing!";
+  if (lower.includes("recover") || lower.includes("rehab") || lower.includes("mobility") || lower.includes("sauna") || lower.includes("bath") || lower.includes("plunge")) {
+    return "Our Recovery Hub has 3 private rooms — infrared sauna, hot plunge, and cold plunge. Members get 1 private room session/week included (+$10 extra sessions, +$20 extra person). Casual passes: 1 person $40, 2 people $60, 3 people $80, 4 people $100. Open 5:00 AM – 9:00 PM daily. See /recovery-hub!";
   }
 
-  // Private rooms / pricing
+  // Private rooms
   if (lower.includes("private") || lower.includes("room")) {
-    return "We have 3 private recovery rooms: Room 1 (Platinum) from $40 (1 person) to $100 (4 people), Rooms 2 & 3 from $35 (1 person) to $95 (4 people). All rooms include infrared sauna, hot plunge & cold plunge. 1-hour passes, open 5 AM – 10 PM. See /recovery-hub!";
+    return "We have 3 private recovery rooms with infrared sauna, hot plunge & cold plunge. Members get 1 session/week included. Casual: 1 person $40, up to 4 people $100 per session. Open 5:00 AM – 9:00 PM. Book at /recovery-hub!";
   }
 
   // Recovery boots
   if (lower.includes("boot")) {
-    return "Recovery Boots are available for $25 per 1-hour session. Great for circulation and muscle recovery after a tough workout!";
+    return "Unlimited recovery boot sessions are included with all memberships — great for circulation and muscle recovery after training!";
   }
 
   // Services overview
@@ -90,7 +95,7 @@ function getBotResponse(message: string): string {
 
   // Booking
   if (lower.includes("book") || lower.includes("reserve") || lower.includes("sign up") || lower.includes("join")) {
-    return "You can book classes and sessions through our online booking system. Click 'Book a Class' on our website or download the Mindbody app. You can also call us at 0474 952 921!";
+    return "All bookings go through Hapana — our booking system. Head to /services to book a class, /membership to sign up or purchase a pack, or /recovery-hub to book a recovery session. You can also call us at 0474 952 921!";
   }
 
   // Contact
@@ -104,8 +109,8 @@ function getBotResponse(message: string): string {
   }
 
   // Cancellation
-  if (lower.includes("cancel")) {
-    return "Memberships have an 8-week lock-in period. 30 days notice required to cancel. You can pause your membership with 7 days notice, for up to 90 days per year. Early Bird prices are locked in for life — no increases!";
+  if (lower.includes("cancel") || lower.includes("pause")) {
+    return "30 days notice required to cancel. Memberships can be paused with 14 days notice, for up to 60 days per year. EarlyBird rate is locked in for life — no price increases while you remain active!";
   }
 
   // What to bring

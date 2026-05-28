@@ -5,7 +5,6 @@ import SectionHeading from "@/components/SectionHeading";
 import ImageSlider from "@/components/ImageSlider";
 import Button from "@/components/Button";
 import HapanaWidget from "@/components/HapanaWidget";
-import { siteConfig } from "@/config/site";
 import { CheckIcon } from "@/components/Icons";
 
 export const metadata: Metadata = {
@@ -127,80 +126,58 @@ export default function RecoveryHubPage() {
         </div>
       </Section>
 
-      {/* Pricing */}
+      {/* Member Inclusions */}
       <Section dark>
         <SectionHeading
-          title="Recovery Passes"
-          subtitle="1 hour sessions. Open 5am – 10pm daily."
+          title="Member Inclusions"
+          subtitle="Included with every All-Access membership."
         />
-
-        {/* Private Room 1 (Platinum) */}
-        <div className="mx-auto mb-12 max-w-5xl">
-          <h3 className="mb-6 text-center font-heading text-lg font-bold uppercase tracking-widest text-white/50">
-            Private Room 1 — Platinum
-          </h3>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto max-w-lg">
+          <ul className="space-y-4">
             {[
-              { people: "1 Person", price: "$40" },
-              { people: "2 People", price: "$60" },
-              { people: "3 People", price: "$80" },
-              { people: "4 People", price: "$100" },
-            ].map((tier) => (
-              <div key={tier.people} className="card-futuristic rounded-xl p-6 text-center transition-all duration-300">
-                <p className="text-sm font-medium uppercase tracking-widest text-white/50">{tier.people}</p>
-                <p className="mt-3 font-heading text-4xl font-black text-white">{tier.price}</p>
-                <p className="mt-1 text-xs text-white/40">per hour</p>
-                <div className="mt-5">
-                  <Button href={siteConfig.bookingUrl} size="sm" className="w-full" external>
-                    Book Now
-                  </Button>
-                </div>
-              </div>
+              "1 private room session per week included (Room 2 or 3)",
+              "+$10 per additional session",
+              "+$20 per extra person brought into a session",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-3">
+                <span className="mt-1 h-5 w-5 shrink-0 text-white">✓</span>
+                <span className="text-lg">{item}</span>
+              </li>
             ))}
+          </ul>
+          <div className="mt-8">
+            <Button href="/membership" size="lg">
+              View Memberships
+            </Button>
           </div>
         </div>
+      </Section>
 
-        {/* Private Room 2 & 3 */}
-        <div className="mx-auto mb-12 max-w-5xl">
-          <h3 className="mb-6 text-center font-heading text-lg font-bold uppercase tracking-widest text-white/50">
-            Private Room 2 &amp; 3
-          </h3>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { people: "1 Person", price: "$35" },
-              { people: "2 People", price: "$55" },
-              { people: "3 People", price: "$75" },
-              { people: "4 People", price: "$95" },
-            ].map((tier) => (
-              <div key={tier.people} className="card-futuristic rounded-xl p-6 text-center transition-all duration-300">
-                <p className="text-sm font-medium uppercase tracking-widest text-white/50">{tier.people}</p>
-                <p className="mt-3 font-heading text-4xl font-black text-white">{tier.price}</p>
-                <p className="mt-1 text-xs text-white/40">per hour</p>
-                <div className="mt-5">
-                  <Button href={siteConfig.bookingUrl} size="sm" className="w-full" external>
-                    Book Now
-                  </Button>
-                </div>
+      {/* Casual Passes */}
+      <Section>
+        <SectionHeading
+          title="Casual Recovery Passes"
+          subtitle="Non-members. Per session. Open 5:00 AM – 9:00 PM daily."
+          gradient
+        />
+        <div className="mx-auto grid max-w-3xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { people: "1 Person", price: "$40" },
+            { people: "2 People", price: "$60" },
+            { people: "3 People", price: "$80" },
+            { people: "4 People", price: "$100" },
+          ].map((tier) => (
+            <div key={tier.people} className="card-futuristic rounded-xl p-6 text-center transition-all duration-300">
+              <p className="text-sm font-medium uppercase tracking-widest text-white/50">{tier.people}</p>
+              <p className="mt-3 font-heading text-4xl font-black text-white">{tier.price}</p>
+              <p className="mt-1 text-xs text-white/40">per session</p>
+              <div className="mt-5">
+                <Button href="/recovery-hub#book" size="sm" className="w-full">
+                  Book Now
+                </Button>
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Recovery Boots */}
-        <div className="mx-auto max-w-sm">
-          <h3 className="mb-6 text-center font-heading text-lg font-bold uppercase tracking-widest text-white/50">
-            Recovery Boots
-          </h3>
-          <div className="card-futuristic rounded-xl p-8 text-center transition-all duration-300">
-            <p className="text-sm font-medium uppercase tracking-widest text-white/50">Per Person</p>
-            <p className="mt-3 font-heading text-5xl font-black text-white">$25</p>
-            <p className="mt-1 text-xs text-white/40">per hour</p>
-            <div className="mt-6">
-              <Button href={siteConfig.bookingUrl} className="w-full" external>
-                Book Now
-              </Button>
             </div>
-          </div>
+          ))}
         </div>
       </Section>
 
@@ -241,7 +218,7 @@ export default function RecoveryHubPage() {
       </Section>
 
       {/* Private Sessions Booking */}
-      <Section>
+      <Section id="book">
         <SectionHeading
           title="Book a Private Session"
           subtitle="Select your recovery room or PT session and lock in your time."
@@ -261,7 +238,7 @@ export default function RecoveryHubPage() {
             and restore your body, clear your mind, and recharge your energy.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button href={siteConfig.bookingUrl} size="lg" external>
+            <Button href="/recovery-hub#book" size="lg">
               Book a Session
             </Button>
             <Button href="/contact" variant="outline" size="lg">

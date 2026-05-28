@@ -33,15 +33,14 @@ export const siteConfig = {
     instagram: "https://www.instagram.com/hyperfit.mitcham",
   },
 
-  // Business Hours
+  // External Links — trial/open day uses TryBooking; all other bookings via Hapana
+  trialUrl: "https://www.trybooking.com/events/1587375/sessions",
+
+  // Access Hours
   hours: [
-    { day: "Monday", open: "5:00 AM", close: "10:00 PM" },
-    { day: "Tuesday", open: "5:00 AM", close: "10:00 PM" },
-    { day: "Wednesday", open: "5:00 AM", close: "10:00 PM" },
-    { day: "Thursday", open: "5:00 AM", close: "10:00 PM" },
-    { day: "Friday", open: "5:00 AM", close: "10:00 PM" },
-    { day: "Saturday", open: "5:00 AM", close: "10:00 PM" },
-    { day: "Sunday", open: "5:00 AM", close: "10:00 PM" },
+    { zone: "Gym (Ground Floor)", time: "24/7" },
+    { zone: "Boxing Room (First Floor)", time: "5:00 AM – 9:00 PM" },
+    { zone: "Recovery Hub", time: "5:00 AM – 9:00 PM" },
   ],
 
   // Navigation
@@ -141,57 +140,59 @@ export const services = [
 
 export const pricingPlans = [
   {
-    name: "Casual Visit",
-    price: "$25",
-    period: "per session",
-    description: "Drop in and train anytime. No commitment required.",
+    name: "2-Week Trial",
+    price: "$65",
+    period: "intro offer",
+    description: "Try HyperFit for 2 weeks — full access, rolls onto membership automatically.",
     features: [
-      "Full gym access",
-      "1 group class included",
-      "No lock-in contract",
-      "Towel & water included",
+      "Full All-Access membership",
+      "Rolls to standard membership after 2 weeks",
+      "24/7 gym access",
+      "All classes & recovery boots",
+      "1 private room session included",
     ],
     highlighted: false,
   },
   {
-    name: "Unlimited Membership",
+    name: "EarlyBird",
     price: "$55",
     period: "per week",
-    description: "Our most popular plan. Unlimited access to everything HyperFit offers.",
+    description: "Launch special — rate locked in for life while you remain a member.",
     features: [
-      "Unlimited group classes",
-      "Full gym access",
-      "Open gym hours",
-      "1 free PT session per month",
-      "Member pricing on private rooms",
-      "Community events access",
+      "24/7 gym access (ground floor)",
+      "First floor boxing room access",
+      "Unlimited functional training classes",
+      "Unlimited Hyperchamber boxing classes",
+      "Unlimited recovery boot sessions",
+      "1 private room session/week (Room 2 or 3)",
+      "Price locked in for life",
     ],
     highlighted: true,
   },
   {
-    name: "10-Class Pack",
-    price: "$200",
-    period: "10 sessions",
-    description: "Flexible class pack for those who want to train on their own schedule.",
+    name: "All-Access",
+    price: "TBC",
+    period: "per week",
+    description: "Standard membership — full access to everything HyperFit offers.",
     features: [
-      "10 group class sessions",
-      "Full gym access on class days",
-      "Valid for 3 months",
-      "No weekly commitment",
+      "24/7 gym access (ground floor)",
+      "First floor boxing room access",
+      "Unlimited functional training classes",
+      "Unlimited Hyperchamber boxing classes",
+      "Unlimited recovery boot sessions",
+      "1 private room session/week (Room 2 or 3)",
     ],
     highlighted: false,
   },
   {
     name: "PT Package",
-    price: "$70",
-    period: "per session",
-    description: "Personalised one-on-one training with our expert coaches.",
+    price: "Coming Soon",
+    period: "",
+    description: "One-on-one personal training — details dropping soon.",
     features: [
       "1-on-1 personal training",
       "Customised program design",
       "Private room access",
-      "Nutrition guidance included",
-      "Discounts on multi-session packs",
     ],
     highlighted: false,
   },
@@ -239,7 +240,7 @@ export const faqs = [
   {
     question: "What membership options do you offer?",
     answer:
-      "We offer several membership options including Unlimited Membership ($55/week), 10-Class Packs ($200), Casual Visits ($25/session), and Personal Training Packages ($90/session). All memberships include full gym access.",
+      "We offer an EarlyBird Membership at $55/week (launch special, price locked for life), a standard All-Access Membership (price TBC), and a 2-Week Trial intro offer for $65. PT packages are coming soon. All memberships include 24/7 gym access, unlimited classes, recovery boots, and 1 private room session per week.",
   },
   {
     question: "What are the private rooms used for?",
@@ -249,7 +250,7 @@ export const faqs = [
   {
     question: "What is your cancellation policy?",
     answer:
-      "Memberships can be cancelled with 2 weeks' written notice. Class bookings can be cancelled up to 4 hours before the session without charge. Late cancellations or no-shows may incur a fee. Contact us for full details.",
+      "Memberships require 30 days written notice to cancel. Memberships can be paused with 14 days notice, for up to 60 days per year.",
   },
   {
     question: "Are classes suitable for beginners?",
@@ -267,8 +268,8 @@ export const faqs = [
       "Yes, we have dedicated free parking right outside the gym. There is also additional street parking available on Whitehorse Road and surrounding streets in Mitcham.",
   },
   {
-    question: "Do you offer a free trial?",
+    question: "Do you offer a trial?",
     answer:
-      "Yes! We offer a free introductory class so you can experience HyperFit before committing. Book your free trial through our website or give us a call to arrange your first session.",
+      "Yes! We offer a 2-Week Trial for $65 — full All-Access membership for 2 weeks, which automatically rolls onto a standard membership. Book through our website to get started.",
   },
 ] as const;

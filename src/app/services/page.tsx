@@ -35,7 +35,7 @@ export default function ServicesPage() {
       </Section>
 
       {/* Class Schedule & Bookings */}
-      <Section dark>
+      <Section id="book" dark>
         <SectionHeading
           title="Class Schedule & Bookings"
           subtitle="Browse the timetable and book your spot."
@@ -54,8 +54,8 @@ export default function ServicesPage() {
             right training for your goals and fitness level.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button href={siteConfig.bookingUrl} size="lg" external>
-              Book a Free Trial
+            <Button href={siteConfig.trialUrl} size="lg" external>
+              Book a Free Class
             </Button>
             <Button href="/contact" variant="outline" size="lg">
               Get in Touch

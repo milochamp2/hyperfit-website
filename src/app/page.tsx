@@ -118,8 +118,8 @@ export default function Home() {
             Book a free 30-minute consult with our manager — we&apos;ll walk you through our facilities, introduce you to the team, and find the right membership for your goals.
           </p>
           <div className="mt-8">
-            <Button href={siteConfig.bookingUrl} size="lg" external>
-              Book Your Free Consult
+            <Button href={siteConfig.trialUrl} size="lg" external>
+              Book a Free Class
             </Button>
           </div>
         </div>
@@ -139,10 +139,10 @@ export default function Home() {
             Mitcham&apos;s leading function training gym.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <Button href={siteConfig.bookingUrl} size="lg" external>
+            <Button href="/services" size="lg">
               Book a Class
             </Button>
-            <Button href="/pricing" variant="outline" size="lg">
+            <Button href="/membership" variant="outline" size="lg">
               Join Now
             </Button>
             <Button
