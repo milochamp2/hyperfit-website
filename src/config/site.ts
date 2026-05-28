@@ -21,7 +21,7 @@ export const siteConfig = {
   },
 
   // External Links
-  bookingUrl: "https://clients.mindbodyonline.com/classic/ws?studioid=000000",
+  bookingUrl: "https://www.trybooking.com/events/1587375/sessions",
   messageUrl: "sms:+61474952921",
   whatsappUrl: "https://wa.me/61474952921",
   googleMapsUrl: "https://maps.google.com/?q=HyperFit+Mitcham",
