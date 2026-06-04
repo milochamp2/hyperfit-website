@@ -216,14 +216,16 @@ export default function MembershipPage() {
       </Section>
 
       {/* Sign Up & Purchase (Hapana widget) */}
-      <Section id="book">
-        <SectionHeading
-          title="Sign Up & Purchase"
-          subtitle="Select your membership or pass below to get started."
-          gradient
-        />
-        <HapanaWidget type="packages" />
-      </Section>
+      <div id="book" className="bg-jet px-4 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeading
+            title="Sign Up & Purchase"
+            subtitle="Select your membership or pass below to get started."
+            gradient
+          />
+          <HapanaWidget type="packages" />
+        </div>
+      </div>
 
       {/* Membership Terms */}
       <Section dark>

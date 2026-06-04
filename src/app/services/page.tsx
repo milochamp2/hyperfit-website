@@ -35,13 +35,15 @@ export default function ServicesPage() {
       </Section>
 
       {/* Class Schedule & Bookings */}
-      <Section id="book" dark>
-        <SectionHeading
-          title="Class Schedule & Bookings"
-          subtitle="Browse the timetable and book your spot."
-        />
-        <HapanaWidget type="classes" />
-      </Section>
+      <div id="book" className="bg-gradient-to-b from-steel to-jet-light px-4 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeading
+            title="Class Schedule & Bookings"
+            subtitle="Browse the timetable and book your spot."
+          />
+          <HapanaWidget type="classes" />
+        </div>
+      </div>
 
       {/* CTA */}
       <Section dark>

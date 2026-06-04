@@ -218,14 +218,16 @@ export default function RecoveryHubPage() {
       </Section>
 
       {/* Private Sessions Booking */}
-      <Section id="book">
-        <SectionHeading
-          title="Book a Private Session"
-          subtitle="Select your recovery room or PT session and lock in your time."
-          gradient
-        />
-        <HapanaWidget type="privates" />
-      </Section>
+      <div id="book" className="bg-jet px-4 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeading
+            title="Book a Private Session"
+            subtitle="Select your recovery room or PT session and lock in your time."
+            gradient
+          />
+          <HapanaWidget type="privates" />
+        </div>
+      </div>
 
       {/* CTA */}
       <Section dark>
