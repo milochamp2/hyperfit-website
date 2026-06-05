@@ -22,12 +22,22 @@ export default function HapanaWidget({ type }: { type: WidgetType }) {
 
     container.innerHTML = widgetHTML[type];
 
-    if (document.querySelector(`script[src="${SCRIPT_SRC}"]`)) return;
+    // Always remove and re-add the script so it re-executes for the new
+    // widget element. On client-side navigation the script is already in the
+    // DOM but won't reinitialise — removing it first forces re-execution.
+    // The CDN script is browser-cached so there's no extra network cost.
+    const existing = document.querySelector(`script[src="${SCRIPT_SRC}"]`);
+    if (existing) existing.remove();
 
     const script = document.createElement("script");
     script.src = SCRIPT_SRC;
     script.async = true;
     document.body.appendChild(script);
+
+    return () => {
+      const s = document.querySelector(`script[src="${SCRIPT_SRC}"]`);
+      if (s) s.remove();
+    };
   }, [type]);
 
   return <div ref={containerRef} />;

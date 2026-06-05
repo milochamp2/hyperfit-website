@@ -216,7 +216,7 @@ export default function MembershipPage() {
       </Section>
 
       {/* Sign Up & Purchase (Hapana widget) */}
-      <div id="book" className="bg-jet px-4 py-20 md:py-28">
+      <div id="book" className="bg-gradient-to-b from-steel to-jet-light px-4 py-20 md:py-28">
         <div className="mx-auto max-w-7xl">
           <SectionHeading
             title="Sign Up & Purchase"
