@@ -35,6 +35,56 @@ const casualRecoveryPasses = [
   { people: "4 People", price: "$100" },
 ];
 
+const ptPackages = [
+  {
+    title: "1on1 Coaching",
+    description:
+      "Personalized coaching built around your individual goals, training experience, movement needs, and performance targets.",
+    features: [
+      "Individualized training program to suit your goals",
+      "1on1 coaching with a dedicated trainer",
+      "Ongoing coach support and correspondence via the app",
+      "Goal-specific exercise selection",
+      "Technique coaching and movement correction",
+      "Strength, fitness, body composition, or performance focus",
+      "Exercise progressions and regressions where needed",
+      "Direct feedback and support during the session",
+      "Clear direction on what to focus on next",
+    ],
+  },
+  {
+    title: "Monthly Progress Coaching",
+    description:
+      "Ongoing coaching support for members wanting more structure, accountability, and direction with their training. Bridges the gap between group training and 1on1 coaching.",
+    features: [
+      "General training program to support your goals",
+      "Ongoing coach support and correspondence via the app",
+      "Monthly 30-minute progress coaching check-in",
+      "Goal review and training direction",
+      "Accountability and habit support",
+      "Guidance around training frequency and class selection",
+      "Program adjustments and progression recommendations",
+      "Recovery, technique, and performance support",
+      "Clear focus points for the month ahead",
+    ],
+  },
+  {
+    title: "Intro 1on1 Coaching Pack",
+    label: "Starter Pack",
+    description:
+      "Designed to help new members build confidence, learn key movements, establish goals, and get clear direction with their training.",
+    features: [
+      "3x 1on1 coaching sessions",
+      "Initial goal-setting and training direction",
+      "Movement and technique assessment",
+      "Coaching on key gym movements",
+      "Confidence building with equipment and exercises",
+      "Personalized exercise progressions where needed",
+      "Recommended training pathway after the pack",
+    ],
+  },
+];
+
 const membershipTerms = [
   "30 days notice required to cancel",
   "14 days notice required to pause a membership",
@@ -145,20 +195,38 @@ export default function MembershipPage() {
       <Section dark>
         <SectionHeading
           title="PT Packages"
-          subtitle="Personal training packages — details coming soon."
+          subtitle="Personal training tailored to your goals — from starter packs to ongoing 1on1 coaching."
         />
-        <div className="mx-auto max-w-sm text-center">
-          <div className="card-futuristic rounded-xl p-10 transition-all duration-300">
-            <p className="font-heading text-2xl font-bold text-white/40">Coming Soon</p>
-            <p className="mt-4 text-sm leading-relaxed text-white/50">
-              We&apos;re finalising our PT package details. Get in touch to be the first to know.
-            </p>
-            <div className="mt-8">
-              <Button href="/contact" variant="outline" className="w-full">
-                Get in Touch
-              </Button>
+        <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-3">
+          {ptPackages.map((pkg) => (
+            <div key={pkg.title} className="relative card-futuristic rounded-xl p-8 transition-all duration-300 flex flex-col">
+              {pkg.label && (
+                <div className="absolute -top-3.5 left-1/2 z-10 -translate-x-1/2">
+                  <div className="whitespace-nowrap rounded-full bg-white px-5 py-1 text-[10px] font-bold uppercase tracking-widest text-jet">
+                    {pkg.label}
+                  </div>
+                </div>
+              )}
+              <div className={pkg.label ? "mt-2" : ""}>
+                <h3 className="font-heading text-xl font-bold text-white">{pkg.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-white/60">{pkg.description}</p>
+              </div>
+              <div className="my-6 h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+              <ul className="flex-1 space-y-2.5">
+                {pkg.features.map((feature) => (
+                  <li key={feature} className="flex items-start gap-3">
+                    <CheckIcon className="mt-0.5 h-4 w-4 shrink-0 text-white/70" />
+                    <span className="text-sm text-white/80">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8">
+                <Button href="/contact" variant="outline" className="w-full">
+                  Enquire Now
+                </Button>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </Section>
 
