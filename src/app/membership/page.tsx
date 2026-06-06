@@ -4,7 +4,6 @@ import Section from "@/components/Section";
 import SectionHeading from "@/components/SectionHeading";
 import Button from "@/components/Button";
 import HapanaWidget from "@/components/HapanaWidget";
-import { siteConfig } from "@/config/site";
 import { CheckIcon } from "@/components/Icons";
 
 export const metadata: Metadata = {
@@ -102,6 +101,18 @@ export default function MembershipPage() {
         showCTAs={false}
       />
 
+      {/* Sign Up & Purchase (Hapana widget) */}
+      <div id="book" className="bg-gradient-to-b from-steel to-jet-light px-4 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeading
+            title="Sign Up & Purchase"
+            subtitle="Select your membership or pass below to get started."
+            gradient
+          />
+          <HapanaWidget type="packages" />
+        </div>
+      </div>
+
       {/* Intro Offer */}
       <Section>
         <SectionHeading
@@ -123,8 +134,8 @@ export default function MembershipPage() {
               Experience everything HyperFit has to offer. After 2 weeks, rolls automatically onto a full membership.
             </p>
             <div className="mt-8">
-              <Button href={siteConfig.trialUrl} className="w-full" external>
-                Book a 30-Minute Consult
+              <Button href="/membership#book" className="w-full">
+                Sign Up Now
               </Button>
             </div>
           </div>
@@ -283,18 +294,6 @@ export default function MembershipPage() {
         </div>
       </Section>
 
-      {/* Sign Up & Purchase (Hapana widget) */}
-      <div id="book" className="bg-gradient-to-b from-steel to-jet-light px-4 py-20 md:py-28">
-        <div className="mx-auto max-w-7xl">
-          <SectionHeading
-            title="Sign Up & Purchase"
-            subtitle="Select your membership or pass below to get started."
-            gradient
-          />
-          <HapanaWidget type="packages" />
-        </div>
-      </div>
-
       {/* Membership Terms */}
       <Section dark>
         <SectionHeading
@@ -327,8 +326,8 @@ export default function MembershipPage() {
             <Button href="/membership#book" size="lg">
               Join Now
             </Button>
-            <Button href={siteConfig.trialUrl} variant="outline" size="lg" external>
-              Book a Free Class
+            <Button href="/services#book" variant="outline" size="lg">
+              Book a Class
             </Button>
             <Button href="/contact" variant="ghost" size="lg">
               Contact Us

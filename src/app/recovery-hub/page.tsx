@@ -74,6 +74,18 @@ export default function RecoveryHubPage() {
         </p>
       </div>
 
+      {/* Private Sessions Booking */}
+      <div id="book" className="bg-gradient-to-b from-steel to-jet-light px-4 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeading
+            title="Book a Private Session"
+            subtitle="Select your recovery room or PT session and lock in your time."
+            gradient
+          />
+          <HapanaWidget type="privates" />
+        </div>
+      </div>
+
       {/* Private Room 1 (Platinum) Gallery */}
       <Section>
         <SectionHeading
@@ -216,18 +228,6 @@ export default function RecoveryHubPage() {
           </p>
         </div>
       </Section>
-
-      {/* Private Sessions Booking */}
-      <div id="book" className="bg-gradient-to-b from-steel to-jet-light px-4 py-20 md:py-28">
-        <div className="mx-auto max-w-7xl">
-          <SectionHeading
-            title="Book a Private Session"
-            subtitle="Select your recovery room or PT session and lock in your time."
-            gradient
-          />
-          <HapanaWidget type="privates" />
-        </div>
-      </div>
 
       {/* CTA */}
       <Section dark>

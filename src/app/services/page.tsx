@@ -5,7 +5,7 @@ import SectionHeading from "@/components/SectionHeading";
 import ServiceCard from "@/components/ServiceCard";
 import Button from "@/components/Button";
 import HapanaWidget from "@/components/HapanaWidget";
-import { siteConfig, services } from "@/config/site";
+import { services } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -22,6 +22,17 @@ export default function ServicesPage() {
         showCTAs={false}
       />
 
+      {/* Class Schedule & Bookings */}
+      <div id="book" className="bg-gradient-to-b from-steel to-jet-light px-4 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeading
+            title="Class Schedule & Bookings"
+            subtitle="Browse the timetable and book your spot."
+          />
+          <HapanaWidget type="classes" />
+        </div>
+      </div>
+
       <Section>
         <SectionHeading
           title="Our Services"
@@ -34,17 +45,6 @@ export default function ServicesPage() {
         </div>
       </Section>
 
-      {/* Class Schedule & Bookings */}
-      <div id="book" className="bg-gradient-to-b from-steel to-jet-light px-4 py-20 md:py-28">
-        <div className="mx-auto max-w-7xl">
-          <SectionHeading
-            title="Class Schedule & Bookings"
-            subtitle="Browse the timetable and book your spot."
-          />
-          <HapanaWidget type="classes" />
-        </div>
-      </div>
-
       {/* CTA */}
       <Section dark>
         <div className="text-center">
@@ -52,12 +52,12 @@ export default function ServicesPage() {
             Not Sure Where to Start?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-white/70">
-            Book a free introductory session and we&apos;ll help you find the
-            right training for your goals and fitness level.
+            Book a session and we&apos;ll help you find the right training for
+            your goals and fitness level.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button href={siteConfig.trialUrl} size="lg" external>
-              Book a Free Class
+            <Button href="/services#book" size="lg">
+              Book a Class
             </Button>
             <Button href="/contact" variant="outline" size="lg">
               Get in Touch
