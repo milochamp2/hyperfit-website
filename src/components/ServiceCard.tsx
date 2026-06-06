@@ -1,7 +1,6 @@
 import Button from "./Button";
 import { type IconName, getIcon } from "./Icons";
 import { CheckIcon } from "./Icons";
-import { siteConfig } from "@/config/site";
 
 interface ServiceCardProps {
   title: string;
@@ -36,7 +35,7 @@ export default function ServiceCard({
         ))}
       </ul>
       <div className="mt-8">
-        <Button href={siteConfig.bookingUrl} size="sm" external>
+        <Button href="/services#book" size="sm">
           Book Now
         </Button>
       </div>

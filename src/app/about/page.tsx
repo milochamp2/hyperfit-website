@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import SectionHeading from "@/components/SectionHeading";
 import Button from "@/components/Button";
-import { siteConfig } from "@/config/site";
 import { CheckIcon } from "@/components/Icons";
 
 export const metadata: Metadata = {
@@ -120,7 +119,7 @@ export default function AboutPage() {
             Book in a 30 min consult — walk through of our facilities &amp; meet our team.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button href={siteConfig.bookingUrl} size="lg" external>
+            <Button href="/services#book" size="lg">
               Book In Consult
             </Button>
             <Button href="/contact" variant="outline" size="lg">

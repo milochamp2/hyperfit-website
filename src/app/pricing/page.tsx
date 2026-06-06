@@ -70,8 +70,8 @@ export default function PricingPage() {
             New to HyperFit? Try everything for 2 weeks — full All-Access membership, all classes, recovery, and more. Rolls automatically onto a full membership after your trial.
           </p>
           <div className="mt-6">
-            <Button href={siteConfig.trialUrl} size="lg" external>
-              Book a 30-Minute Consult
+            <Button href="/membership#book" size="lg">
+              Sign Up Now
             </Button>
           </div>
         </div>

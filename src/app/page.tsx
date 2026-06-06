@@ -118,8 +118,8 @@ export default function Home() {
             Book a free 30-minute consult with our manager — we&apos;ll walk you through our facilities, introduce you to the team, and find the right membership for your goals.
           </p>
           <div className="mt-8">
-            <Button href={siteConfig.trialUrl} size="lg" external>
-              Book a Free Class
+            <Button href="/services#book" size="lg">
+              Book a Class
             </Button>
           </div>
         </div>

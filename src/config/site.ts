@@ -21,7 +21,6 @@ export const siteConfig = {
   },
 
   // External Links
-  bookingUrl: "https://www.trybooking.com/events/1587375/sessions",
   messageUrl: "sms:+61474952921",
   whatsappUrl: "https://wa.me/61474952921",
   googleMapsUrl: "https://maps.google.com/?q=HyperFit+Mitcham",
@@ -33,8 +32,6 @@ export const siteConfig = {
     instagram: "https://www.instagram.com/hyperfit.mitcham",
   },
 
-  // External Links — trial/open day uses TryBooking; all other bookings via Hapana
-  trialUrl: "https://www.trybooking.com/events/1587375/sessions",
 
   // Access Hours
   hours: [

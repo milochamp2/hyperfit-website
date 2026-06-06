@@ -66,9 +66,8 @@ export default function ContactPage() {
                 Send a Message
               </Button>
               <Button
-                href={siteConfig.bookingUrl}
+                href="/services#book"
                 className="w-full"
-                external
               >
                 Book a Class
               </Button>
@@ -132,7 +131,7 @@ export default function ContactPage() {
             say hello. We can&apos;t wait to meet you.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button href={siteConfig.bookingUrl} size="lg" external>
+            <Button href="/services#book" size="lg">
               Book a Class
             </Button>
             <Button href="/pricing" variant="outline" size="lg">

@@ -80,7 +80,7 @@ export default function Hero({
 
           {showCTAs && (
             <div className="mt-10 flex flex-wrap gap-4">
-              <Button href={siteConfig.bookingUrl} size="lg" external>
+              <Button href="/services#book" size="lg">
                 Book a Class
               </Button>
               <Button href="/pricing" variant="outline" size="lg">

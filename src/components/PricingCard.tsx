@@ -1,6 +1,5 @@
 import Button from "./Button";
 import { CheckIcon } from "./Icons";
-import { siteConfig } from "@/config/site";
 
 interface PricingCardProps {
   name: string;
@@ -55,10 +54,9 @@ export default function PricingCard({
       </ul>
       <div className="mt-8">
         <Button
-          href={siteConfig.bookingUrl}
+          href="/membership#book"
           variant={highlighted ? "primary" : "outline"}
           className="w-full"
-          external
         >
           Get Started
         </Button>

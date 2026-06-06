@@ -43,7 +43,7 @@ export default function Header() {
 
         {/* Desktop CTA */}
         <div className="hidden items-center gap-3 lg:flex">
-          <Button href={siteConfig.bookingUrl} size="sm" external>
+          <Button href="/services#book" size="sm">
             Book a Class
           </Button>
         </div>
@@ -82,7 +82,7 @@ export default function Header() {
               </Link>
             ))}
             <div className="mt-4 flex flex-col gap-3">
-              <Button href={siteConfig.bookingUrl} external>
+              <Button href="/services#book">
                 Book a Class
               </Button>
               <Button href={`tel:${siteConfig.phone}`} variant="outline">
