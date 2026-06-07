@@ -70,7 +70,7 @@ function getBotResponse(message: string): string {
 
   // Recovery boots
   if (lower.includes("boot")) {
-    return "Unlimited recovery boot sessions are included with all memberships — great for circulation and muscle recovery after training!";
+    return "1 recovery boot session per week is included with all memberships — great for circulation and muscle recovery after training!";
   }
 
   // Services overview

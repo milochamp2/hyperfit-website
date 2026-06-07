@@ -17,7 +17,7 @@ const allAccessFeatures = [
   "First floor access — boxing room",
   "Functional training classes",
   "Unlimited Hyperchamber boxing room classes",
-  "Unlimited recovery boot sessions",
+  "1 recovery boot session per week",
   "1 private room session per week (Room 2 or Room 3)",
 ];
 
