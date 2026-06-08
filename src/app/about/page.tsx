@@ -53,13 +53,22 @@ export default function AboutPage() {
       />
 
       {/* Mission */}
-      <Section>
-        <div className="mx-auto max-w-3xl text-center">
+      <div
+        className="relative px-4 py-20 md:py-28"
+        style={{
+          backgroundImage: "url('/about-page/hyperfit background website.jpeg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        {/* Dark overlay for text legibility */}
+        <div className="absolute inset-0 bg-jet/70" />
+        <div className="relative mx-auto max-w-3xl text-center">
           <SectionHeading
             title="Our Mission"
             subtitle="To make functional fitness accessible, effective, and enjoyable for everyone — regardless of age, experience, or fitness level."
           />
-          <p className="text-white/70 leading-relaxed">
+          <p className="text-white/80 leading-relaxed">
             HyperFit was founded with a simple belief: training should prepare
             you for life, not just the mirror. Our open functional training
             space, fully equipped gym floor, and private rooms create an
@@ -68,7 +77,7 @@ export default function AboutPage() {
             proud to be a hub for functional fitness in our local community.
           </p>
         </div>
-      </Section>
+      </div>
 
       {/* What Sets Us Apart */}
       <Section dark>

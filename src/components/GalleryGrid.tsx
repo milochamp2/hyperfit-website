@@ -3,39 +3,59 @@ import Image from "next/image";
 const galleryItems = [
   {
     label: "Training Floor",
-    src: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=600&fit=crop&crop=center",
-    alt: "Functional training gym floor with equipment",
+    src: "/image%20gallery/img1.jpg",
+    alt: "HyperFit training floor with cyan neon lighting",
+  },
+  {
+    label: "Functional Training",
+    src: "/image%20gallery/img2.jpg",
+    alt: "ZIVA rowers and ski ergs on the functional training floor",
+  },
+  {
+    label: "Strength Zone",
+    src: "/image%20gallery/img3.jpg",
+    alt: "ZIVA squat racks loaded with coloured bumper plates",
+  },
+  {
+    label: "The Den",
+    src: "/image%20gallery/img4.jpg",
+    alt: "Wide view of The Den training floor with cardio equipment",
   },
   {
     label: "Gym Floor",
-    src: "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=600&h=600&fit=crop&crop=center",
-    alt: "Fully equipped gym with free weights and machines",
+    src: "/image%20gallery/img5.jpg",
+    alt: "Dumbbell racks and benches with Self Care Club neon sign",
   },
   {
-    label: "Private Room",
-    src: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=600&fit=crop&crop=center",
-    alt: "Private training room session",
+    label: "The Hyper Chamber",
+    src: "/image%20gallery/img6.jpg",
+    alt: "The Hyper Chamber boxing room with agility track and speed bags",
   },
   {
-    label: "Group Class",
-    src: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=600&fit=crop&crop=center",
-    alt: "High energy group fitness class",
+    label: "Boxing Room",
+    src: "/image%20gallery/img7.jpg",
+    alt: "Boxing room with STING heavy bags and neon strip lighting",
   },
   {
-    label: "Recovery",
-    src: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=600&fit=crop&crop=center",
-    alt: "Recovery and mobility stretching session",
+    label: "Infrared Sauna",
+    src: "/image%20gallery/img8.jpg",
+    alt: "Infrared sauna glowing red in the Mitcham Recovery Hub",
   },
   {
-    label: "Community",
-    src: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&h=600&fit=crop&crop=center",
-    alt: "Gym community members training together",
+    label: "Recovery Hub",
+    src: "/image%20gallery/img9.jpg",
+    alt: "Recovery Hub amenities including ice machine and shower",
+  },
+  {
+    label: "Recovery Amenities",
+    src: "/image%20gallery/img10.jpg",
+    alt: "HyperFit recovery room amenities",
   },
 ];
 
 export default function GalleryGrid() {
   return (
-    <div className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4">
+    <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-5 md:gap-4">
       {galleryItems.map((item) => (
         <div
           key={item.label}
