@@ -2,6 +2,7 @@ import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import {
   InstagramIcon,
+  LinktreeIcon,
   MapPinIcon,
   PhoneIcon,
   EnvelopeIcon,
@@ -35,6 +36,15 @@ export default function Footer() {
                 className="flex h-9 w-9 items-center justify-center rounded-lg border border-steel-light bg-steel/50 text-white/70 transition-all hover:border-white/30 hover:text-white"
               >
                 <InstagramIcon className="h-4 w-4" />
+              </a>
+              <a
+                href={siteConfig.socials.linktree}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Linktree"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-steel-light bg-steel/50 text-white/70 transition-all hover:border-white/30 hover:text-white"
+              >
+                <LinktreeIcon className="h-4 w-4" />
               </a>
             </div>
           </div>

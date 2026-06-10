@@ -108,6 +108,17 @@ h1, h2, h3, h4, h5, h6 {
   animation: intro-exit-up 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
 
+/* ─── Promo Popup ─── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* ─── Page Transition ─── */
 .page-enter {
   opacity: 0;

@@ -3,6 +3,7 @@ import { Space_Grotesk, Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import IntroOverlay from "@/components/IntroOverlay";
+import PromoPopup from "@/components/PromoPopup";
 import ChatWidget from "@/components/ChatWidget";
 import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
@@ -63,6 +64,7 @@ export default function RootLayout({
       <body className="flex min-h-screen flex-col antialiased">
         <SmoothScroll />
 <IntroOverlay />
+        <PromoPopup />
         <Header />
         <main className="flex-1 pt-[72px]">{children}</main>
         <Footer />

@@ -147,6 +147,14 @@ export function TikTokIcon({ className = "h-6 w-6" }: IconProps) {
   );
 }
 
+export function LinktreeIcon({ className = "h-6 w-6" }: IconProps) {
+  return (
+    <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+      <path d="M13.51 5.853l4.005-3.9 2.116 2.17-4.192 3.972h5.908v2.978h-5.937l4.221 3.944-2.116 2.17-5.52-5.378-5.522 5.378-2.116-2.17 4.222-3.944H2.66V8.095h5.906L4.375 4.123l2.116-2.17 4.005 3.9V0h2.982zm-2.982 10.727h2.982V24h-2.982z" />
+    </svg>
+  );
+}
+
 const iconMap = {
   users: UsersIcon,
   dumbbell: DumbbellIcon,

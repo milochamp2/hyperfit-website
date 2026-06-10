@@ -29,7 +29,8 @@ export const siteConfig = {
 
   // Social Links
   socials: {
-    instagram: "https://www.instagram.com/hyperfit.mitcham",
+    instagram: "https://www.instagram.com/hyperfit_mitcham",
+    linktree: "https://linktr.ee/Hyperfit_self.care.club",
   },
 
 
