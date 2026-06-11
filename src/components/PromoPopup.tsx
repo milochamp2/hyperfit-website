@@ -121,7 +121,7 @@ export default function PromoPopup() {
 
             {/* CTA */}
             <Link
-              href="/membership"
+              href="/membership#book"
               onClick={dismiss}
               className="mt-6 flex w-full items-center justify-center rounded-xl bg-cyan px-6 py-3 text-sm font-bold uppercase tracking-widest text-jet transition-opacity hover:opacity-90"
             >
