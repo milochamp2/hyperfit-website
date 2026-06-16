@@ -3,7 +3,7 @@ import Section from "@/components/Section";
 import SectionHeading from "@/components/SectionHeading";
 import FeatureCard from "@/components/FeatureCard";
 import ServiceCard from "@/components/ServiceCard";
-
+import HapanaWidget from "@/components/HapanaWidget";
 import GalleryGrid from "@/components/GalleryGrid";
 import LocationHours from "@/components/LocationHours";
 import Button from "@/components/Button";
@@ -87,6 +87,18 @@ export default function Home() {
       </Section>
 
 
+      {/* Book a Class */}
+      <div id="book" className="bg-gradient-to-b from-jet to-steel px-4 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeading
+            title="Book a Class"
+            subtitle="Pick a session and reserve your spot — it takes less than a minute."
+            gradient
+          />
+          <HapanaWidget type="classes" />
+        </div>
+      </div>
+
       {/* Gallery Preview */}
       <Section>
         <SectionHeading
@@ -118,7 +130,7 @@ export default function Home() {
             Book a free 30-minute consult with our manager — we&apos;ll walk you through our facilities, introduce you to the team, and find the right membership for your goals.
           </p>
           <div className="mt-8">
-            <Button href="/services#book" size="lg">
+            <Button href="/#book" size="lg">
               Book a Class
             </Button>
           </div>
@@ -139,7 +151,7 @@ export default function Home() {
             Mitcham&apos;s leading function training gym.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <Button href="/services" size="lg">
+            <Button href="/#book" size="lg">
               Book a Class
             </Button>
             <Button href="/membership" variant="outline" size="lg">
