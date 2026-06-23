@@ -82,24 +82,17 @@ export default function Footer() {
                 <PhoneIcon className="mt-0.5 h-4 w-4 shrink-0 text-white/60" />
                 <div className="space-y-0.5">
                   <div>
-                    <span className="text-white/40 text-[10px] uppercase tracking-wider">Gym &amp; Functional Training</span>
+                    <span className="text-white/40 text-[10px] uppercase tracking-wider">Manager — Ella Bayliss</span>
                     <br />
                     <a href={`tel:${siteConfig.phone}`} className="text-white/70 hover:text-white">
                       {siteConfig.phoneDisplay}
                     </a>
                   </div>
                   <div>
-                    <span className="text-white/40 text-[10px] uppercase tracking-wider">Recovery Services</span>
+                    <span className="text-white/40 text-[10px] uppercase tracking-wider">Recovery — Jarrod Bayliss</span>
                     <br />
                     <a href="tel:+61436526009" className="text-white/70 hover:text-white">
                       0436 526 009
-                    </a>
-                  </div>
-                  <div>
-                    <span className="text-white/40 text-[10px] uppercase tracking-wider">Ella Bayliss</span>
-                    <br />
-                    <a href="tel:+61421327425" className="text-white/70 hover:text-white">
-                      0421 327 425
                     </a>
                   </div>
                 </div>
