@@ -97,19 +97,27 @@ export default function PromoPopup() {
               <span className="font-heading text-6xl font-black text-white leading-none">$50</span>
               <div className="text-sm text-white/50 leading-tight">
                 for<br />
-                <span className="text-white font-semibold text-base">5 sessions</span>
+                <span className="text-white font-semibold text-base">5 classes</span>
               </div>
             </div>
 
+            {/* Classes only callout */}
+            <div className="mt-3 flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2">
+              <span className="text-base">⚡</span>
+              <p className="text-xs font-semibold uppercase tracking-wider text-white/80">
+                Classes only — <span className="text-white/40 font-normal normal-case tracking-normal">does not include recovery services</span>
+              </p>
+            </div>
+
             <p className="mt-3 text-sm text-white/60 leading-relaxed">
-              Kick off your HyperFit journey with 5 full-access sessions for just $50. No lock-in, no commitment.
+              Kick off your HyperFit journey with 5 group classes for just $50. No lock-in, no commitment.
             </p>
 
             {/* Features */}
             <ul className="mt-4 space-y-1.5">
               {[
-                "Full gym & class access",
-                "Recovery boots included",
+                "5 group training classes",
+                "Functional training & boxing",
                 "No ongoing commitment",
               ].map((item) => (
                 <li key={item} className="flex items-center gap-2 text-sm text-white/70">
@@ -129,7 +137,7 @@ export default function PromoPopup() {
             </Link>
 
             <p className="mt-3 text-center text-[10px] text-white/30">
-              New members only · Limited availability
+              New members only · Classes only · Limited availability
             </p>
           </div>
         )}
