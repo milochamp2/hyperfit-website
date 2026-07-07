@@ -40,7 +40,7 @@ export default function PromoPopup() {
       <div
         className={`relative w-full ${
           step === "offer"
-            ? "h-[92dvh] sm:h-auto sm:max-h-[90vh] sm:max-w-xl rounded-t-2xl sm:rounded-2xl"
+            ? "h-[92dvh] sm:h-auto sm:max-h-[90vh] sm:max-w-4xl rounded-t-2xl sm:rounded-2xl"
             : "max-w-sm rounded-t-2xl sm:rounded-2xl"
         } border border-white/10 bg-jet shadow-2xl flex flex-col overflow-hidden`}
         style={{ animation: "slideUp 0.4s cubic-bezier(0.16,1,0.3,1)" }}
