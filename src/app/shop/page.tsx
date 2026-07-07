@@ -28,7 +28,7 @@ export default function ShopPage() {
             subtitle="Give the gift of training. Perfect for birthdays, milestones, or anyone ready to start their fitness journey."
             gradient
           />
-          <div className="mt-10 rounded-2xl bg-white p-6 shadow-2xl md:p-10">
+          <div className="hapana-wrapper mt-10 rounded-2xl bg-white p-6 shadow-2xl md:p-10">
             <HapanaWidget type="giftCards" />
           </div>
         </div>
