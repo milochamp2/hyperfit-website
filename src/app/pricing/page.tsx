@@ -60,23 +60,6 @@ export default function PricingPage() {
         </div>
       </Section>
 
-      {/* Intro Offer */}
-      <Section>
-        <div className="mx-auto max-w-2xl rounded-xl border-2 border-white/30 bg-steel p-8 text-center">
-          <h2 className="font-heading text-2xl font-bold md:text-3xl">
-            Intro Offer: 2-Week Trial — $65
-          </h2>
-          <p className="mt-3 text-white/70">
-            New to HyperFit? Try everything for 2 weeks — full All-Access membership, all classes, recovery, and more. Rolls automatically onto a full membership after your trial.
-          </p>
-          <div className="mt-6">
-            <Button href="/membership#book" size="lg">
-              Sign Up Now
-            </Button>
-          </div>
-        </div>
-      </Section>
-
       {/* CTA */}
       <Section dark>
         <div className="text-center">

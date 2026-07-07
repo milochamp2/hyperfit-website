@@ -22,13 +22,15 @@ export default function ShopPage() {
 
       {/* Gift Cards */}
       <div id="gift-cards" className="bg-gradient-to-b from-steel to-jet-light px-4 py-20 md:py-28">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-5xl">
           <SectionHeading
             title="Gift Cards"
             subtitle="Give the gift of training. Perfect for birthdays, milestones, or anyone ready to start their fitness journey."
             gradient
           />
-          <HapanaWidget type="giftCards" />
+          <div className="mt-10 rounded-2xl bg-white p-6 shadow-2xl md:p-10">
+            <HapanaWidget type="giftCards" />
+          </div>
         </div>
       </div>
 

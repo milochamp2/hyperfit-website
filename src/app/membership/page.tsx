@@ -113,35 +113,6 @@ export default function MembershipPage() {
         </div>
       </div>
 
-      {/* Intro Offer */}
-      <Section>
-        <SectionHeading
-          title="Intro Offer"
-          subtitle="New to HyperFit? Start here."
-          gradient
-        />
-        <div className="mx-auto max-w-sm">
-          <div className="card-futuristic rounded-xl p-8 text-center transition-all duration-300">
-            <p className="text-sm font-medium uppercase tracking-widest text-white/50">
-              2-Week Trial
-            </p>
-            <div className="mt-3 flex items-baseline justify-center gap-1">
-              <span className="font-heading text-6xl font-black text-white">$65</span>
-            </div>
-            <p className="mt-1 text-sm text-white/50">full access for 2 weeks</p>
-            <div className="my-6 h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-            <p className="text-sm leading-relaxed text-white/70">
-              Experience everything HyperFit has to offer. After 2 weeks, rolls automatically onto a full membership.
-            </p>
-            <div className="mt-8">
-              <Button href="/membership#book" className="w-full">
-                Sign Up Now
-              </Button>
-            </div>
-          </div>
-        </div>
-      </Section>
-
       {/* EarlyBird */}
       <Section dark>
         <SectionHeading

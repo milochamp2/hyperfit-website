@@ -38,7 +38,7 @@ export default function PromoPopup() {
 
       {/* Card */}
       <div
-        className={`relative w-full ${step === "offer" ? "max-w-lg" : "max-w-sm"} rounded-2xl border border-white/10 bg-jet shadow-2xl overflow-hidden`}
+        className={`relative w-full ${step === "offer" ? "max-w-2xl" : "max-w-sm"} rounded-2xl border border-white/10 bg-jet shadow-2xl overflow-y-auto max-h-[90vh]`}
         style={{ animation: "slideUp 0.4s cubic-bezier(0.16,1,0.3,1)" }}
       >
         {/* Top accent glow */}
