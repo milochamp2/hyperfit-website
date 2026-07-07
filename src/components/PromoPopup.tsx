@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import { XIcon, CheckIcon } from "./Icons";
+import { XIcon } from "./Icons";
+import HapanaWidget from "./HapanaWidget";
 
 const SESSION_KEY = "hyperfit-promo-seen";
 
@@ -38,7 +38,7 @@ export default function PromoPopup() {
 
       {/* Card */}
       <div
-        className="relative w-full max-w-sm rounded-2xl border border-white/10 bg-jet shadow-2xl overflow-hidden"
+        className={`relative w-full ${step === "offer" ? "max-w-lg" : "max-w-sm"} rounded-2xl border border-white/10 bg-jet shadow-2xl overflow-hidden`}
         style={{ animation: "slideUp 0.4s cubic-bezier(0.16,1,0.3,1)" }}
       >
         {/* Top accent glow */}
@@ -65,7 +65,7 @@ export default function PromoPopup() {
               First time at HyperFit?
             </h2>
             <p className="mt-2 text-sm text-white/50 leading-relaxed">
-              We&apos;ve got a special intro deal waiting for new members.
+              We&apos;ve got a special intro deal — <span className="text-white font-semibold">$7 for 7 days</span> — waiting for new members.
             </p>
 
             <div className="mt-6 flex flex-col gap-3">
@@ -86,59 +86,23 @@ export default function PromoPopup() {
         )}
 
         {step === "offer" && (
-          <div className="px-7 pb-7 pt-6">
-            {/* Badge */}
-            <span className="inline-block rounded-full border border-cyan/30 bg-cyan/10 px-3 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-cyan">
-              Intro Offer · New Members Only
-            </span>
-
-            {/* Headline */}
-            <div className="mt-4 flex items-baseline gap-2">
-              <span className="font-heading text-6xl font-black text-white leading-none">$50</span>
-              <div className="text-sm text-white/50 leading-tight">
-                for<br />
-                <span className="text-white font-semibold text-base">5 classes</span>
+          <div className="px-6 pb-6 pt-5">
+            {/* Header */}
+            <div className="mb-4 text-center">
+              <span className="inline-block rounded-full border border-cyan/30 bg-cyan/10 px-3 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-cyan">
+                Intro Offer · New Members Only
+              </span>
+              <div className="mt-3 flex items-baseline justify-center gap-2">
+                <span className="font-heading text-5xl font-black text-white leading-none">$7</span>
+                <div className="text-sm text-white/50 leading-tight text-left">
+                  for<br />
+                  <span className="text-white font-semibold text-base">7 days</span>
+                </div>
               </div>
+              <p className="mt-2 text-xs text-white/40">New members only · Classes only</p>
             </div>
-
-            {/* Classes only callout */}
-            <div className="mt-3 flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2">
-              <span className="text-base">⚡</span>
-              <p className="text-xs font-semibold uppercase tracking-wider text-white/80">
-                Classes only — <span className="text-white/40 font-normal normal-case tracking-normal">does not include recovery services</span>
-              </p>
-            </div>
-
-            <p className="mt-3 text-sm text-white/60 leading-relaxed">
-              Kick off your HyperFit journey with 5 group classes for just $50. No lock-in, no commitment.
-            </p>
-
-            {/* Features */}
-            <ul className="mt-4 space-y-1.5">
-              {[
-                "5 group training classes",
-                "Functional training & boxing",
-                "No ongoing commitment",
-              ].map((item) => (
-                <li key={item} className="flex items-center gap-2 text-sm text-white/70">
-                  <CheckIcon className="h-3.5 w-3.5 shrink-0 text-cyan" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-
-            {/* CTA */}
-            <Link
-              href="/membership#book"
-              onClick={dismiss}
-              className="mt-6 flex w-full items-center justify-center rounded-xl bg-cyan px-6 py-3 text-sm font-bold uppercase tracking-widest text-jet transition-opacity hover:opacity-90"
-            >
-              Claim Offer
-            </Link>
-
-            <p className="mt-3 text-center text-[10px] text-white/30">
-              New members only · Classes only · Limited availability
-            </p>
+            {/* Hapana booking widget */}
+            <HapanaWidget type="introOffer" />
           </div>
         )}
       </div>

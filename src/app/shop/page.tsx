@@ -1,24 +1,44 @@
 import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
+import SectionHeading from "@/components/SectionHeading";
+import HapanaWidget from "@/components/HapanaWidget";
 import Button from "@/components/Button";
 
 export const metadata: Metadata = {
   title: "Shop",
   description:
-    "Shop HyperFit merch — apparel and gear from our official store.",
+    "Shop HyperFit merch, gift cards, and gear from our official store.",
 };
 
 export default function ShopPage() {
   return (
     <>
       <Hero
-        title="HyperFit Merch"
-        subtitle="Represent the gym. Shop our official apparel and gear."
+        title="HyperFit Shop"
+        subtitle="Gift cards, merch, and gear — all in one place."
         showCTAs={false}
       />
 
+      {/* Gift Cards */}
+      <div id="gift-cards" className="bg-gradient-to-b from-steel to-jet-light px-4 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeading
+            title="Gift Cards"
+            subtitle="Give the gift of training. Perfect for birthdays, milestones, or anyone ready to start their fitness journey."
+            gradient
+          />
+          <HapanaWidget type="giftCards" />
+        </div>
+      </div>
+
+      {/* Merch */}
       <Section>
+        <SectionHeading
+          title="HyperFit Merch"
+          subtitle="Represent the gym. Shop our official apparel and gear."
+          gradient
+        />
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-lg leading-relaxed text-white/70">
             Our official merch store is powered by Icon Sports. Browse and order

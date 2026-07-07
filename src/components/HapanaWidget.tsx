@@ -5,12 +5,14 @@ import { useEffect, useRef } from "react";
 const WIDGET_ID = "SHlRbC9Pb0dIbnFWRzNFVEpHSU03dz09";
 const SCRIPT_SRC = "https://widget.hapana.com/hapana_widget.js";
 
-type WidgetType = "classes" | "packages" | "privates";
+type WidgetType = "classes" | "packages" | "privates" | "giftCards" | "introOffer";
 
 const widgetHTML: Record<WidgetType, string> = {
   classes: `<hapana-widget data-type="classes" widget-id="${WIDGET_ID}" instructor-id="" session-type=""></hapana-widget>`,
   packages: `<hapana-widget data-type="packages" widget-id="${WIDGET_ID}" package-id="" variant=""></hapana-widget>`,
   privates: `<hapana-widget data-type="privates" widget-id="${WIDGET_ID}" instructor-id=""></hapana-widget>`,
+  giftCards: `<hapana-widget data-type="giftCards" widget-id="${WIDGET_ID}"></hapana-widget>`,
+  introOffer: `<hapana-widget data-type="packages" widget-id="${WIDGET_ID}" package-id="Y0Myd2h5dGptYTB3eDBsSFRsOVJTdz09" variant="pageview"></hapana-widget>`,
 };
 
 export default function HapanaWidget({ type }: { type: WidgetType }) {
