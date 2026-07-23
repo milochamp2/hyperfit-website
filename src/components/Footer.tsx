@@ -91,8 +91,8 @@ export default function Footer() {
                   <div>
                     <span className="text-white/40 text-[10px] uppercase tracking-wider">Recovery — Jarrod Bayliss</span>
                     <br />
-                    <a href="tel:+61436526009" className="text-white/70 hover:text-white">
-                      0436 526 009
+                    <a href="tel:+61409732117" className="text-white/70 hover:text-white">
+                      0409 732 117
                     </a>
                   </div>
                 </div>
