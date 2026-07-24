@@ -155,6 +155,14 @@ export function LinktreeIcon({ className = "h-6 w-6" }: IconProps) {
   );
 }
 
+export function BoxingIcon({ className = "h-8 w-8" }: IconProps) {
+  return (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 3h9a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H9m0-9H6a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h3m0-9v9m0 0v6a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-1h2v1a1 1 0 0 0 1 1h.5" />
+    </svg>
+  );
+}
+
 const iconMap = {
   users: UsersIcon,
   dumbbell: DumbbellIcon,
@@ -162,6 +170,7 @@ const iconMap = {
   heart: HeartIcon,
   lock: LockIcon,
   userGroup: UserGroupIcon,
+  boxing: BoxingIcon,
 } as const;
 
 export type IconName = keyof typeof iconMap;

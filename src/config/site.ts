@@ -96,28 +96,15 @@ export const services = [
     icon: "target",
   },
   {
-    id: "recovery-mobility",
-    title: "Recovery & Mobility Sessions",
+    id: "private-room-recovery",
+    title: "Private Room Recovery",
     description:
-      "Dedicated recovery sessions focusing on mobility, stretching, and soft tissue work. Available in our private rooms for a focused, distraction-free experience.",
+      "Access our private recovery rooms for focused, distraction-free sessions. Hot & cold baths, infrared sauna, and recovery equipment — up to 4 people per session.",
     benefits: [
-      "Improve flexibility & range of motion",
-      "Reduce injury risk",
-      "Private room environment",
-      "Guided by qualified coaches",
-    ],
-    icon: "heart",
-  },
-  {
-    id: "private-room-training",
-    title: "Private Room Training",
-    description:
-      "Book one of our 3 private training rooms for focused, distraction-free sessions. Ideal for personal training, rehab, or specialised coaching.",
-    benefits: [
-      "3 fully equipped private rooms",
+      "Hot & cold bath access",
+      "Infrared sauna",
+      "Up to 4 people per session",
       "Complete privacy & focus",
-      "Perfect for PT or rehab",
-      "Flexible booking options",
     ],
     icon: "lock",
   },
@@ -133,6 +120,19 @@ export const services = [
       "Great for team building",
     ],
     icon: "userGroup",
+  },
+  {
+    id: "1on1-boxing",
+    title: "1 on 1 Boxing",
+    description:
+      "Private one-on-one boxing coaching with our qualified trainers. Build technique, power, and fitness in a focused, personalised session tailored to your level.",
+    benefits: [
+      "Private coaching session",
+      "Technique & pad work",
+      "All fitness levels welcome",
+      "Bookable online via Hapana",
+    ],
+    icon: "boxing",
   },
 ] as const;
 
