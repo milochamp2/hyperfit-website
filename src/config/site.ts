@@ -47,7 +47,7 @@ export const siteConfig = {
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
     { label: "Membership", href: "/membership" },
-    { label: "Recovery Hub", href: "/recovery-hub" },
+    { label: "Recovery Hub & Private Bookings", href: "/recovery-hub" },
     { label: "Pricing", href: "/pricing" },
     { label: "Shop", href: "/shop" },
     { label: "FAQs", href: "/faqs" },

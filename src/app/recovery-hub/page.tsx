@@ -8,9 +8,9 @@ import HapanaWidget from "@/components/HapanaWidget";
 import { CheckIcon } from "@/components/Icons";
 
 export const metadata: Metadata = {
-  title: "Recovery Hub",
+  title: "Recovery Hub & Private Bookings",
   description:
-    "Explore HyperFit's Recovery Hub — 3 private recovery rooms featuring infrared sauna, hot plunge, cold plunge, and recovery boots. Open 5 AM – 10 PM. Book your session today.",
+    "Explore HyperFit's Recovery Hub & Private Bookings — 3 private recovery rooms featuring infrared sauna, hot plunge, cold plunge, and recovery boots. Open 5 AM – 10 PM. Book your session today.",
 };
 
 const platinumRoomImages = [
@@ -62,7 +62,7 @@ export default function RecoveryHubPage() {
   return (
     <>
       <Hero
-        title="Recovery Hub"
+        title="Recovery Hub & Private Bookings"
         subtitle="3 private recovery rooms, featuring — infrared sauna, hot plunge, cold plunge."
         showCTAs={false}
       />
