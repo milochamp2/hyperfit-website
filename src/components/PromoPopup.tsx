@@ -68,7 +68,7 @@ export default function PromoPopup() {
             </h2>
             <p className="mt-2 text-sm text-white/50 leading-relaxed">
               We&apos;ve got a special intro deal —{" "}
-              <span className="font-semibold text-white">$7 for 7 days</span> —
+              <span className="font-semibold text-white">14 days for $49</span> —
               waiting for new members.
             </p>
             <div className="mt-6 flex flex-col gap-3">
@@ -98,11 +98,11 @@ export default function PromoPopup() {
               </span>
               <div className="mt-2 flex items-baseline justify-center gap-2">
                 <span className="font-heading text-4xl font-black text-white leading-none">
-                  $7
+                  $49
                 </span>
                 <div className="text-sm text-white/50 leading-tight text-left">
                   for<br />
-                  <span className="font-semibold text-white text-base">7 days</span>
+                  <span className="font-semibold text-white text-base">14 days</span>
                 </div>
               </div>
               <p className="mt-1 text-[10px] text-white/30 uppercase tracking-wider">
