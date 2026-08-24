@@ -174,10 +174,10 @@ export default function RecoveryHubPage() {
         />
         <div className="mx-auto grid max-w-3xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { people: "1 Person", price: "$40" },
-            { people: "2 People", price: "$60" },
-            { people: "3 People", price: "$80" },
-            { people: "4 People", price: "$100" },
+            { people: "1 Person", price: "$50" },
+            { people: "2 People", price: "$70" },
+            { people: "3 People", price: "$90" },
+            { people: "4 People", price: "$110" },
           ].map((tier) => (
             <div key={tier.people} className="card-futuristic rounded-xl p-6 text-center transition-all duration-300">
               <p className="text-sm font-medium uppercase tracking-widest text-white/50">{tier.people}</p>

@@ -39,6 +39,14 @@ const navItems: NavItem[] = [
     ],
   },
   { label: "Recovery Hub", href: "/recovery-hub" },
+  {
+    label: "Bookings",
+    children: [
+      { label: "Personal Training",  href: "/services#book", description: "1on1 PT sessions" },
+      { label: "1 on 1 Boxing",      href: "/services#book", description: "Private boxing coaching" },
+      { label: "Private Bookings",   href: "/recovery-hub#book", description: "Book a private room" },
+    ],
+  },
   { label: "Shop",         href: "/shop" },
   {
     label: "More",

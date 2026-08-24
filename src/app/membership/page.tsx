@@ -28,10 +28,10 @@ const memberRecoveryInclusions = [
 ];
 
 const casualRecoveryPasses = [
-  { people: "1 Person", price: "$40" },
-  { people: "2 People", price: "$60" },
-  { people: "3 People", price: "$80" },
-  { people: "4 People", price: "$100" },
+  { people: "1 Person", price: "$50" },
+  { people: "2 People", price: "$70" },
+  { people: "3 People", price: "$90" },
+  { people: "4 People", price: "$110" },
 ];
 
 const ptPackages = [
