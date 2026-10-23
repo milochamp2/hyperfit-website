@@ -138,62 +138,47 @@ export const services = [
 
 export const pricingPlans = [
   {
-    name: "2-Week Trial",
-    price: "$65",
-    period: "intro offer",
-    description: "Try HyperFit for 2 weeks — full access, rolls onto membership automatically.",
+    name: "Hyper Train",
+    price: "$45",
+    period: "week",
+    description: "Classes and gym access — everything you need to train.",
     features: [
-      "Full All-Access membership",
-      "Rolls to standard membership after 2 weeks",
+      "Unlimited classes",
       "24/7 gym access",
-      "All classes & recovery boots",
-      "1 private room session included",
     ],
     highlighted: false,
   },
   {
-    name: "EarlyBird",
+    name: "Hyper Elite",
     price: "$55",
-    period: "per week",
-    description: "Launch special — rate locked in for life while you remain a member.",
+    period: "week",
+    description: "The complete package — training, gym access, and recovery.",
     features: [
-      "24/7 gym access (ground floor)",
-      "First floor boxing room access",
-      "Unlimited functional training classes",
-      "Unlimited Hyperchamber boxing classes",
-      "1 recovery boot session per week",
-      "1 private room session/week (Room 2 or 3)",
-      "Price locked in for life",
+      "Unlimited classes",
+      "24/7 gym access",
+      "Recovery boots",
+      "1 private room session (Room 2 or 3)",
     ],
     highlighted: true,
   },
   {
-    name: "All-Access",
-    price: "TBC",
-    period: "per week",
-    description: "Standard membership — full access to everything HyperFit offers.",
+    name: "Hyper Recover",
+    price: "$55",
+    period: "week",
+    description: "Built for recovery — unlimited recovery plus 24/7 gym access.",
     features: [
-      "24/7 gym access (ground floor)",
-      "First floor boxing room access",
-      "Unlimited functional training classes",
-      "Unlimited Hyperchamber boxing classes",
-      "1 recovery boot session per week",
-      "1 private room session/week (Room 2 or 3)",
+      "Unlimited recovery",
+      "1 private room session per day",
+      "24/7 gym access",
     ],
     highlighted: false,
   },
-  {
-    name: "PT Package",
-    price: "Coming Soon",
-    period: "",
-    description: "One-on-one personal training — details dropping soon.",
-    features: [
-      "1-on-1 personal training",
-      "Customised program design",
-      "Private room access",
-    ],
-    highlighted: false,
-  },
+] as const;
+
+export const classPasses = [
+  { name: "Single Class", price: "$22" },
+  { name: "5 Class Pass", price: "$100" },
+  { name: "10 Class Pass", price: "$180" },
 ] as const;
 
 export const testimonials = [
@@ -238,7 +223,7 @@ export const faqs = [
   {
     question: "What membership options do you offer?",
     answer:
-      "We offer an EarlyBird Membership at $55/week (launch special, price locked for life), a standard All-Access Membership (price TBC), and a 2-Week Trial intro offer for $65. PT packages are coming soon. All memberships include 24/7 gym access, unlimited classes, recovery boots, and 1 private room session per week.",
+      "We offer three memberships: Hyper Train ($45/week) — classes & 24/7 gym access; Hyper Elite ($55/week) — classes, 24/7 gym, recovery boots & 1 private room session (Room 2 or 3); and Hyper Recover ($55/week) — unlimited recovery (1 private room session per day) & 24/7 gym access. Prefer casual? Single classes are $22, or grab a 5 Class Pass ($100) or 10 Class Pass ($180).",
   },
   {
     question: "What are the private rooms used for?",
@@ -268,6 +253,6 @@ export const faqs = [
   {
     question: "Do you offer a trial?",
     answer:
-      "Yes! We offer a 2-Week Trial for $65 — full All-Access membership for 2 weeks, which automatically rolls onto a standard membership. Book through our website to get started.",
+      "Yes! New members can try HyperFit for 14 days for $49. You can also drop in to a single class for $22. Book through our website to get started.",
   },
 ] as const;

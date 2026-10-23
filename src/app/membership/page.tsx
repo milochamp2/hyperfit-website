@@ -4,25 +4,19 @@ import Section from "@/components/Section";
 import SectionHeading from "@/components/SectionHeading";
 import Button from "@/components/Button";
 import HapanaWidget from "@/components/HapanaWidget";
+import PricingCard from "@/components/PricingCard";
 import { CheckIcon } from "@/components/Icons";
+import { pricingPlans, classPasses } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Membership",
   description:
-    "HyperFit membership plans — EarlyBird $55/week locked for life, 2-Week Trial intro offer, and All-Access membership. Join Mitcham's premier functional training gym.",
+    "HyperFit memberships — Hyper Train $45/week, Hyper Elite $55/week, Hyper Recover $55/week, plus class passes from $22. Join Mitcham's premier functional training gym.",
 };
 
-const allAccessFeatures = [
-  "24/7 gym access — ground floor",
-  "First floor access — boxing room",
-  "Functional training classes",
-  "Unlimited Hyperchamber boxing room classes",
-  "1 recovery boot session per week",
-  "1 private room session per week (Room 2 or Room 3)",
-];
-
 const memberRecoveryInclusions = [
-  "1 private room session per week included (Room 2 or 3)",
+  "Hyper Elite: 1 private room session included (Room 2 or 3)",
+  "Hyper Recover: unlimited recovery — 1 private room session per day",
   "+$10 per additional session",
   "+$20 per extra person brought into a session",
 ];
@@ -88,8 +82,6 @@ const membershipTerms = [
   "30 days notice required to cancel",
   "14 days notice required to pause a membership",
   "Memberships can be paused for a maximum of 60 days per year",
-  "EarlyBird rate locked in for life — no price increases while you remain a member",
-  "EarlyBird available launch day + 2 weeks only",
 ];
 
 export default function MembershipPage() {
@@ -113,63 +105,45 @@ export default function MembershipPage() {
         </div>
       </div>
 
-      {/* EarlyBird */}
+      {/* Memberships */}
       <Section dark>
         <SectionHeading
-          title="EarlyBird Membership"
-          subtitle="Launch special — available for a limited time only."
+          title="Memberships"
+          subtitle="Choose the membership that fits your training and recovery goals."
         />
-        <div className="mx-auto max-w-sm">
-          <div className="relative card-futuristic rounded-xl p-8 border-white/30 transition-all duration-300">
-            <div className="absolute -top-3.5 left-1/2 z-10 -translate-x-1/2">
-              <div className="whitespace-nowrap rounded-full bg-white px-5 py-1 text-[10px] font-bold uppercase tracking-widest text-jet">
-                Limited Time
-              </div>
-            </div>
-            <div className="mt-2 flex items-baseline gap-1">
-              <span className="font-heading text-5xl font-bold text-white">$55</span>
-              <span className="text-sm text-white/70">/week</span>
-            </div>
-            <p className="mt-1 text-xs text-white/50">
-              Rate locked in for life — available launch day + 2 weeks only
-            </p>
-            <div className="my-6 h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-            <p className="text-sm leading-relaxed text-white/70">
-              Full All-Access membership at $55/week — locked in permanently for as long as you remain an active member.
-            </p>
-            <div className="mt-6">
-              <Button href="/membership#book" className="w-full">
-                Join Now
-              </Button>
-            </div>
-          </div>
+        <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
+          {pricingPlans.map((plan) => (
+            <PricingCard key={plan.name} {...plan} />
+          ))}
         </div>
       </Section>
 
-      {/* All-Access Membership */}
+      {/* Class Passes */}
       <Section>
         <SectionHeading
-          title="All-Access Membership"
-          subtitle="One membership. Everything included."
+          title="Class Passes"
+          subtitle="No membership needed. Drop in or grab a pack."
           gradient
         />
-        <div className="mx-auto max-w-lg">
-          <ul className="space-y-3">
-            {allAccessFeatures.map((feature) => (
-              <li key={feature} className="flex items-start gap-3">
-                <CheckIcon className="mt-1 h-5 w-5 shrink-0 text-white" />
-                <span className="text-lg">{feature}</span>
-              </li>
-            ))}
-          </ul>
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Button href="/membership#book" size="lg">
-              Join Now
-            </Button>
-            <Button href="/contact" variant="outline" size="lg">
-              Ask a Question
-            </Button>
-          </div>
+        <div className="mx-auto grid max-w-3xl gap-6 sm:grid-cols-3">
+          {classPasses.map((pass) => (
+            <div
+              key={pass.name}
+              className="card-futuristic rounded-xl p-6 text-center transition-all duration-300"
+            >
+              <p className="text-sm font-medium uppercase tracking-widest text-white/50">
+                {pass.name}
+              </p>
+              <div className="mt-3">
+                <span className="font-heading text-4xl font-bold text-white">{pass.price}</span>
+              </div>
+              <div className="mt-4">
+                <Button href="/membership#book" variant="outline" size="sm" className="w-full">
+                  Buy Now
+                </Button>
+              </div>
+            </div>
+          ))}
         </div>
       </Section>
 
@@ -216,7 +190,7 @@ export default function MembershipPage() {
       <Section>
         <SectionHeading
           title="Recovery — Member Inclusions"
-          subtitle="Included with every All-Access membership."
+          subtitle="Included with Hyper Elite and Hyper Recover memberships."
           gradient
         />
         <div className="mx-auto max-w-lg">

@@ -4,12 +4,12 @@ import Section from "@/components/Section";
 import SectionHeading from "@/components/SectionHeading";
 import PricingCard from "@/components/PricingCard";
 import Button from "@/components/Button";
-import { siteConfig, pricingPlans } from "@/config/site";
+import { siteConfig, pricingPlans, classPasses } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "HyperFit membership pricing — EarlyBird $55/week locked for life, 2-Week Trial $65, All-Access membership, and PT packages. Simple, transparent pricing in Mitcham.",
+    "HyperFit pricing — Hyper Train $45/week, Hyper Elite $55/week, Hyper Recover $55/week, plus class passes from $22. Simple, transparent pricing in Mitcham.",
 };
 
 export default function PricingPage() {
@@ -17,18 +17,39 @@ export default function PricingPage() {
     <>
       <Hero
         title="Simple, Transparent Pricing"
-        subtitle="One membership tier. Full access. No hidden fees."
+        subtitle="Three memberships. Flexible class passes. No hidden fees."
         showCTAs={false}
       />
 
       <Section>
         <SectionHeading
           title="Membership Plans"
-          subtitle="EarlyBird pricing is locked in for life — available at launch for a limited time only."
+          subtitle="Choose the membership that fits your training and recovery goals."
         />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
           {pricingPlans.map((plan) => (
             <PricingCard key={plan.name} {...plan} />
+          ))}
+        </div>
+      </Section>
+
+      {/* Class Passes */}
+      <Section dark>
+        <SectionHeading
+          title="Class Passes"
+          subtitle="No membership needed. Drop in or grab a pack."
+        />
+        <div className="mx-auto grid max-w-3xl gap-6 sm:grid-cols-3">
+          {classPasses.map((pass) => (
+            <div key={pass.name} className="card-futuristic rounded-xl p-6 text-center transition-all duration-300">
+              <p className="text-sm font-medium uppercase tracking-widest text-white/50">{pass.name}</p>
+              <p className="mt-3 font-heading text-4xl font-black text-white">{pass.price}</p>
+              <div className="mt-5">
+                <Button href="/membership#book" size="sm" className="w-full">
+                  Buy Now
+                </Button>
+              </div>
+            </div>
           ))}
         </div>
       </Section>
@@ -41,10 +62,10 @@ export default function PricingPage() {
         />
         <div className="mx-auto grid max-w-3xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { people: "1 Person", price: "$40" },
-            { people: "2 People", price: "$60" },
-            { people: "3 People", price: "$80" },
-            { people: "4 People", price: "$100" },
+            { people: "1 Person", price: "$50" },
+            { people: "2 People", price: "$70" },
+            { people: "3 People", price: "$90" },
+            { people: "4 People", price: "$110" },
           ].map((tier) => (
             <div key={tier.people} className="card-futuristic rounded-xl p-6 text-center transition-all duration-300">
               <p className="text-sm font-medium uppercase tracking-widest text-white/50">{tier.people}</p>

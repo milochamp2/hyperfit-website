@@ -142,12 +142,13 @@ export default function RecoveryHubPage() {
       <Section dark>
         <SectionHeading
           title="Member Inclusions"
-          subtitle="Included with every All-Access membership."
+          subtitle="Included with Hyper Elite and Hyper Recover memberships."
         />
         <div className="mx-auto max-w-lg">
           <ul className="space-y-4">
             {[
-              "1 private room session per week included (Room 2 or 3)",
+              "Hyper Elite: 1 private room session included (Room 2 or 3)",
+              "Hyper Recover: unlimited recovery — 1 private room session per day",
               "+$10 per additional session",
               "+$20 per extra person brought into a session",
             ].map((item) => (

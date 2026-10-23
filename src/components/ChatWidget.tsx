@@ -30,22 +30,17 @@ function getBotResponse(message: string): string {
 
   // Pricing & membership
   if (lower.includes("price") || lower.includes("cost") || lower.includes("membership") || lower.includes("much") || lower.includes("fee")) {
-    return "We have one membership tier — All-Access. EarlyBird is $55/week, locked in for life (launch + 2 weeks only). Standard All-Access pricing TBC. 2-Week Trial intro offer is $65 — full access, rolls onto membership after. Recovery casual passes: 1 person $40, 2 people $60, 3 people $80, 4 people $100 per session. Visit /membership for full details!";
-  }
-
-  // Early bird
-  if (lower.includes("early bird") || lower.includes("earlybird") || lower.includes("launch") || lower.includes("special")) {
-    return "EarlyBird membership is $55/week — available launch day + 2 weeks only. The rate is locked in for life for as long as you remain an active member. Full All-Access membership. Sign up at /membership!";
+    return "We have three memberships: Hyper Train $45/week (classes + 24/7 gym), Hyper Elite $55/week (classes, 24/7 gym, recovery boots + 1 private room session in Room 2 or 3), and Hyper Recover $55/week (unlimited recovery — 1 private room session per day — + 24/7 gym). Class passes: single class $22, 5 classes $100, 10 classes $180. Visit /membership for full details!";
   }
 
   // Boxing
   if (lower.includes("boxing") || lower.includes("hyperchamber")) {
-    return "Boxing is included in the All-Access membership — unlimited Hyperchamber boxing room classes plus access to the first floor boxing room (5:00 AM – 9:00 PM). Check /services for more!";
+    return "Boxing classes are included with Hyper Train and Hyper Elite memberships — unlimited Hyperchamber boxing room classes plus access to the first floor boxing room (5:00 AM – 9:00 PM). Check /services for more!";
   }
 
   // Trial
   if (lower.includes("trial") || lower.includes("intro") || lower.includes("2 week") || lower.includes("two week")) {
-    return "Our 2-Week Trial is $65 — full All-Access membership for 2 weeks, then rolls automatically onto a standard membership. Great way to experience everything before committing! Book at /membership.";
+    return "New members can try HyperFit for 14 days for $49, or drop in to a single class for $22. Great way to experience everything before committing! Book at /membership.";
   }
 
   // Free trial / free class
@@ -60,17 +55,17 @@ function getBotResponse(message: string): string {
 
   // Recovery Hub / Sauna / Bath
   if (lower.includes("recover") || lower.includes("rehab") || lower.includes("mobility") || lower.includes("sauna") || lower.includes("bath") || lower.includes("plunge")) {
-    return "Our Recovery Hub has 3 private rooms — infrared sauna, hot plunge, and cold plunge. Members get 1 private room session/week included (+$10 extra sessions, +$20 extra person). Casual passes: 1 person $40, 2 people $60, 3 people $80, 4 people $100. Open 5:00 AM – 9:00 PM daily. See /recovery-hub!";
+    return "Our Recovery Hub has 3 private rooms — infrared sauna, hot plunge, and cold plunge. Hyper Elite members get 1 private room session included and Hyper Recover members get 1 session per day (+$10 extra sessions, +$20 extra person). Casual passes: 1 person $50, 2 people $70, 3 people $90, 4 people $110. Open 5:00 AM – 9:00 PM daily. See /recovery-hub!";
   }
 
   // Private rooms
   if (lower.includes("private") || lower.includes("room")) {
-    return "We have 3 private recovery rooms with infrared sauna, hot plunge & cold plunge. Members get 1 session/week included. Casual: 1 person $40, up to 4 people $100 per session. Open 5:00 AM – 9:00 PM. Book at /recovery-hub!";
+    return "We have 3 private recovery rooms with infrared sauna, hot plunge & cold plunge. Hyper Elite includes 1 session; Hyper Recover includes 1 session per day. Casual: 1 person $50, up to 4 people $110 per session. Open 5:00 AM – 9:00 PM. Book at /recovery-hub!";
   }
 
   // Recovery boots
   if (lower.includes("boot")) {
-    return "1 recovery boot session per week is included with all memberships — great for circulation and muscle recovery after training!";
+    return "Recovery boots are included with the Hyper Elite membership — great for circulation and muscle recovery after training!";
   }
 
   // Services overview
@@ -90,7 +85,7 @@ function getBotResponse(message: string): string {
 
   // Gym / equipment
   if (lower.includes("gym") || lower.includes("equipment") || lower.includes("weights") || lower.includes("cardio")) {
-    return "Our fully equipped gym includes premium free weights, machines, cardio equipment, functional rigs, sleds, ropes, and more. Open gym access is included with all memberships!";
+    return "Our fully equipped gym includes premium free weights, machines, cardio equipment, functional rigs, sleds, ropes, and more. 24/7 gym access is included with all memberships!";
   }
 
   // Booking
@@ -110,7 +105,7 @@ function getBotResponse(message: string): string {
 
   // Cancellation
   if (lower.includes("cancel") || lower.includes("pause")) {
-    return "30 days notice required to cancel. Memberships can be paused with 14 days notice, for up to 60 days per year. EarlyBird rate is locked in for life — no price increases while you remain active!";
+    return "30 days notice required to cancel. Memberships can be paused with 14 days notice, for up to 60 days per year.";
   }
 
   // What to bring
