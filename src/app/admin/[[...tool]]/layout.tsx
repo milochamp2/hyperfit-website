@@ -1,5 +1,6 @@
 export const metadata = {
   title: "HyperFit CMS",
+  robots: { index: false, follow: false },
 };
 
 export default function StudioLayout({
