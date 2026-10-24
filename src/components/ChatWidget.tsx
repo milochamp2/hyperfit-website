@@ -55,12 +55,12 @@ function getBotResponse(message: string): string {
 
   // Recovery Hub / Sauna / Bath
   if (lower.includes("recover") || lower.includes("rehab") || lower.includes("mobility") || lower.includes("sauna") || lower.includes("bath") || lower.includes("plunge")) {
-    return "Our Recovery Hub has 3 private rooms — infrared sauna, hot plunge, and cold plunge. Hyper Elite members get 1 private room session included and Hyper Recover members get 1 session per day (+$10 extra sessions, +$20 extra person). Casual passes: 1 person $50, 2 people $70, 3 people $90, 4 people $110. Open 5:00 AM – 9:00 PM daily. See /recovery-hub!";
+    return "Our Recovery Hub has 3 private rooms — infrared sauna, hot plunge, and cold plunge. Hyper Elite members get 1 private room session included and Hyper Recover members get 1 session per day (+$10 extra sessions, +$20 extra person). Casual passes: 1 person $40, 2 people $60, 3 people $80, 4 people $100. Open 5:00 AM – 9:00 PM daily. See /recovery-hub!";
   }
 
   // Private rooms
   if (lower.includes("private") || lower.includes("room")) {
-    return "We have 3 private recovery rooms with infrared sauna, hot plunge & cold plunge. Hyper Elite includes 1 session; Hyper Recover includes 1 session per day. Casual: 1 person $50, up to 4 people $110 per session. Open 5:00 AM – 9:00 PM. Book at /recovery-hub!";
+    return "We have 3 private recovery rooms with infrared sauna, hot plunge & cold plunge. Hyper Elite includes 1 session; Hyper Recover includes 1 session per day. Casual: 1 person $40, up to 4 people $100 per session. Open 5:00 AM – 9:00 PM. Book at /recovery-hub!";
   }
 
   // Recovery boots
